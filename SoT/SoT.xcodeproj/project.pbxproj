@@ -28,6 +28,7 @@
 		7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B151BE14E8B00042C40 /* TwitterImageView.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B191BE1506800042C40 /* GenericTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B181BE1506800042C40 /* GenericTextField.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B1D1BE1509B00042C40 /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B1C1BE1509B00042C40 /* SearchTextField.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B201BE151DD00042C40 /* SearchBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B1F1BE151DD00042C40 /* SearchBackgroundView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		7BCB0B181BE1506800042C40 /* GenericTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericTextField.m; path = "Custom UI Components/UITextField/GenericTextField.m"; sourceTree = "<group>"; };
 		7BCB0B1B1BE1509B00042C40 /* SearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchTextField.h; path = "Custom UI Components/UITextField/SearchTextField.h"; sourceTree = "<group>"; };
 		7BCB0B1C1BE1509B00042C40 /* SearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTextField.m; path = "Custom UI Components/UITextField/SearchTextField.m"; sourceTree = "<group>"; };
+		7BCB0B1E1BE151DD00042C40 /* SearchBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchBackgroundView.h; path = "Custom UI Components/UIView/SearchBackgroundView.h"; sourceTree = "<group>"; };
+		7BCB0B1F1BE151DD00042C40 /* SearchBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchBackgroundView.m; path = "Custom UI Components/UIView/SearchBackgroundView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +267,8 @@
 				7BCB0B081BE14ACC00042C40 /* GenericView.m */,
 				7BCB0B0A1BE14B1C00042C40 /* LineView.h */,
 				7BCB0B0B1BE14B1C00042C40 /* LineView.m */,
+				7BCB0B1E1BE151DD00042C40 /* SearchBackgroundView.h */,
+				7BCB0B1F1BE151DD00042C40 /* SearchBackgroundView.m */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BCB0B201BE151DD00042C40 /* SearchBackgroundView.m in Sources */,
 				7BCB0AEE1BE13B7E00042C40 /* RecentSearchButton.m in Sources */,
 				7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */,
 				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
