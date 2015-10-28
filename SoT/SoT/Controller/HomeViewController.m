@@ -71,7 +71,7 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 
 -(RecentSearchButton *)createRecentSearchButton {
     
-    RecentSearchButton *button = [[RecentSearchButton alloc] init];
+    RecentSearchButton *button = [RecentSearchButton new];
     
     return button;
     
@@ -79,7 +79,7 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 
 -(TrendingNowButton *)createTrendingNowButton {
     
-    TrendingNowButton *button = [[TrendingNowButton alloc] init];
+    TrendingNowButton *button = [TrendingNowButton new];
     
     return button;
     

@@ -22,6 +22,10 @@
     
 }
 
--(void)setup {}
+-(void)setup {
+    
+    self.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:64.0];
+    
+}
 
 @end
