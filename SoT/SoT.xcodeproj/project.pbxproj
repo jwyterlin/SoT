@@ -25,6 +25,7 @@
 		7BCB0B0C1BE14B1C00042C40 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B0B1BE14B1C00042C40 /* LineView.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B101BE14D1800042C40 /* GenericImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B0F1BE14D1800042C40 /* GenericImageView.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B131BE14D4C00042C40 /* SearchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B121BE14D4C00042C40 /* SearchImageView.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B151BE14E8B00042C40 /* TwitterImageView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		7BCB0B0F1BE14D1800042C40 /* GenericImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericImageView.m; path = "Custom UI Components/UIImageView/GenericImageView.m"; sourceTree = "<group>"; };
 		7BCB0B111BE14D4C00042C40 /* SearchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchImageView.h; path = "Custom UI Components/UIImageView/SearchImageView.h"; sourceTree = "<group>"; };
 		7BCB0B121BE14D4C00042C40 /* SearchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchImageView.m; path = "Custom UI Components/UIImageView/SearchImageView.m"; sourceTree = "<group>"; };
+		7BCB0B141BE14E8B00042C40 /* TwitterImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterImageView.h; path = "Custom UI Components/UIImageView/TwitterImageView.h"; sourceTree = "<group>"; };
+		7BCB0B151BE14E8B00042C40 /* TwitterImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterImageView.m; path = "Custom UI Components/UIImageView/TwitterImageView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +277,8 @@
 				7BCB0B0F1BE14D1800042C40 /* GenericImageView.m */,
 				7BCB0B111BE14D4C00042C40 /* SearchImageView.h */,
 				7BCB0B121BE14D4C00042C40 /* SearchImageView.m */,
+				7BCB0B141BE14E8B00042C40 /* TwitterImageView.h */,
+				7BCB0B151BE14E8B00042C40 /* TwitterImageView.m */,
 			);
 			name = UIImageView;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,
 				7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */,
 				7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */,
+				7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */,
 				7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */,
 				7BCB0AF41BE13BBB00042C40 /* TrendingNowButton.m in Sources */,
 				7BCB0B131BE14D4C00042C40 /* SearchImageView.m in Sources */,

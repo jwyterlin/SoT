@@ -13,6 +13,7 @@
 #import "RecentSearchButton.h"
 #import "SearchImageView.h"
 #import "TrendingNowButton.h"
+#import "TwitterImageView.h"
 #import "UIView+Helper.h"
 
 // Service Layer
@@ -21,7 +22,7 @@
 @interface HomeViewController()
 
 // UI
-@property(nonatomic,strong) UIImageView *twitterLogo;
+@property(nonatomic,strong) TwitterImageView *twitterLogo;
 @property(nonatomic,strong) LineView *lineRecentSearches;
 @property(nonatomic,strong) LineView *lineTrendingNow;
 @property(nonatomic,strong) UITextField *searchTextField;
@@ -80,18 +81,10 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 
 #pragma mark - Creating components
 
--(UIImageView *)twitterLogo {
+-(TwitterImageView *)twitterLogo {
     
     if ( ! _twitterLogo ) {
-        
-        CGFloat width = 165;
-        CGFloat height = 135;
-        CGFloat x = [DeviceInfo width]/2 - width/2;
-        CGFloat y = 165;
-        
-        _twitterLogo = [[UIImageView alloc] initWithFrame:CGRectMake( x, y, width, height )];
-        _twitterLogo.image = [UIImage imageNamed:@"Twitter_logo_blue"];
-        
+        _twitterLogo = [TwitterImageView new];
     }
     
     return _twitterLogo;
