@@ -22,6 +22,11 @@
     
 }
 
--(void)setup {}
+-(void)setup {
+    
+    self.titleLabel.font = [UIFont systemFontOfSize:17.0];
+    self.titleLabel.textColor = [UIColor colorWithRed:104.0/256.0 green:104.0/256.0 blue:113.0/256.0 alpha:1.0];
+    
+}
 
 @end

@@ -10,5 +10,7 @@
 
 @implementation TrendingNowButton
 
+-(void)setup {
+}
 
 @end

@@ -10,4 +10,7 @@
 
 @implementation RecentSearchButton
 
+-(void)setup {
+}
+
 @end
