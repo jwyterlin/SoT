@@ -12,6 +12,8 @@
 
 -(void)setup {
     
+    self.x = 55;
+    self.y = 18;
     self.width = 74;
     self.height = 74;
     self.image = [UIImage imageNamed:@"Icon_search_big"];
