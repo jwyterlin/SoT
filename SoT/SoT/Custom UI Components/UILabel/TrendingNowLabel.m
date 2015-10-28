@@ -11,6 +11,7 @@
 @implementation TrendingNowLabel
 
 -(void)setup {
+    self.text = @"Trending Now";
 }
 
 @end
