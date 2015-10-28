@@ -42,8 +42,8 @@
 @property(nonatomic,strong) NSArray *recentSearchList;
 @property(nonatomic,strong) NSArray *trendingNowList;
 
-@property(nonatomic,strong) NSArray *recentSearchButtons;
-@property(nonatomic,strong) NSArray *trendingNowButtons;
+@property(nonatomic,strong) NSMutableArray *recentSearchButtons;
+@property(nonatomic,strong) NSMutableArray *trendingNowButtons;
 
 @end
 
@@ -75,6 +75,14 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - IBAction methods
+
+-(IBAction)recentSearchButtonPressed:(UIButton *)sender {
+}
+
+-(IBAction)trendingNowButtonPressed:(UIButton *)sender {
+}
+
 #pragma mark - Private methods
 
 -(void)showTwitterLogo {
@@ -100,7 +108,10 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
         
         self.recentSearchList = recentSearches;
         
-        /// TODO: Change UI to show recentSearchList
+        if ( self.recentSearchList.count > 0 )
+            [self showRecentSearches];
+        else
+            [self removeRecentSearches];
         
     }];
 
@@ -122,35 +133,99 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
         
         self.trendingNowList = trendingNowList;
         
-        /// TODO: Change UI to show trendingNowList
+        if ( self.trendingNowList.count > 0 )
+            [self showTrendingNow];
+        else
+            [self removeTrendingNow];
         
     }];
     
 }
 
 -(void)showRecentSearches {
+    
+    if ( self.recentSearchList.count > 0 ) {
+        
+        [self.view addSubview:self.lineRecentSearches];
+        [self.view addSubview:self.recentSearchLabel];
+        
+        /// TODO: Show list of recent searches buttons
+        for ( NSString *text in self.recentSearchList ) {
+            RecentSearchButton *recentSearchButton = [self createRecentSearchButtonWithText:text];
+            [self.recentSearchButtons addObject:recentSearchButton];
+            [self.view addSubview:recentSearchButton];
+        }
+        
+    }
+    
 }
 
 -(void)removeRecentSearches {
+    
+    if ( self.recentSearchList.count == 0 ) {
+        
+        [self.lineRecentSearches removeFromSuperview];
+        [self.recentSearchLabel removeFromSuperview];
+        [self removeButtonsInList:self.recentSearchButtons];
+        
+    }
+    
 }
 
 -(void)showTrendingNow {
+    
+    if ( self.trendingNowList.count > 0 ) {
+        
+        [self.view addSubview:self.lineTrendingNow];
+        [self.view addSubview:self.trendingNowLabel];
+        
+        /// TODO: Show list of trending now buttons
+        for ( NSString *text in self.trendingNowList ) {
+            TrendingNowButton *trendingNowButton = [self createTrendingNowButtonWithText:text];
+            [self.trendingNowButtons addObject:trendingNowButton];
+            [self.view addSubview:trendingNowButton];
+        }
+        
+    }
+    
 }
 
 -(void)removeTrendingNow {
+    
+    if ( self.trendingNowList.count == 0 ) {
+        
+        [self.lineTrendingNow removeFromSuperview];
+        [self.trendingNowLabel removeFromSuperview];
+        [self removeButtonsInList:self.trendingNowButtons];
+        
+    }
+    
 }
 
--(RecentSearchButton *)createRecentSearchButton {
+-(void)removeButtonsInList:(NSMutableArray *)list {
+    
+    for ( UIButton *b in list )
+        [b removeFromSuperview];
+    
+    [list removeAllObjects];
+    
+}
+
+-(RecentSearchButton *)createRecentSearchButtonWithText:(NSString *)text {
     
     RecentSearchButton *button = [RecentSearchButton new];
+    [button setTitle:text forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(recentSearchButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     return button;
     
 }
 
--(TrendingNowButton *)createTrendingNowButton {
+-(TrendingNowButton *)createTrendingNowButtonWithText:(NSString *)text {
     
     TrendingNowButton *button = [TrendingNowButton new];
+    [button setTitle:text forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(trendingNowButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     return button;
     
@@ -219,7 +294,12 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 -(SearchBackgroundView *)searchBackground {
     
     if ( ! _searchBackground ) {
+        
         _searchBackground = [SearchBackgroundView new];
+        
+        [_searchBackground addSubview:self.searchLogo];
+        [_searchBackground addSubview:self.searchTextField];
+        
     }
     
     return _searchBackground;
@@ -245,6 +325,26 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     }
     
     return _trendingNowLabel;
+    
+}
+
+-(NSMutableArray *)recentSearchButtons {
+    
+    if ( ! _recentSearchButtons ) {
+        _recentSearchButtons = [NSMutableArray new];
+    }
+    
+    return _recentSearchButtons;
+    
+}
+
+-(NSMutableArray *)trendingNowButtons {
+    
+    if ( ! _trendingNowButtons ) {
+        _trendingNowButtons = [NSMutableArray new];
+    }
+    
+    return _trendingNowButtons;
     
 }
 
