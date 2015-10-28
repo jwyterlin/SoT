@@ -25,6 +25,7 @@
 
 // DAO
 #import "SearchDAO.h"
+#import "TrendingDAO.h"
 
 @interface HomeViewController()
 
@@ -105,13 +106,21 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 
 -(void)getTrendingNowList {
     
-    self.trendingNowList = @[
-                             @"Sub Celeb Yada Yada",
-                             @"Quentin Tarantino Thurman",
-                             @"Fuck South Corea in the arse",
-                             @"Copa Libertadores",
-                             @"Boobs = Love"
-                             ];
+    [[TrendingDAO new] trendingNowWithCompletion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
+       
+        if ( hasNoConnection ) {
+            /// TODO: Show has no connection
+            return;
+        }
+        
+        if ( error ) {
+            /// TODO: Show connection error
+            return;
+        }
+        
+        self.trendingNowList = tweetsFound;
+        
+    }];
     
 }
 

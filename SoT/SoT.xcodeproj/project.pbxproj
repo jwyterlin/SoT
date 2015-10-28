@@ -34,6 +34,7 @@
 		7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B291BE1558100042C40 /* TrendingNowLabel.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B2D1BE15E9600042C40 /* GenericDAO.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B311BE15F0200042C40 /* SearchDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B301BE15F0200042C40 /* SearchDAO.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B331BE1615D00042C40 /* TrendingDAO.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		7BCB0B2D1BE15E9600042C40 /* GenericDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericDAO.m; path = DAO/GenericDAO.m; sourceTree = "<group>"; };
 		7BCB0B2F1BE15F0200042C40 /* SearchDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchDAO.h; path = DAO/SearchDAO.h; sourceTree = "<group>"; };
 		7BCB0B301BE15F0200042C40 /* SearchDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchDAO.m; path = DAO/SearchDAO.m; sourceTree = "<group>"; };
+		7BCB0B321BE1615D00042C40 /* TrendingDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingDAO.h; path = DAO/TrendingDAO.h; sourceTree = "<group>"; };
+		7BCB0B331BE1615D00042C40 /* TrendingDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingDAO.m; path = DAO/TrendingDAO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +346,8 @@
 				7BCB0B2D1BE15E9600042C40 /* GenericDAO.m */,
 				7BCB0B2F1BE15F0200042C40 /* SearchDAO.h */,
 				7BCB0B301BE15F0200042C40 /* SearchDAO.m */,
+				7BCB0B321BE1615D00042C40 /* TrendingDAO.h */,
+				7BCB0B331BE1615D00042C40 /* TrendingDAO.m */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
 				7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */,
 				7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */,
+				7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */,
 				7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */,
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,
 				7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */,
