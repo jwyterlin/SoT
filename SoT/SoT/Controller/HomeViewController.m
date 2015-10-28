@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 
 // Custom UI Components
+#import "LineView.h"
 #import "RecentSearchButton.h"
 #import "TrendingNowButton.h"
 #import "UIView+Helper.h"
@@ -20,8 +21,8 @@
 
 // UI
 @property(nonatomic,strong) UIImageView *twitterLogo;
-@property(nonatomic,strong) UIView *lineRecentSearches;
-@property(nonatomic,strong) UIView *lineTrendingNow;
+@property(nonatomic,strong) LineView *lineRecentSearches;
+@property(nonatomic,strong) LineView *lineTrendingNow;
 @property(nonatomic,strong) UITextField *searchTextField;
 @property(nonatomic,strong) UIImageView *searchLogo;
 @property(nonatomic,strong) UIView *searchBackground;
@@ -96,16 +97,13 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
 }
 
--(UIView *)lineRecentSearches {
+-(LineView *)lineRecentSearches {
     
     if ( ! _lineRecentSearches ) {
         
-        CGFloat width = 231;
-        CGFloat height = 4;
-        CGFloat x = [DeviceInfo width]/2 - width - 38.5;
-        CGFloat y = self.twitterLogo.y + self.twitterLogo.height + 89;
-        
-        _lineRecentSearches = [[UIView alloc] initWithFrame:CGRectMake( x, y, width, height )];
+        _lineRecentSearches = [LineView new];
+        _lineRecentSearches.x = [DeviceInfo width]/2 - _lineRecentSearches.width - 38.5;
+        _lineRecentSearches.y = self.twitterLogo.y + self.twitterLogo.height + 89;
         
     }
     
@@ -113,16 +111,13 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
 }
 
--(UIView *)lineTrendingNow {
+-(LineView *)lineTrendingNow {
     
     if ( ! _lineTrendingNow ) {
         
-        CGFloat width = 231;
-        CGFloat height = 4;
-        CGFloat x = self.lineRecentSearches.x + self.lineRecentSearches.width + 77;
-        CGFloat y = self.twitterLogo.y+self.twitterLogo.height+89;
-        
-        _lineTrendingNow = [[UIView alloc] initWithFrame:CGRectMake( x, y, width, height )];
+        _lineTrendingNow = [LineView new];
+        _lineTrendingNow.x = self.lineRecentSearches.x + self.lineRecentSearches.width + 77;
+        _lineTrendingNow.y = self.twitterLogo.y + self.twitterLogo.height + 89;
         
     }
     

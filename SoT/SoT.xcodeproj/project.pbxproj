@@ -21,6 +21,8 @@
 		7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AFD1BE13FCB00042C40 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B001BE13FE100042C40 /* DeviceInfo.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B051BE1479400042C40 /* UIView+Helper.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B081BE14ACC00042C40 /* GenericView.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B0C1BE14B1C00042C40 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B0B1BE14B1C00042C40 /* LineView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		7BCB0B001BE13FE100042C40 /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceInfo.m; path = "Service Layer/DeviceInfo.m"; sourceTree = "<group>"; };
 		7BCB0B041BE1479400042C40 /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Helper.h"; path = "Custom UI Components/UIView/Categories/UIView+Helper.h"; sourceTree = "<group>"; };
 		7BCB0B051BE1479400042C40 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Helper.m"; path = "Custom UI Components/UIView/Categories/UIView+Helper.m"; sourceTree = "<group>"; };
+		7BCB0B071BE14ACC00042C40 /* GenericView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericView.h; path = "Custom UI Components/UIView/GenericView.h"; sourceTree = "<group>"; };
+		7BCB0B081BE14ACC00042C40 /* GenericView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericView.m; path = "Custom UI Components/UIView/GenericView.m"; sourceTree = "<group>"; };
+		7BCB0B0A1BE14B1C00042C40 /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineView.h; path = "Custom UI Components/UIView/LineView.h"; sourceTree = "<group>"; };
+		7BCB0B0B1BE14B1C00042C40 /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineView.m; path = "Custom UI Components/UIView/LineView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +243,10 @@
 			isa = PBXGroup;
 			children = (
 				7BCB0B031BE1476800042C40 /* Categories */,
+				7BCB0B071BE14ACC00042C40 /* GenericView.h */,
+				7BCB0B081BE14ACC00042C40 /* GenericView.m */,
+				7BCB0B0A1BE14B1C00042C40 /* LineView.h */,
+				7BCB0B0B1BE14B1C00042C40 /* LineView.m */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -384,11 +394,13 @@
 				7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */,
 				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,
+				7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */,
 				7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */,
 				7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */,
 				7BCB0AF41BE13BBB00042C40 /* TrendingNowButton.m in Sources */,
 				7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */,
 				7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */,
+				7BCB0B0C1BE14B1C00042C40 /* LineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
