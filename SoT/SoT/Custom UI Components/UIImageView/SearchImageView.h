@@ -6,8 +6,8 @@
 //  Copyright © 2015 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GenericImageView.h"
 
-@interface SearchImageView : UIImageView
+@interface SearchImageView : GenericImageView
 
 @end

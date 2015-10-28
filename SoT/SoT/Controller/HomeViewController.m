@@ -11,6 +11,7 @@
 // Custom UI Components
 #import "LineView.h"
 #import "RecentSearchButton.h"
+#import "SearchImageView.h"
 #import "TrendingNowButton.h"
 #import "UIView+Helper.h"
 
@@ -24,7 +25,7 @@
 @property(nonatomic,strong) LineView *lineRecentSearches;
 @property(nonatomic,strong) LineView *lineTrendingNow;
 @property(nonatomic,strong) UITextField *searchTextField;
-@property(nonatomic,strong) UIImageView *searchLogo;
+@property(nonatomic,strong) SearchImageView *searchLogo;
 @property(nonatomic,strong) UIView *searchBackground;
 
 @property(nonatomic,strong) NSArray *recentSearchButtons;
@@ -135,10 +136,10 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
 }
 
--(UIImageView *)searchLogo {
+-(SearchImageView *)searchLogo {
     
     if ( ! _searchLogo ) {
-        _searchLogo = [[UIImageView alloc] init];
+        _searchLogo = [SearchImageView new];
     }
     
     return _searchLogo;

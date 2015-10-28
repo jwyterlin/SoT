@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+Helper.h"
 
 @interface GenericImageView : UIImageView
+
+-(void)setup;
 
 @end

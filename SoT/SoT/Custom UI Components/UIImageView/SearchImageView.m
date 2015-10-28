@@ -10,12 +10,12 @@
 
 @implementation SearchImageView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void)setup {
+    
+    self.width = 74;
+    self.height = 74;
+    self.image = [UIImage imageNamed:@"Icon_search_big"];
+    
 }
-*/
 
 @end
