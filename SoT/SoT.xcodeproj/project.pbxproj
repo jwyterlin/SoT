@@ -236,11 +236,11 @@
 		7BCB0AE71BE13AE900042C40 /* Custom UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				7BCB0AE81BE13AF300042C40 /* UIButton */,
+				7BCB0B0D1BE14CF700042C40 /* UIImageView */,
 				7BCB0B211BE153EC00042C40 /* UILabel */,
 				7BCB0B1A1BE1506D00042C40 /* UITextField */,
-				7BCB0B0D1BE14CF700042C40 /* UIImageView */,
 				7BCB0B021BE1475F00042C40 /* UIView */,
-				7BCB0AE81BE13AF300042C40 /* UIButton */,
 			);
 			name = "Custom UI Components";
 			sourceTree = "<group>";

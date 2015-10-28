@@ -159,6 +159,7 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
     if ( ! _recentSearchLabel ) {
         _recentSearchLabel = [RecentSearchLabel new];
+        _recentSearchLabel.y = self.lineRecentSearches.y + self.lineRecentSearches.height + 8;
     }
     
     return _recentSearchLabel;
@@ -169,6 +170,7 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
     if ( ! _trendingNowLabel ) {
         _trendingNowLabel = [TrendingNowLabel new];
+        _trendingNowLabel.y = self.lineTrendingNow.y + self.lineTrendingNow.height + 8;
     }
     
     return _trendingNowLabel;
