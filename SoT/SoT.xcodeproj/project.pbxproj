@@ -29,6 +29,9 @@
 		7BCB0B191BE1506800042C40 /* GenericTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B181BE1506800042C40 /* GenericTextField.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B1D1BE1509B00042C40 /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B1C1BE1509B00042C40 /* SearchTextField.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B201BE151DD00042C40 /* SearchBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B1F1BE151DD00042C40 /* SearchBackgroundView.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B231BE1540800042C40 /* GenericLabel.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B271BE1554200042C40 /* RecentSearchLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B261BE1554200042C40 /* RecentSearchLabel.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B291BE1558100042C40 /* TrendingNowLabel.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,12 @@
 		7BCB0B1C1BE1509B00042C40 /* SearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTextField.m; path = "Custom UI Components/UITextField/SearchTextField.m"; sourceTree = "<group>"; };
 		7BCB0B1E1BE151DD00042C40 /* SearchBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchBackgroundView.h; path = "Custom UI Components/UIView/SearchBackgroundView.h"; sourceTree = "<group>"; };
 		7BCB0B1F1BE151DD00042C40 /* SearchBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchBackgroundView.m; path = "Custom UI Components/UIView/SearchBackgroundView.m"; sourceTree = "<group>"; };
+		7BCB0B221BE1540800042C40 /* GenericLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericLabel.h; path = "Custom UI Components/UILabel/GenericLabel.h"; sourceTree = "<group>"; };
+		7BCB0B231BE1540800042C40 /* GenericLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericLabel.m; path = "Custom UI Components/UILabel/GenericLabel.m"; sourceTree = "<group>"; };
+		7BCB0B251BE1554200042C40 /* RecentSearchLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentSearchLabel.h; path = "Custom UI Components/UILabel/RecentSearchLabel.h"; sourceTree = "<group>"; };
+		7BCB0B261BE1554200042C40 /* RecentSearchLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecentSearchLabel.m; path = "Custom UI Components/UILabel/RecentSearchLabel.m"; sourceTree = "<group>"; };
+		7BCB0B281BE1558100042C40 /* TrendingNowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingNowLabel.h; path = "Custom UI Components/UILabel/TrendingNowLabel.h"; sourceTree = "<group>"; };
+		7BCB0B291BE1558100042C40 /* TrendingNowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingNowLabel.m; path = "Custom UI Components/UILabel/TrendingNowLabel.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +236,7 @@
 		7BCB0AE71BE13AE900042C40 /* Custom UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				7BCB0B211BE153EC00042C40 /* UILabel */,
 				7BCB0B1A1BE1506D00042C40 /* UITextField */,
 				7BCB0B0D1BE14CF700042C40 /* UIImageView */,
 				7BCB0B021BE1475F00042C40 /* UIView */,
@@ -304,6 +314,19 @@
 				7BCB0B1C1BE1509B00042C40 /* SearchTextField.m */,
 			);
 			name = UITextField;
+			sourceTree = "<group>";
+		};
+		7BCB0B211BE153EC00042C40 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0B221BE1540800042C40 /* GenericLabel.h */,
+				7BCB0B231BE1540800042C40 /* GenericLabel.m */,
+				7BCB0B251BE1554200042C40 /* RecentSearchLabel.h */,
+				7BCB0B261BE1554200042C40 /* RecentSearchLabel.m */,
+				7BCB0B281BE1558100042C40 /* TrendingNowLabel.h */,
+				7BCB0B291BE1558100042C40 /* TrendingNowLabel.m */,
+			);
+			name = UILabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +463,8 @@
 				7BCB0AEE1BE13B7E00042C40 /* RecentSearchButton.m in Sources */,
 				7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */,
 				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
+				7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */,
+				7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */,
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,
 				7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */,
 				7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */,
@@ -452,6 +477,7 @@
 				7BCB0B101BE14D1800042C40 /* GenericImageView.m in Sources */,
 				7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */,
 				7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */,
+				7BCB0B271BE1554200042C40 /* RecentSearchLabel.m in Sources */,
 				7BCB0B0C1BE14B1C00042C40 /* LineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

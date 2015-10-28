@@ -16,15 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Twitter_logo_blue" translatesAutoresizingMaskIntoConstraints="NO" id="z95-UX-TD2">
-                                <rect key="frame" x="218" y="165" width="165" height="135"/>
-                                <animations/>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tbs-m0-M5i" userLabel="Line Recent Searches">
-                                <rect key="frame" x="74" y="405" width="200" height="4"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.3529411764705882" green="0.62745098039215685" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recent Searches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r20-jr-nm4">
                                 <rect key="frame" x="74" y="418" width="192" height="34"/>
                                 <animations/>
@@ -32,11 +23,6 @@
                                 <color key="textColor" red="0.36862745098039218" green="0.62352941176470589" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJ2-hj-QNY" userLabel="Line Trending">
-                                <rect key="frame" x="326" y="405" width="200" height="4"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.35294117650000001" green="0.62745098040000002" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trending Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnB-d3-qPf">
                                 <rect key="frame" x="326" y="418" width="192" height="34"/>
                                 <animations/>
@@ -54,7 +40,4 @@
             <point key="canvasLocation" x="257" y="318"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Twitter_logo_blue" width="165" height="135"/>
-    </resources>
 </document>
