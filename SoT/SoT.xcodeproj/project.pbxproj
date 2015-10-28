@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		7BC0C22A1BDD583600CE2540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2291BDD583600CE2540 /* main.m */; };
-		7BC0C22D1BDD583600CE2540 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C22C1BDD583600CE2540 /* AppDelegate.m */; };
-		7BC0C2301BDD583600CE2540 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C22F1BDD583600CE2540 /* HomeViewController.m */; };
 		7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2311BDD583600CE2540 /* Main.storyboard */; };
 		7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2341BDD583600CE2540 /* Assets.xcassets */; };
 		7BC0C2381BDD583600CE2540 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2361BDD583600CE2540 /* LaunchScreen.storyboard */; };
 		7BC0C2431BDD583600CE2540 /* SoTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2421BDD583600CE2540 /* SoTTests.m */; };
 		7BC0C24E1BDD583600CE2540 /* SoTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C24D1BDD583600CE2540 /* SoTUITests.m */; };
+		7BCB0AEE1BE13B7E00042C40 /* RecentSearchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AED1BE13B7E00042C40 /* RecentSearchButton.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF01BE13B9100042C40 /* GenericButton.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0AF41BE13BBB00042C40 /* TrendingNowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF31BE13BBB00042C40 /* TrendingNowButton.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF61BE13D6000042C40 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF91BE13D8B00042C40 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AFD1BE13FCB00042C40 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B001BE13FE100042C40 /* DeviceInfo.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B051BE1479400042C40 /* UIView+Helper.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +43,6 @@
 /* Begin PBXFileReference section */
 		7BC0C2251BDD583600CE2540 /* SoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC0C2291BDD583600CE2540 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7BC0C22B1BDD583600CE2540 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7BC0C22C1BDD583600CE2540 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7BC0C22E1BDD583600CE2540 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		7BC0C22F1BDD583600CE2540 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7BC0C2321BDD583600CE2540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BC0C2341BDD583600CE2540 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BC0C2371BDD583600CE2540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,22 @@
 		7BC0C2491BDD583600CE2540 /* SoTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC0C24D1BDD583600CE2540 /* SoTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoTUITests.m; sourceTree = "<group>"; };
 		7BC0C24F1BDD583600CE2540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BCB0AEC1BE13B7E00042C40 /* RecentSearchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentSearchButton.h; path = "Custom UI Components/UIButton/RecentSearchButton.h"; sourceTree = "<group>"; };
+		7BCB0AED1BE13B7E00042C40 /* RecentSearchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecentSearchButton.m; path = "Custom UI Components/UIButton/RecentSearchButton.m"; sourceTree = "<group>"; };
+		7BCB0AEF1BE13B9100042C40 /* GenericButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericButton.h; path = "Custom UI Components/UIButton/GenericButton.h"; sourceTree = "<group>"; };
+		7BCB0AF01BE13B9100042C40 /* GenericButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericButton.m; path = "Custom UI Components/UIButton/GenericButton.m"; sourceTree = "<group>"; };
+		7BCB0AF21BE13BBB00042C40 /* TrendingNowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingNowButton.h; path = "Custom UI Components/UIButton/TrendingNowButton.h"; sourceTree = "<group>"; };
+		7BCB0AF31BE13BBB00042C40 /* TrendingNowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingNowButton.m; path = "Custom UI Components/UIButton/TrendingNowButton.m"; sourceTree = "<group>"; };
+		7BCB0AF51BE13D6000042C40 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Controller/HomeViewController.h; sourceTree = "<group>"; };
+		7BCB0AF61BE13D6000042C40 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Controller/HomeViewController.m; sourceTree = "<group>"; };
+		7BCB0AF81BE13D8B00042C40 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AppDelegate/AppDelegate.h; sourceTree = "<group>"; };
+		7BCB0AF91BE13D8B00042C40 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AppDelegate/AppDelegate.m; sourceTree = "<group>"; };
+		7BCB0AFC1BE13FCB00042C40 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Service Layer/Constants.h"; sourceTree = "<group>"; };
+		7BCB0AFD1BE13FCB00042C40 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "Service Layer/Constants.m"; sourceTree = "<group>"; };
+		7BCB0AFF1BE13FE100042C40 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceInfo.h; path = "Service Layer/DeviceInfo.h"; sourceTree = "<group>"; };
+		7BCB0B001BE13FE100042C40 /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceInfo.m; path = "Service Layer/DeviceInfo.m"; sourceTree = "<group>"; };
+		7BCB0B041BE1479400042C40 /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Helper.h"; path = "Custom UI Components/UIView/Categories/UIView+Helper.h"; sourceTree = "<group>"; };
+		7BCB0B051BE1479400042C40 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Helper.m"; path = "Custom UI Components/UIView/Categories/UIView+Helper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +119,14 @@
 		7BC0C2271BDD583600CE2540 /* SoT */ = {
 			isa = PBXGroup;
 			children = (
-				7BC0C22B1BDD583600CE2540 /* AppDelegate.h */,
-				7BC0C22C1BDD583600CE2540 /* AppDelegate.m */,
-				7BC0C22E1BDD583600CE2540 /* HomeViewController.h */,
-				7BC0C22F1BDD583600CE2540 /* HomeViewController.m */,
-				7BC0C2311BDD583600CE2540 /* Main.storyboard */,
-				7BC0C2341BDD583600CE2540 /* Assets.xcassets */,
-				7BC0C2361BDD583600CE2540 /* LaunchScreen.storyboard */,
-				7BC0C2391BDD583600CE2540 /* Info.plist */,
+				7BCB0AFB1BE13FAB00042C40 /* Service Layer */,
+				7BCB0AE71BE13AE900042C40 /* Custom UI Components */,
+				7BCB0AE51BE13A8200042C40 /* AppDelegate */,
+				7BCB0AE61BE13A9600042C40 /* Assets */,
+				7BCB0AE21BE13A6500042C40 /* Controller */,
+				7BCB0AE31BE13A7000042C40 /* Model */,
 				7BC0C2281BDD583600CE2540 /* Supporting Files */,
+				7BCB0AE41BE13A7600042C40 /* View */,
 			);
 			path = SoT;
 			sourceTree = "<group>";
@@ -117,6 +134,7 @@
 		7BC0C2281BDD583600CE2540 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7BC0C2391BDD583600CE2540 /* Info.plist */,
 				7BC0C2291BDD583600CE2540 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +156,98 @@
 				7BC0C24F1BDD583600CE2540 /* Info.plist */,
 			);
 			path = SoTUITests;
+			sourceTree = "<group>";
+		};
+		7BCB0AE21BE13A6500042C40 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0AF51BE13D6000042C40 /* HomeViewController.h */,
+				7BCB0AF61BE13D6000042C40 /* HomeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7BCB0AE31BE13A7000042C40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7BCB0AE41BE13A7600042C40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7BC0C2361BDD583600CE2540 /* LaunchScreen.storyboard */,
+				7BC0C2311BDD583600CE2540 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7BCB0AE51BE13A8200042C40 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0AF81BE13D8B00042C40 /* AppDelegate.h */,
+				7BCB0AF91BE13D8B00042C40 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7BCB0AE61BE13A9600042C40 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7BC0C2341BDD583600CE2540 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		7BCB0AE71BE13AE900042C40 /* Custom UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0B021BE1475F00042C40 /* UIView */,
+				7BCB0AE81BE13AF300042C40 /* UIButton */,
+			);
+			name = "Custom UI Components";
+			sourceTree = "<group>";
+		};
+		7BCB0AE81BE13AF300042C40 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0AEF1BE13B9100042C40 /* GenericButton.h */,
+				7BCB0AF01BE13B9100042C40 /* GenericButton.m */,
+				7BCB0AEC1BE13B7E00042C40 /* RecentSearchButton.h */,
+				7BCB0AED1BE13B7E00042C40 /* RecentSearchButton.m */,
+				7BCB0AF21BE13BBB00042C40 /* TrendingNowButton.h */,
+				7BCB0AF31BE13BBB00042C40 /* TrendingNowButton.m */,
+			);
+			name = UIButton;
+			sourceTree = "<group>";
+		};
+		7BCB0AFB1BE13FAB00042C40 /* Service Layer */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0AFC1BE13FCB00042C40 /* Constants.h */,
+				7BCB0AFD1BE13FCB00042C40 /* Constants.m */,
+				7BCB0AFF1BE13FE100042C40 /* DeviceInfo.h */,
+				7BCB0B001BE13FE100042C40 /* DeviceInfo.m */,
+			);
+			name = "Service Layer";
+			sourceTree = "<group>";
+		};
+		7BCB0B021BE1475F00042C40 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0B031BE1476800042C40 /* Categories */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		7BCB0B031BE1476800042C40 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0B041BE1479400042C40 /* UIView+Helper.h */,
+				7BCB0B051BE1479400042C40 /* UIView+Helper.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +380,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BC0C2301BDD583600CE2540 /* HomeViewController.m in Sources */,
-				7BC0C22D1BDD583600CE2540 /* AppDelegate.m in Sources */,
+				7BCB0AEE1BE13B7E00042C40 /* RecentSearchButton.m in Sources */,
+				7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */,
+				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,
+				7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */,
+				7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */,
+				7BCB0AF41BE13BBB00042C40 /* TrendingNowButton.m in Sources */,
+				7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */,
+				7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
