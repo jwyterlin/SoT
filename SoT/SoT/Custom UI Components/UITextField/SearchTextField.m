@@ -16,6 +16,7 @@
     self.y = 0;
     self.width = [DeviceInfo width] - self.x;
     self.height = 31;
+    self.placeholder = @"Search it";
     
 }
 
