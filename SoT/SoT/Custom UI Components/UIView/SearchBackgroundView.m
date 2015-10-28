@@ -12,7 +12,7 @@
 
 -(void)setup {
     
-    
+    self.backgroundColor = [UIColor whiteColor];
     
 }
 
