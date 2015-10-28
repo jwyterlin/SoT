@@ -23,6 +23,9 @@
 // Service Layer
 #import "DeviceInfo.h"
 
+// DAO
+#import "SearchDAO.h"
+
 @interface HomeViewController()
 
 // UI
@@ -59,21 +62,44 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self showTwitterLogo];
+    
+}
+
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Private methods
 
+-(void)showTwitterLogo {
+    
+    if ( ! [self.twitterLogo isDescendantOfView:self.view] )
+        [self.view addSubview:self.twitterLogo];
+    
+}
+
 -(void)getRecentSearchList {
     
-    self.recentSearchList = @[
-                              @"Important question",
-                              @"Amazing Gadget",
-                              @"Hyped Social Networking",
-                              @"Developer bitchin about",
-                              @"Hot new actress doig nothing"
-                             ];
+    [[SearchDAO new] searchTerm:self.searchTextField.text completion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
+        
+        if ( hasNoConnection ) {
+            /// TODO: Show has no connection
+            return;
+        }
+        
+        if ( error ) {
+            /// TODO: Show connection error
+            return;
+        }
+        
+        self.recentSearchList = tweetsFound;
+        
+    }];
 
 }
 
