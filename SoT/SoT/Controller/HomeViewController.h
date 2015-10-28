@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+#import "GenericViewController.h"
+
+@interface HomeViewController : GenericViewController
 
 
 @end

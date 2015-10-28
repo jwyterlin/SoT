@@ -35,6 +35,8 @@
 		7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B2D1BE15E9600042C40 /* GenericDAO.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B311BE15F0200042C40 /* SearchDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B301BE15F0200042C40 /* SearchDAO.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B331BE1615D00042C40 /* TrendingDAO.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B371BE17A0200042C40 /* CATransformLayer+Helper.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,10 @@
 		7BCB0B301BE15F0200042C40 /* SearchDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchDAO.m; path = DAO/SearchDAO.m; sourceTree = "<group>"; };
 		7BCB0B321BE1615D00042C40 /* TrendingDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingDAO.h; path = DAO/TrendingDAO.h; sourceTree = "<group>"; };
 		7BCB0B331BE1615D00042C40 /* TrendingDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingDAO.m; path = DAO/TrendingDAO.m; sourceTree = "<group>"; };
+		7BCB0B361BE17A0200042C40 /* CATransformLayer+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CATransformLayer+Helper.h"; path = "Custom UI Components/CATransformLayer/CATransformLayer+Helper.h"; sourceTree = "<group>"; };
+		7BCB0B371BE17A0200042C40 /* CATransformLayer+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CATransformLayer+Helper.m"; path = "Custom UI Components/CATransformLayer/CATransformLayer+Helper.m"; sourceTree = "<group>"; };
+		7BCB0B391BE17A4700042C40 /* GenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericViewController.h; path = Controller/GenericViewController.h; sourceTree = "<group>"; };
+		7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericViewController.m; path = Controller/GenericViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +212,8 @@
 			children = (
 				7BCB0AF51BE13D6000042C40 /* HomeViewController.h */,
 				7BCB0AF61BE13D6000042C40 /* HomeViewController.m */,
+				7BCB0B391BE17A4700042C40 /* GenericViewController.h */,
+				7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 		7BCB0AE71BE13AE900042C40 /* Custom UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				7BCB0B351BE179C700042C40 /* CATransformLayer */,
 				7BCB0AE81BE13AF300042C40 /* UIButton */,
 				7BCB0B0D1BE14CF700042C40 /* UIImageView */,
 				7BCB0B211BE153EC00042C40 /* UILabel */,
@@ -350,6 +359,15 @@
 				7BCB0B331BE1615D00042C40 /* TrendingDAO.m */,
 			);
 			name = DAO;
+			sourceTree = "<group>";
+		};
+		7BCB0B351BE179C700042C40 /* CATransformLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0B361BE17A0200042C40 /* CATransformLayer+Helper.h */,
+				7BCB0B371BE17A0200042C40 /* CATransformLayer+Helper.m */,
+			);
+			name = CATransformLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,7 +520,9 @@
 				7BCB0B101BE14D1800042C40 /* GenericImageView.m in Sources */,
 				7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */,
 				7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */,
+				7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */,
 				7BCB0B271BE1554200042C40 /* RecentSearchLabel.m in Sources */,
+				7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */,
 				7BCB0B311BE15F0200042C40 /* SearchDAO.m in Sources */,
 				7BCB0B0C1BE14B1C00042C40 /* LineView.m in Sources */,
 			);
