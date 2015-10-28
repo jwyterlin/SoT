@@ -12,9 +12,9 @@
 
 // Trending Now
 
--(void)trendingNowWithCompletion:(void(^)(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error))completion;
+-(void)trendingNowWithCompletion:(void(^)(NSArray *trendingNowList, BOOL hasNoConnection, NSError *error))completion;
 
--(void)trendingNowWithCompletion:(void(^)(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error))completion
+-(void)trendingNowWithCompletion:(void(^)(NSArray *trendingNowList, BOOL hasNoConnection, NSError *error))completion
                             test:(void(^)(id responseData, NSError *error))test;
 
 @end

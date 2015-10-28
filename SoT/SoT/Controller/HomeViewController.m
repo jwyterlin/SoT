@@ -86,7 +86,7 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 
 -(void)getRecentSearchList {
     
-    [[SearchDAO new] searchTerm:self.searchTextField.text completion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
+    [[SearchDAO new] recentSearchesWithCompletion:^(NSArray *recentSearches, BOOL hasNoConnection, NSError *error) {
         
         if ( hasNoConnection ) {
             /// TODO: Show has no connection
@@ -98,7 +98,9 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
             return;
         }
         
-        self.recentSearchList = tweetsFound;
+        self.recentSearchList = recentSearches;
+        
+        /// TODO: Change UI to show recentSearchList
         
     }];
 
@@ -106,7 +108,7 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 
 -(void)getTrendingNowList {
     
-    [[TrendingDAO new] trendingNowWithCompletion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
+    [[TrendingDAO new] trendingNowWithCompletion:^(NSArray *trendingNowList, BOOL hasNoConnection, NSError *error) {
        
         if ( hasNoConnection ) {
             /// TODO: Show has no connection
@@ -118,7 +120,9 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
             return;
         }
         
-        self.trendingNowList = tweetsFound;
+        self.trendingNowList = trendingNowList;
+        
+        /// TODO: Change UI to show trendingNowList
         
     }];
     

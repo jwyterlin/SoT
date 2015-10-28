@@ -17,4 +17,11 @@
 -(void)searchTerm:(NSString *)term completion:(void(^)(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error))completion
              test:(void(^)(id responseData, NSError *error))test;
 
+// Recent Searches
+
+-(void)recentSearchesWithCompletion:(void(^)(NSArray *recentSearches, BOOL hasNoConnection, NSError *error))completion;
+
+-(void)recentSearchesWithCompletion:(void(^)(NSArray *recentSearches, BOOL hasNoConnection, NSError *error))completion
+                               test:(void(^)(id responseData, NSError *error))test;
+
 @end

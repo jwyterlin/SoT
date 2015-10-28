@@ -12,11 +12,11 @@
 
 // Trending Now
 
--(void)trendingNowWithCompletion:(void(^)(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error))completion {
+-(void)trendingNowWithCompletion:(void(^)(NSArray *trendingNowList, BOOL hasNoConnection, NSError *error))completion {
     
-    [self trendingNowWithCompletion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
+    [self trendingNowWithCompletion:^(NSArray *trendingNowList, BOOL hasNoConnection, NSError *error) {
         if ( completion ) {
-            completion( tweetsFound, hasNoConnection, error );
+            completion( trendingNowList, hasNoConnection, error );
         }
     } test:^(id responseData, NSError *error) {
         // Do nothing
@@ -24,10 +24,10 @@
     
 }
 
--(void)trendingNowWithCompletion:(void(^)(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error))completion
+-(void)trendingNowWithCompletion:(void(^)(NSArray *trendingNowList, BOOL hasNoConnection, NSError *error))completion
              test:(void(^)(id responseData, NSError *error))test {
     
-    NSArray *tweetsFound =  @[
+    NSArray *trendingNowList =  @[
                               @"Sub Celeb Yada Yada",
                               @"Quentin Tarantino Thurman",
                               @"Fuck South Corea in the arse",
@@ -36,7 +36,7 @@
                               ];
     
     if (completion) {
-        completion( tweetsFound, NO, NULL );
+        completion( trendingNowList, NO, NULL );
         return;
     }
     

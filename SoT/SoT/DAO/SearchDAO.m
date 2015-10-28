@@ -42,4 +42,36 @@
     
 }
 
+// Recent Searches
+
+-(void)recentSearchesWithCompletion:(void(^)(NSArray *recentSearches, BOOL hasNoConnection, NSError *error))completion {
+    
+    [self recentSearchesWithCompletion:^(NSArray *recentSearches, BOOL hasNoConnection, NSError *error) {
+        if (completion) {
+            completion(recentSearches,hasNoConnection,error);
+        }
+    } test:^(id responseData, NSError *error) {
+        // Do nothing
+    }];
+    
+}
+
+-(void)recentSearchesWithCompletion:(void(^)(NSArray *recentSearches, BOOL hasNoConnection, NSError *error))completion
+             test:(void(^)(id responseData, NSError *error))test {
+    
+    NSArray *recentSearches =  @[
+                              @"Important question",
+                              @"Amazing Gadget",
+                              @"Hyped Social Networking",
+                              @"Developer bitchin about",
+                              @"Hot new actress doig nothing"
+                              ];
+    
+    if (completion) {
+        completion( recentSearches, NO, NULL );
+        return;
+    }
+    
+}
+
 @end
