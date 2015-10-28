@@ -12,6 +12,7 @@
 #import "LineView.h"
 #import "RecentSearchButton.h"
 #import "SearchImageView.h"
+#import "SearchTextField.h"
 #import "TrendingNowButton.h"
 #import "TwitterImageView.h"
 #import "UIView+Helper.h"
@@ -25,7 +26,7 @@
 @property(nonatomic,strong) TwitterImageView *twitterLogo;
 @property(nonatomic,strong) LineView *lineRecentSearches;
 @property(nonatomic,strong) LineView *lineTrendingNow;
-@property(nonatomic,strong) UITextField *searchTextField;
+@property(nonatomic,strong) SearchTextField *searchTextField;
 @property(nonatomic,strong) SearchImageView *searchLogo;
 @property(nonatomic,strong) UIView *searchBackground;
 
@@ -119,10 +120,10 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
 }
 
--(UITextField *)searchTextField {
+-(SearchTextField *)searchTextField {
     
     if ( ! _searchTextField ) {
-        _searchTextField = [[UITextField alloc] init];
+        _searchTextField = [SearchTextField new];
     }
     
     return _searchTextField;

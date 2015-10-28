@@ -26,6 +26,8 @@
 		7BCB0B101BE14D1800042C40 /* GenericImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B0F1BE14D1800042C40 /* GenericImageView.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B131BE14D4C00042C40 /* SearchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B121BE14D4C00042C40 /* SearchImageView.m */; settings = {ASSET_TAGS = (); }; };
 		7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B151BE14E8B00042C40 /* TwitterImageView.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B191BE1506800042C40 /* GenericTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B181BE1506800042C40 /* GenericTextField.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0B1D1BE1509B00042C40 /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B1C1BE1509B00042C40 /* SearchTextField.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,10 @@
 		7BCB0B121BE14D4C00042C40 /* SearchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchImageView.m; path = "Custom UI Components/UIImageView/SearchImageView.m"; sourceTree = "<group>"; };
 		7BCB0B141BE14E8B00042C40 /* TwitterImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterImageView.h; path = "Custom UI Components/UIImageView/TwitterImageView.h"; sourceTree = "<group>"; };
 		7BCB0B151BE14E8B00042C40 /* TwitterImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterImageView.m; path = "Custom UI Components/UIImageView/TwitterImageView.m"; sourceTree = "<group>"; };
+		7BCB0B171BE1506800042C40 /* GenericTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericTextField.h; path = "Custom UI Components/UITextField/GenericTextField.h"; sourceTree = "<group>"; };
+		7BCB0B181BE1506800042C40 /* GenericTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericTextField.m; path = "Custom UI Components/UITextField/GenericTextField.m"; sourceTree = "<group>"; };
+		7BCB0B1B1BE1509B00042C40 /* SearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchTextField.h; path = "Custom UI Components/UITextField/SearchTextField.h"; sourceTree = "<group>"; };
+		7BCB0B1C1BE1509B00042C40 /* SearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTextField.m; path = "Custom UI Components/UITextField/SearchTextField.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +224,7 @@
 		7BCB0AE71BE13AE900042C40 /* Custom UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				7BCB0B1A1BE1506D00042C40 /* UITextField */,
 				7BCB0B0D1BE14CF700042C40 /* UIImageView */,
 				7BCB0B021BE1475F00042C40 /* UIView */,
 				7BCB0AE81BE13AF300042C40 /* UIButton */,
@@ -281,6 +288,17 @@
 				7BCB0B151BE14E8B00042C40 /* TwitterImageView.m */,
 			);
 			name = UIImageView;
+			sourceTree = "<group>";
+		};
+		7BCB0B1A1BE1506D00042C40 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0B171BE1506800042C40 /* GenericTextField.h */,
+				7BCB0B181BE1506800042C40 /* GenericTextField.m */,
+				7BCB0B1B1BE1509B00042C40 /* SearchTextField.h */,
+				7BCB0B1C1BE1509B00042C40 /* SearchTextField.m */,
+			);
+			name = UITextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,7 +440,9 @@
 				7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */,
 				7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */,
 				7BCB0AF41BE13BBB00042C40 /* TrendingNowButton.m in Sources */,
+				7BCB0B191BE1506800042C40 /* GenericTextField.m in Sources */,
 				7BCB0B131BE14D4C00042C40 /* SearchImageView.m in Sources */,
+				7BCB0B1D1BE1509B00042C40 /* SearchTextField.m in Sources */,
 				7BCB0B101BE14D1800042C40 /* GenericImageView.m in Sources */,
 				7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */,
 				7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */,
