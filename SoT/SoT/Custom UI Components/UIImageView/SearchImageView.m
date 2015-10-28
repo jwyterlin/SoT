@@ -12,6 +12,8 @@
 
 -(void)setup {
     
+    [super setup];
+    
     self.x = 55;
     self.y = 18;
     self.width = 74;

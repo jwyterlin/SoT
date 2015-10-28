@@ -12,6 +12,8 @@
 
 -(void)setup {
     
+    [super setup];
+    
     self.width = 231;
     self.height = 4;
     self.backgroundColor = [UIColor colorWithRed:90.0/256.0 green:60.0/256.0 blue:198.0/256.0 alpha:1.0];

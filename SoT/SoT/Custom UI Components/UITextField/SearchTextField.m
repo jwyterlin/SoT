@@ -12,9 +12,11 @@
 
 -(void)setup {
     
+    [super setup];
+    
     self.x = 165;
     self.y = 18;
-    self.width = [DeviceInfo width] - self.x;
+    self.width = [DeviceInfo width] - self.x - 21;
     self.height = 74;
     self.placeholder = @"Search it";
     

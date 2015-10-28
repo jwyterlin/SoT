@@ -12,6 +12,8 @@
 
 -(void)setup {
     
+    [super setup];
+    
     self.x = 0;
     self.y = 0;
     self.width = [DeviceInfo width];

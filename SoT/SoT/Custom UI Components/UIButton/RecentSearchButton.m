@@ -11,6 +11,9 @@
 @implementation RecentSearchButton
 
 -(void)setup {
+    
+    [super setup];
+    
 }
 
 @end

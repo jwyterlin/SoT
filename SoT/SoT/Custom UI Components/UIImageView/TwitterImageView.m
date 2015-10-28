@@ -15,6 +15,8 @@
 
 -(void)setup {
     
+    [super setup];
+    
     self.width = 165;
     self.height = 135;
     self.x = [DeviceInfo width]/2 - self.width/2;

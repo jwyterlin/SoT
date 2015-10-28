@@ -11,7 +11,11 @@
 @implementation RecentSearchLabel
 
 -(void)setup {
+    
+    [super setup];
+    
     self.text = @"Recent Searches";
+    
 }
 
 @end

@@ -11,6 +11,9 @@
 @implementation TrendingNowButton
 
 -(void)setup {
+    
+    [super setup];
+    
 }
 
 @end

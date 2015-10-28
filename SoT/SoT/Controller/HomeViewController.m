@@ -68,6 +68,7 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     [super viewWillAppear:animated];
     
     [self showTwitterLogo];
+    [self showSearchTextField];
     
 }
 
