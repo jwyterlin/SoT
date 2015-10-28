@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 
 // Custom UI Components
+#import "CATransformLayer+Helper.h"
 #import "LineView.h"
 #import "RecentSearchButton.h"
 #import "RecentSearchLabel.h"

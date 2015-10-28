@@ -14,4 +14,24 @@
     return;
 }
 
+-(void)setEdgeAntialiasingMask:(unsigned int)edgeAntialiasingMask {
+    return;
+}
+
+-(void)setShadowColor:(CGColorRef)shadowColor {
+    return;
+}
+
+-(void)setMasksToBounds:(BOOL)masksToBounds {
+    return;
+}
+
+-(void)setFilters:(NSArray *)filters {
+    return;
+}
+
+-(void)setBackgroundFilters:(NSArray *)backgroundFilters {
+    return;
+}
+
 @end
