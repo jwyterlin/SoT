@@ -35,6 +35,9 @@
 @property(nonatomic,strong) RecentSearchLabel *recentSearchLabel;
 @property(nonatomic,strong) TrendingNowLabel *trendingNowLabel;
 
+@property(nonatomic,strong) NSArray *recentSearchList;
+@property(nonatomic,strong) NSArray *trendingNowList;
+
 @property(nonatomic,strong) NSArray *recentSearchButtons;
 @property(nonatomic,strong) NSArray *trendingNowButtons;
 
@@ -48,7 +51,12 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 #pragma mark - View Lifecycle
 
 -(void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    [self getRecentSearchList];
+    [self getTrendingNowList];
+    
 }
 
 -(void)didReceiveMemoryWarning {
@@ -56,6 +64,30 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 }
 
 #pragma mark - Private methods
+
+-(void)getRecentSearchList {
+    
+    self.recentSearchList = @[
+                              @"Important question",
+                              @"Amazing Gadget",
+                              @"Hyped Social Networking",
+                              @"Developer bitchin about",
+                              @"Hot new actress doig nothing"
+                             ];
+
+}
+
+-(void)getTrendingNowList {
+    
+    self.trendingNowList = @[
+                             @"Sub Celeb Yada Yada",
+                             @"Quentin Tarantino Thurman",
+                             @"Fuck South Corea in the arse",
+                             @"Copa Libertadores",
+                             @"Boobs = Love"
+                             ];
+    
+}
 
 -(void)showRecentSearches {
 }
