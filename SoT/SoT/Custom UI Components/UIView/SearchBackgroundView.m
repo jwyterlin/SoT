@@ -12,6 +12,11 @@
 
 -(void)setup {
     
+    self.x = 0;
+    self.y = 0;
+    self.width = [DeviceInfo width];
+    self.height = 70;
+    
     self.backgroundColor = [UIColor whiteColor];
     
 }

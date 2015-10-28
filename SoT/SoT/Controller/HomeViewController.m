@@ -92,6 +92,13 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
 }
 
+-(void)showSearchTextField {
+    
+    if ( ! [self.searchBackground isDescendantOfView:self.view] )
+        [self.view addSubview:self.searchBackground];
+    
+}
+
 -(void)getRecentSearchList {
     
     [[SearchDAO new] recentSearchesWithCompletion:^(NSArray *recentSearches, BOOL hasNoConnection, NSError *error) {
@@ -296,6 +303,13 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     if ( ! _searchBackground ) {
         
         _searchBackground = [SearchBackgroundView new];
+
+        if ( [self.lineRecentSearches isDescendantOfView:self.view] ) {
+            UIButton *button = [self.recentSearchButtons lastObject];
+            _searchBackground.y = button.y + button.height + 55;
+        } else {
+            _searchBackground.y = self.twitterLogo.y + self.twitterLogo.height + 55;
+        }
         
         [_searchBackground addSubview:self.searchLogo];
         [_searchBackground addSubview:self.searchTextField];

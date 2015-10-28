@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView+Helper.h"
+#import "DeviceInfo.h"
 
 @interface GenericView : UIView
 
