@@ -161,9 +161,10 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
         /// TODO: Show list of recent searches buttons
         for ( NSString *text in self.recentSearchList ) {
             RecentSearchButton *recentSearchButton = [self createRecentSearchButtonWithText:text];
-            [self.recentSearchButtons addObject:recentSearchButton];
             [self.view addSubview:recentSearchButton];
         }
+        
+        self.searchBackground.y = [self positionToSearchBackground];
         
     }
     
@@ -191,9 +192,10 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
         /// TODO: Show list of trending now buttons
         for ( NSString *text in self.trendingNowList ) {
             TrendingNowButton *trendingNowButton = [self createTrendingNowButtonWithText:text];
-            [self.trendingNowButtons addObject:trendingNowButton];
             [self.view addSubview:trendingNowButton];
         }
+        
+        self.searchBackground.y = [self positionToSearchBackground];
         
     }
     
@@ -225,6 +227,8 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     RecentSearchButton *button = [RecentSearchButton new];
     [button setTitle:text forState:UIControlStateNormal];
     [button addTarget:self action:@selector(recentSearchButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.recentSearchButtons addObject:button];
+    button.y = self.recentSearchLabel.y + self.recentSearchLabel.height + ( self.recentSearchButtons.count * ( button.height + 8 ) );
     
     return button;
     
@@ -235,8 +239,43 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     TrendingNowButton *button = [TrendingNowButton new];
     [button setTitle:text forState:UIControlStateNormal];
     [button addTarget:self action:@selector(trendingNowButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.trendingNowButtons addObject:button];
+    button.y = self.trendingNowLabel.y + self.trendingNowLabel.height + ( self.trendingNowButtons.count * ( button.height + 8 ) );
     
     return button;
+    
+}
+
+-(int)positionToSearchBackground {
+    
+    NSMutableArray *listButtons = [self listWithMoreButtons];
+    
+    if ( listButtons ) {
+        UIButton *button = [listButtons lastObject];
+        return button.y + button.height + 55;
+    } else {
+        return self.twitterLogo.y + self.twitterLogo.height + 55;
+    }
+
+}
+
+-(NSMutableArray *)listWithMoreButtons {
+    
+    NSMutableArray *listButtons;
+    
+    NSUInteger quantityRecentSearchButtons = self.recentSearchButtons.count;
+    NSUInteger quantityTrendingNowButtons = self.trendingNowButtons.count;
+    
+    if ( quantityRecentSearchButtons > quantityTrendingNowButtons ) {
+        listButtons = self.recentSearchButtons;
+    } else if ( quantityTrendingNowButtons > quantityRecentSearchButtons ) {
+        listButtons = self.trendingNowButtons;
+    } else {
+        if ( quantityRecentSearchButtons > 0 )
+            listButtons = self.recentSearchButtons;
+    }
+    
+    return listButtons;
     
 }
 
@@ -266,6 +305,20 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
 }
 
+-(RecentSearchLabel *)recentSearchLabel {
+    
+    if ( ! _recentSearchLabel ) {
+        
+        _recentSearchLabel = [RecentSearchLabel new];
+        _recentSearchLabel.x = self.lineRecentSearches.x;
+        _recentSearchLabel.y = self.lineRecentSearches.y + self.lineRecentSearches.height + 8;
+        
+    }
+    
+    return _recentSearchLabel;
+    
+}
+
 -(LineView *)lineTrendingNow {
     
     if ( ! _lineTrendingNow ) {
@@ -277,6 +330,20 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     }
     
     return _lineTrendingNow;
+    
+}
+
+-(TrendingNowLabel *)trendingNowLabel {
+    
+    if ( ! _trendingNowLabel ) {
+        
+        _trendingNowLabel = [TrendingNowLabel new];
+        _trendingNowLabel.x = self.lineTrendingNow.x;
+        _trendingNowLabel.y = self.lineTrendingNow.y + self.lineTrendingNow.height + 8;
+        
+    }
+    
+    return _trendingNowLabel;
     
 }
 
@@ -305,42 +372,14 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     if ( ! _searchBackground ) {
         
         _searchBackground = [SearchBackgroundView new];
+        _searchBackground.y = [self positionToSearchBackground];
 
-        if ( [self.lineRecentSearches isDescendantOfView:self.view] ) {
-            UIButton *button = [self.recentSearchButtons lastObject];
-            _searchBackground.y = button.y + button.height + 55;
-        } else {
-            _searchBackground.y = self.twitterLogo.y + self.twitterLogo.height + 55;
-        }
-        
         [_searchBackground addSubview:self.searchLogo];
         [_searchBackground addSubview:self.searchTextField];
         
     }
     
     return _searchBackground;
-    
-}
-
--(RecentSearchLabel *)recentSearchLabel {
-    
-    if ( ! _recentSearchLabel ) {
-        _recentSearchLabel = [RecentSearchLabel new];
-        _recentSearchLabel.y = self.lineRecentSearches.y + self.lineRecentSearches.height + 8;
-    }
-    
-    return _recentSearchLabel;
-    
-}
-
--(TrendingNowLabel *)trendingNowLabel {
-    
-    if ( ! _trendingNowLabel ) {
-        _trendingNowLabel = [TrendingNowLabel new];
-        _trendingNowLabel.y = self.lineTrendingNow.y + self.lineTrendingNow.height + 8;
-    }
-    
-    return _trendingNowLabel;
     
 }
 

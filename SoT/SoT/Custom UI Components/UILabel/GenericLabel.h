@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "UIView+Helper.h"
+
 @interface GenericLabel : UILabel
 
 -(void)setup;
