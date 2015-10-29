@@ -46,6 +46,7 @@
 		7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B331BE1615D00042C40 /* TrendingDAO.m */; };
 		7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B371BE17A0200042C40 /* CATransformLayer+Helper.m */; };
 		7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */; };
+		7BCF40911BE29D3D002A3D28 /* TopSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCF40901BE29D3D002A3D28 /* TopSearchBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		7BCB0B371BE17A0200042C40 /* CATransformLayer+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CATransformLayer+Helper.m"; path = "Custom UI Components/CATransformLayer/CATransformLayer+Helper.m"; sourceTree = "<group>"; };
 		7BCB0B391BE17A4700042C40 /* GenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericViewController.h; path = Controller/GenericViewController.h; sourceTree = "<group>"; };
 		7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericViewController.m; path = Controller/GenericViewController.m; sourceTree = "<group>"; };
+		7BCF408F1BE29D3D002A3D28 /* TopSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopSearchBarView.h; path = "Custom UI Components/UIView/TopSearchBarView.h"; sourceTree = "<group>"; };
+		7BCF40901BE29D3D002A3D28 /* TopSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopSearchBarView.m; path = "Custom UI Components/UIView/TopSearchBarView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +366,8 @@
 				7BCB0B0B1BE14B1C00042C40 /* LineView.m */,
 				7BCB0B1E1BE151DD00042C40 /* SearchBackgroundView.h */,
 				7BCB0B1F1BE151DD00042C40 /* SearchBackgroundView.m */,
+				7BCF408F1BE29D3D002A3D28 /* TopSearchBarView.h */,
+				7BCF40901BE29D3D002A3D28 /* TopSearchBarView.m */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -578,6 +583,7 @@
 				7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */,
 				7B87A4721BE27E280024A45B /* CellHelper.m in Sources */,
 				7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */,
+				7BCF40911BE29D3D002A3D28 /* TopSearchBarView.m in Sources */,
 				7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */,
 				7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */,
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,

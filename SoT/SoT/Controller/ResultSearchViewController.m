@@ -10,6 +10,7 @@
 
 // Custom UI Components
 #import "UITableView+Helper.h"
+#import "TopSearchBarView.h"
 #import "TweetCell.h"
 
 // Service Layer
@@ -18,6 +19,7 @@
 @interface ResultSearchViewController()<UITableViewDataSource,UITableViewDelegate,CellHelperDelegate>
 
 // UI
+@property(nonatomic,strong) TopSearchBarView *topView;
 @property(nonatomic,strong) UITableView *tableView;
 
 @property(nonatomic,strong) NSArray *tweetsFound;
@@ -44,6 +46,7 @@
     
     [super viewDidLoad];
     
+    [self.view addSubview:self.topView];
     [self.view addSubview:self.tableView];
     
 }
@@ -96,11 +99,23 @@
 
 #pragma mark - Creating components
 
+-(TopSearchBarView *)topView {
+    
+    if ( ! _topView ) {
+        _topView = [TopSearchBarView new];
+    }
+    
+    return _topView;
+    
+}
+
 -(UITableView *)tableView {
     
     if ( ! _tableView ) {
         
-        _tableView = [[UITableView alloc] initWithFrame: CGRectMake( 0, 0, [DeviceInfo width], [DeviceInfo height] ) ];
+        CGFloat y = self.topView.y+self.topView.height;
+        
+        _tableView = [[UITableView alloc] initWithFrame: CGRectMake( 0, y, [DeviceInfo width], [DeviceInfo height]-y ) ];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         

@@ -217,7 +217,6 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
         [self.view addSubview:self.lineRecentSearches];
         [self.view addSubview:self.recentSearchLabel];
         
-        /// TODO: Show list of recent searches buttons
         for ( NSString *text in self.recentSearchList ) {
             RecentSearchButton *recentSearchButton = [self createRecentSearchButtonWithText:text];
             [self.view addSubview:recentSearchButton];
@@ -248,7 +247,6 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
         [self.view addSubview:self.lineTrendingNow];
         [self.view addSubview:self.trendingNowLabel];
         
-        /// TODO: Show list of trending now buttons
         for ( NSString *text in self.trendingNowList ) {
             TrendingNowButton *trendingNowButton = [self createTrendingNowButtonWithText:text];
             [self.view addSubview:trendingNowButton];
