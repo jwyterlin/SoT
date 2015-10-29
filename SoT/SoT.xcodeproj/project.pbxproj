@@ -213,10 +213,10 @@
 		7BCB0AE21BE13A6500042C40 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7BCB0AF51BE13D6000042C40 /* HomeViewController.h */,
-				7BCB0AF61BE13D6000042C40 /* HomeViewController.m */,
 				7BCB0B391BE17A4700042C40 /* GenericViewController.h */,
 				7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */,
+				7BCB0AF51BE13D6000042C40 /* HomeViewController.h */,
+				7BCB0AF61BE13D6000042C40 /* HomeViewController.m */,
 				7B87A4541BE25C070024A45B /* ResultSearchViewController.h */,
 				7B87A4551BE25C070024A45B /* ResultSearchViewController.m */,
 			);

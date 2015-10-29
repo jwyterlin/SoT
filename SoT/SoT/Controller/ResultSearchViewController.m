@@ -8,7 +8,12 @@
 
 #import "ResultSearchViewController.h"
 
-@interface ResultSearchViewController()
+@interface ResultSearchViewController()<UITableViewDataSource,UITableViewDelegate>
+
+// UI
+@property(nonatomic,strong) UITableView *tableView;
+
+@property(nonatomic,strong) NSArray *tweetsFound;
 
 @end
 
@@ -22,6 +27,26 @@
 
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - UITableViewDataSource methods
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1 + self.tweetsFound.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return [UITableViewCell new];
+    
+}
+
+#pragma mark - UITableViewDelegate methods
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    
 }
 
 @end
