@@ -14,6 +14,7 @@
 @property(nonatomic,strong) NSNumber *keyHeight;
 @property(nonatomic,strong) NSNumber *screenHasMoved;
 @property(nonatomic,strong) NSNumber *screenMoveValue;
+@property(nonatomic) BOOL isFirstUpdateAnimateTextField;
 
 @end
 
@@ -25,10 +26,26 @@
     
     [self registerObserversForKeyboard];
     
+    self.isFirstUpdateAnimateTextField = YES;
+    
 }
 
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    
+    self.keyHeight = nil;
+    self.isFirstUpdateAnimateTextField = YES;
+    
+    if ( [self.screenHasMoved boolValue] == YES ) {
+    
+        self.view.frame = CGRectOffset( self.view.frame, 0, [self.screenMoveValue floatValue] );
+        self.screenHasMoved = [NSNumber numberWithBool:NO];
+        
+    }
+    
 }
 
 #pragma mark - Public methods
@@ -47,6 +64,8 @@
 
 -(void)animateTextField:(UITextField *)textField up:(BOOL)up {
     
+    NSLog( @"animateTextField:(UITextField *)textField up:%@", up?@"YES":@"NO" );
+    
     if ( ! self.keyHeight )
         return;
     if ( ! self.screenHasMoved )
@@ -58,10 +77,10 @@
     
     if ( up ) {
         
-        if ( [DeviceInfo height] - textSize < [self.keyHeight floatValue] ) {
+        if ( self.view.height - textSize < [self.keyHeight floatValue] ) {
             
             // tweak as needed
-            self.screenMoveValue = [NSNumber numberWithInt:[self.keyHeight floatValue] - ( [DeviceInfo height] - textSize ) + 16];
+            self.screenMoveValue = [NSNumber numberWithInt:[self.keyHeight floatValue] - ( self.view.height - textSize ) + 16];
             const float movementDuration = 0.3f; // tweak as needed
             
             [UIView beginAnimations: @"anim" context: nil];
@@ -106,8 +125,11 @@
         CGRect keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
         self.keyHeight = [NSNumber numberWithFloat: keyboardFrameBeginRect.size.height];
         
-        [self updateAnimateTextField];
-        
+        if ( self.isFirstUpdateAnimateTextField ) {
+            self.isFirstUpdateAnimateTextField = NO;
+            [self updateAnimateTextField];
+        }
+
     }
     
 }

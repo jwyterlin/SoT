@@ -80,6 +80,31 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     [super didReceiveMemoryWarning];
 }
 
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    // Adjust components
+    self.twitterLogo.x = size.width/2 - self.twitterLogo.width/2;
+    self.lineRecentSearches.x = size.width/2 - self.lineRecentSearches.width - 38.5;
+    self.lineTrendingNow.x = self.lineRecentSearches.x + self.lineRecentSearches.width + 77;
+    self.recentSearchLabel.x = self.lineRecentSearches.x;
+    self.trendingNowLabel.x = self.lineTrendingNow.x;
+    
+    for ( UIButton *b in self.recentSearchButtons )
+        b.x = self.lineRecentSearches.x;
+    
+    for ( UIButton *b in self.trendingNowButtons )
+        b.x = self.lineTrendingNow.x;
+    
+    self.searchBackground.width = size.width;
+    self.searchTextField.width = size.width - self.searchTextField.x - 21;
+    
+    if ( [self.searchTextField isFirstResponder] )
+        [self updateAnimateTextField];
+    
+}
+
 #pragma mark - IBAction methods
 
 -(IBAction)recentSearchButtonPressed:(UIButton *)sender {
