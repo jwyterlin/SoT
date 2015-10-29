@@ -18,10 +18,13 @@
 -(void)searchTerm:(NSString *)term completion:(void(^)(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error))completion {
     
     [self searchTerm:term completion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
-        if (completion) {
-            completion(tweetsFound, hasNoConnection, error);
-        }
+
+        if ( completion )
+            completion( tweetsFound, hasNoConnection, error );
+        
     } test:^(id responseData, NSError *error) {
+        
+        // Do nothing
         
     }];
     

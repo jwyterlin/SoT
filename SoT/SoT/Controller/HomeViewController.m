@@ -28,6 +28,9 @@
 #import "SearchDAO.h"
 #import "TrendingDAO.h"
 
+// Controller
+#import "ResultSearchViewController.h"
+
 @interface HomeViewController()<SearchTextFieldDelegate>
 
 // UI
@@ -110,6 +113,10 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
         }
         
         // Success
+        if ( tweetsFound.count > 0 ) {
+            ResultSearchViewController *resultSearchVC = [[ResultSearchViewController alloc] initWithTweetsFound:tweetsFound];
+            [self presentViewController:resultSearchVC animated:YES completion:nil];
+        }
         
     }];
     
