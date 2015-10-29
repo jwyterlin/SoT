@@ -35,4 +35,12 @@ static CGFloat width;
     
 }
 
++(BOOL)isIpad {
+    return ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad );
+}
+
++(BOOL)isIphone {
+    return ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone );
+}
+
 @end

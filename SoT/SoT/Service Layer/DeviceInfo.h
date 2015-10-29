@@ -13,5 +13,7 @@
 
 +(CGFloat)height;
 +(CGFloat)width;
++(BOOL)isIpad;
++(BOOL)isIphone;
 
 @end

@@ -19,5 +19,6 @@
 
 -(void)registerObserversForKeyboard;
 -(void)animateTextField:(UITextField *)textField up:(BOOL)up;
+-(void)updateAnimateTextField;
 
 @end

@@ -7,45 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4551BE25C070024A45B /* ResultSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7B87A4591BE25F140024A45B /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4581BE25F140024A45B /* GenericModel.m */; settings = {ASSET_TAGS = (); }; };
-		7B87A45C1BE25F2D0024A45B /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45B1BE25F2D0024A45B /* TweetModel.m */; settings = {ASSET_TAGS = (); }; };
-		7B87A4601BE2601D0024A45B /* GenericTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45F1BE2601D0024A45B /* GenericTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		7B87A4631BE261270024A45B /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4621BE261270024A45B /* TweetCell.m */; settings = {ASSET_TAGS = (); }; };
-		7B87A46A1BE263850024A45B /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B87A4681BE263850024A45B /* TweetCell.xib */; settings = {ASSET_TAGS = (); }; };
-		7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A46E1BE268CE0024A45B /* UITableView+Helper.m */; settings = {ASSET_TAGS = (); }; };
-		7B87A4721BE27E280024A45B /* CellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4711BE27E280024A45B /* CellHelper.m */; settings = {ASSET_TAGS = (); }; };
-		7B87A47A1BE286F70024A45B /* CellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4791BE286F70024A45B /* CellLabel.m */; settings = {ASSET_TAGS = (); }; };
+		7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4551BE25C070024A45B /* ResultSearchViewController.m */; };
+		7B87A4591BE25F140024A45B /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4581BE25F140024A45B /* GenericModel.m */; };
+		7B87A45C1BE25F2D0024A45B /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45B1BE25F2D0024A45B /* TweetModel.m */; };
+		7B87A4601BE2601D0024A45B /* GenericTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45F1BE2601D0024A45B /* GenericTableViewCell.m */; };
+		7B87A4631BE261270024A45B /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4621BE261270024A45B /* TweetCell.m */; };
+		7B87A46A1BE263850024A45B /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B87A4681BE263850024A45B /* TweetCell.xib */; };
+		7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A46E1BE268CE0024A45B /* UITableView+Helper.m */; };
+		7B87A4721BE27E280024A45B /* CellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4711BE27E280024A45B /* CellHelper.m */; };
+		7B87A47A1BE286F70024A45B /* CellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4791BE286F70024A45B /* CellLabel.m */; };
 		7BC0C22A1BDD583600CE2540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2291BDD583600CE2540 /* main.m */; };
 		7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2311BDD583600CE2540 /* Main.storyboard */; };
 		7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2341BDD583600CE2540 /* Assets.xcassets */; };
 		7BC0C2381BDD583600CE2540 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2361BDD583600CE2540 /* LaunchScreen.storyboard */; };
 		7BC0C2431BDD583600CE2540 /* SoTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2421BDD583600CE2540 /* SoTTests.m */; };
 		7BC0C24E1BDD583600CE2540 /* SoTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C24D1BDD583600CE2540 /* SoTUITests.m */; };
-		7BCB0AEE1BE13B7E00042C40 /* RecentSearchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AED1BE13B7E00042C40 /* RecentSearchButton.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF01BE13B9100042C40 /* GenericButton.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0AF41BE13BBB00042C40 /* TrendingNowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF31BE13BBB00042C40 /* TrendingNowButton.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF61BE13D6000042C40 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF91BE13D8B00042C40 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AFD1BE13FCB00042C40 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B001BE13FE100042C40 /* DeviceInfo.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B051BE1479400042C40 /* UIView+Helper.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B081BE14ACC00042C40 /* GenericView.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B0C1BE14B1C00042C40 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B0B1BE14B1C00042C40 /* LineView.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B101BE14D1800042C40 /* GenericImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B0F1BE14D1800042C40 /* GenericImageView.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B131BE14D4C00042C40 /* SearchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B121BE14D4C00042C40 /* SearchImageView.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B151BE14E8B00042C40 /* TwitterImageView.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B191BE1506800042C40 /* GenericTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B181BE1506800042C40 /* GenericTextField.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B1D1BE1509B00042C40 /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B1C1BE1509B00042C40 /* SearchTextField.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B201BE151DD00042C40 /* SearchBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B1F1BE151DD00042C40 /* SearchBackgroundView.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B231BE1540800042C40 /* GenericLabel.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B271BE1554200042C40 /* RecentSearchLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B261BE1554200042C40 /* RecentSearchLabel.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B291BE1558100042C40 /* TrendingNowLabel.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B2D1BE15E9600042C40 /* GenericDAO.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B311BE15F0200042C40 /* SearchDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B301BE15F0200042C40 /* SearchDAO.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B331BE1615D00042C40 /* TrendingDAO.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B371BE17A0200042C40 /* CATransformLayer+Helper.m */; settings = {ASSET_TAGS = (); }; };
-		7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7BCB0AEE1BE13B7E00042C40 /* RecentSearchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AED1BE13B7E00042C40 /* RecentSearchButton.m */; };
+		7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF01BE13B9100042C40 /* GenericButton.m */; };
+		7BCB0AF41BE13BBB00042C40 /* TrendingNowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF31BE13BBB00042C40 /* TrendingNowButton.m */; };
+		7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF61BE13D6000042C40 /* HomeViewController.m */; };
+		7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF91BE13D8B00042C40 /* AppDelegate.m */; };
+		7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AFD1BE13FCB00042C40 /* Constants.m */; };
+		7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B001BE13FE100042C40 /* DeviceInfo.m */; };
+		7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B051BE1479400042C40 /* UIView+Helper.m */; };
+		7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B081BE14ACC00042C40 /* GenericView.m */; };
+		7BCB0B0C1BE14B1C00042C40 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B0B1BE14B1C00042C40 /* LineView.m */; };
+		7BCB0B101BE14D1800042C40 /* GenericImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B0F1BE14D1800042C40 /* GenericImageView.m */; };
+		7BCB0B131BE14D4C00042C40 /* SearchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B121BE14D4C00042C40 /* SearchImageView.m */; };
+		7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B151BE14E8B00042C40 /* TwitterImageView.m */; };
+		7BCB0B191BE1506800042C40 /* GenericTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B181BE1506800042C40 /* GenericTextField.m */; };
+		7BCB0B1D1BE1509B00042C40 /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B1C1BE1509B00042C40 /* SearchTextField.m */; };
+		7BCB0B201BE151DD00042C40 /* SearchBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B1F1BE151DD00042C40 /* SearchBackgroundView.m */; };
+		7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B231BE1540800042C40 /* GenericLabel.m */; };
+		7BCB0B271BE1554200042C40 /* RecentSearchLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B261BE1554200042C40 /* RecentSearchLabel.m */; };
+		7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B291BE1558100042C40 /* TrendingNowLabel.m */; };
+		7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B2D1BE15E9600042C40 /* GenericDAO.m */; };
+		7BCB0B311BE15F0200042C40 /* SearchDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B301BE15F0200042C40 /* SearchDAO.m */; };
+		7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B331BE1615D00042C40 /* TrendingDAO.m */; };
+		7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B371BE17A0200042C40 /* CATransformLayer+Helper.m */; };
+		7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -403,14 +403,14 @@
 		7BCB0B211BE153EC00042C40 /* UILabel */ = {
 			isa = PBXGroup;
 			children = (
+				7B87A4781BE286F70024A45B /* CellLabel.h */,
+				7B87A4791BE286F70024A45B /* CellLabel.m */,
 				7BCB0B221BE1540800042C40 /* GenericLabel.h */,
 				7BCB0B231BE1540800042C40 /* GenericLabel.m */,
 				7BCB0B251BE1554200042C40 /* RecentSearchLabel.h */,
 				7BCB0B261BE1554200042C40 /* RecentSearchLabel.m */,
 				7BCB0B281BE1558100042C40 /* TrendingNowLabel.h */,
 				7BCB0B291BE1558100042C40 /* TrendingNowLabel.m */,
-				7B87A4781BE286F70024A45B /* CellLabel.h */,
-				7B87A4791BE286F70024A45B /* CellLabel.m */,
 			);
 			name = UILabel;
 			sourceTree = "<group>";

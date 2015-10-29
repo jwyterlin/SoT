@@ -36,8 +36,8 @@
 -(void)registerObserversForKeyboard {
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWasShown:)
-                                                 name:UIKeyboardDidShowNotification object:nil];
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillBeHidden:)
@@ -48,7 +48,7 @@
 -(void)animateTextField:(UITextField *)textField up:(BOOL)up {
     
     if ( ! self.keyHeight )
-        self.keyHeight = [NSNumber numberWithFloat:216.0];
+        return;
     if ( ! self.screenHasMoved )
         self.screenHasMoved = [NSNumber numberWithBool:NO];
     if ( ! self.screenMoveValue )
@@ -86,9 +86,11 @@
     
 }
 
+-(void)updateAnimateTextField {}
+
 #pragma mark - Private methods
 
--(void)keyboardWasShown:(NSNotification*)aNotification {
+-(void)keyboardWillShow:(NSNotification *)aNotification {
     
     // Add tap to dismiss keyboard
     if ( ! self.tapToDismissKeyboard )
@@ -97,14 +99,20 @@
     [self.view addGestureRecognizer:self.tapToDismissKeyboard];
     
     // Get the height of keyboard
-    NSDictionary* keyboardInfo = [aNotification userInfo];
-    NSValue *keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
-    CGRect keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
-    self.keyHeight = [NSNumber numberWithFloat: keyboardFrameBeginRect.size.height];
+    if ( [self.keyHeight floatValue] == 0.0 ) {
+        
+        NSDictionary *keyboardInfo = [aNotification userInfo];
+        NSValue *keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
+        CGRect keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
+        self.keyHeight = [NSNumber numberWithFloat: keyboardFrameBeginRect.size.height];
+        
+        [self updateAnimateTextField];
+        
+    }
     
 }
 
--(void)keyboardWillBeHidden:(NSNotification*)aNotification {
+-(void)keyboardWillBeHidden:(NSNotification *)aNotification {
     [self.view removeGestureRecognizer:self.tapToDismissKeyboard];
 }
 

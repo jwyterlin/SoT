@@ -122,6 +122,16 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
 }
 
+#pragma mark - Overriding super methods
+
+-(void)updateAnimateTextField {
+    
+    [super updateAnimateTextField];
+    
+    [self animateTextField:self.searchTextField up:YES];
+    
+}
+
 #pragma mark - Private methods
 
 -(void)showTwitterLogo {
