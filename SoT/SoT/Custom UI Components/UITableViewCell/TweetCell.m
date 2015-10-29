@@ -7,12 +7,16 @@
 //
 
 #import "TweetCell.h"
+#import "CellLabel.h"
 
 @interface TweetCell()
 
 @property(nonatomic,strong) IBOutlet UIImageView *userPhoto;
 @property(nonatomic,strong) IBOutlet UILabel *userName;
-@property(nonatomic,strong) IBOutlet UILabel *tweetContent;
+@property(nonatomic,strong) IBOutlet CellLabel *tweetContent;
+
+// Constraints
+@property(nonatomic,strong) IBOutlet NSLayoutConstraint *tweetContentWidth;
 
 @end
 
@@ -47,6 +51,14 @@
     
     cell.userName.text = tweet.userName;
     cell.tweetContent.text = tweet.detail;
+    
+    int rightWidth = [DeviceInfo width] - cell.tweetContent.x - 66;
+    
+    if ( cell.tweetContentWidth.constant != rightWidth ) {
+        cell.tweetContentWidth.constant = rightWidth;
+    }
+    
+    [cell.tweetContent setNeedsUpdateConstraints];
     
 }
 

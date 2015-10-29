@@ -31,9 +31,12 @@
                         <color key="textColor" red="0.36862745098039218" green="0.62352941176470589" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey @getblogo team! It was really really great to see you again earlier. Let's definitely get that coffee sometime next week" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INj-hF-tyo">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey @getblogo team! It was really really great to see you again earlier. Let's definitely get that coffee sometime next week" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="537" translatesAutoresizingMaskIntoConstraints="NO" id="INj-hF-tyo" customClass="CellLabel">
                         <rect key="frame" x="165" y="81" width="537" height="50"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" priority="750" constant="537" id="3yM-JS-cc3"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -62,10 +65,16 @@
                     <constraint firstItem="INj-hF-tyo" firstAttribute="leading" secondItem="UgV-9T-MAA" secondAttribute="trailing" constant="33" id="qzl-es-twJ"/>
                     <constraint firstAttribute="bottom" secondItem="13R-ph-jge" secondAttribute="bottom" constant="1" id="wlr-e0-7fm"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="FeC-sn-dpt"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="tweetContent" destination="INj-hF-tyo" id="rdx-xh-9fN"/>
+                <outlet property="tweetContent" destination="INj-hF-tyo" id="qDi-tj-iye"/>
+                <outlet property="tweetContentWidth" destination="3yM-JS-cc3" id="SYe-RC-6kv"/>
                 <outlet property="userName" destination="LwI-2o-eq8" id="hDl-0s-bdg"/>
                 <outlet property="userPhoto" destination="UgV-9T-MAA" id="piD-o5-6MX"/>
             </connections>

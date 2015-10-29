@@ -10,6 +10,7 @@
 
 // Service Layer
 #import "Constants.h"
+#import "DeviceInfo.h"
 
 // Custom UI Components
 #import "UIView+Helper.h"

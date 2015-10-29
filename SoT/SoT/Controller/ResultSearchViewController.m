@@ -12,7 +12,10 @@
 #import "UITableView+Helper.h"
 #import "TweetCell.h"
 
-@interface ResultSearchViewController()<UITableViewDataSource,UITableViewDelegate>
+// Service Layer
+#import "CellHelper.h"
+
+@interface ResultSearchViewController()<UITableViewDataSource,UITableViewDelegate,CellHelperDelegate>
 
 // UI
 @property(nonatomic,strong) UITableView *tableView;
@@ -66,12 +69,28 @@
 #pragma mark - UITableViewDelegate methods
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 165.0f;
+    
+    CGFloat height = [[CellHelper new] heightForCellAtIndexPath:indexPath tableView:tableView cellIdentifier:kNibNameTweetCell delegate:self];
+    
+    return height;
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
+    
+}
+
+#pragma mark - CellHelperDelegate Methods
+
+-(void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    TweetCell *customCell = (TweetCell *)cell;
+    
+    TweetModel *tweetModel = self.tweetsFound[indexPath.row];
+    
+    [customCell configureTweetCell:customCell atIndexPath:indexPath tweet:tweetModel];
     
 }
 

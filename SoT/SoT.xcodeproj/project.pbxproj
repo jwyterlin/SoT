@@ -14,6 +14,8 @@
 		7B87A4631BE261270024A45B /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4621BE261270024A45B /* TweetCell.m */; settings = {ASSET_TAGS = (); }; };
 		7B87A46A1BE263850024A45B /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B87A4681BE263850024A45B /* TweetCell.xib */; settings = {ASSET_TAGS = (); }; };
 		7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A46E1BE268CE0024A45B /* UITableView+Helper.m */; settings = {ASSET_TAGS = (); }; };
+		7B87A4721BE27E280024A45B /* CellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4711BE27E280024A45B /* CellHelper.m */; settings = {ASSET_TAGS = (); }; };
+		7B87A47A1BE286F70024A45B /* CellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4791BE286F70024A45B /* CellLabel.m */; settings = {ASSET_TAGS = (); }; };
 		7BC0C22A1BDD583600CE2540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2291BDD583600CE2540 /* main.m */; };
 		7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2311BDD583600CE2540 /* Main.storyboard */; };
 		7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2341BDD583600CE2540 /* Assets.xcassets */; };
@@ -77,6 +79,10 @@
 		7B87A4681BE263850024A45B /* TweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TweetCell.xib; path = "Custom UI Components/UITableViewCell/TweetCell.xib"; sourceTree = "<group>"; };
 		7B87A46D1BE268CE0024A45B /* UITableView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+Helper.h"; path = "Custom UI Components/UITableView/Categories/UITableView+Helper.h"; sourceTree = "<group>"; };
 		7B87A46E1BE268CE0024A45B /* UITableView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Helper.m"; path = "Custom UI Components/UITableView/Categories/UITableView+Helper.m"; sourceTree = "<group>"; };
+		7B87A4701BE27E280024A45B /* CellHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellHelper.h; path = "Service Layer/CellHelper.h"; sourceTree = "<group>"; };
+		7B87A4711BE27E280024A45B /* CellHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellHelper.m; path = "Service Layer/CellHelper.m"; sourceTree = "<group>"; };
+		7B87A4781BE286F70024A45B /* CellLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellLabel.h; path = "Custom UI Components/UILabel/CellLabel.h"; sourceTree = "<group>"; };
+		7B87A4791BE286F70024A45B /* CellLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellLabel.m; path = "Custom UI Components/UILabel/CellLabel.m"; sourceTree = "<group>"; };
 		7BC0C2251BDD583600CE2540 /* SoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC0C2291BDD583600CE2540 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BC0C2321BDD583600CE2540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -337,6 +343,8 @@
 		7BCB0AFB1BE13FAB00042C40 /* Service Layer */ = {
 			isa = PBXGroup;
 			children = (
+				7B87A4701BE27E280024A45B /* CellHelper.h */,
+				7B87A4711BE27E280024A45B /* CellHelper.m */,
 				7BCB0AFC1BE13FCB00042C40 /* Constants.h */,
 				7BCB0AFD1BE13FCB00042C40 /* Constants.m */,
 				7BCB0AFF1BE13FE100042C40 /* DeviceInfo.h */,
@@ -401,6 +409,8 @@
 				7BCB0B261BE1554200042C40 /* RecentSearchLabel.m */,
 				7BCB0B281BE1558100042C40 /* TrendingNowLabel.h */,
 				7BCB0B291BE1558100042C40 /* TrendingNowLabel.m */,
+				7B87A4781BE286F70024A45B /* CellLabel.h */,
+				7B87A4791BE286F70024A45B /* CellLabel.m */,
 			);
 			name = UILabel;
 			sourceTree = "<group>";
@@ -560,11 +570,13 @@
 			files = (
 				7BCB0B201BE151DD00042C40 /* SearchBackgroundView.m in Sources */,
 				7BCB0AEE1BE13B7E00042C40 /* RecentSearchButton.m in Sources */,
+				7B87A47A1BE286F70024A45B /* CellLabel.m in Sources */,
 				7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */,
 				7B87A4631BE261270024A45B /* TweetCell.m in Sources */,
 				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
 				7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */,
 				7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */,
+				7B87A4721BE27E280024A45B /* CellHelper.m in Sources */,
 				7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */,
 				7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */,
 				7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */,
