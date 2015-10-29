@@ -10,4 +10,7 @@
 
 @interface Constants : NSObject
 
+// UITableViewCell Nib Names
+extern NSString *const kNibNameTweetCell;
+
 @end

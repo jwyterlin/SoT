@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+// Service Layer
+#import "Constants.h"
+
 @interface GenericTableViewCell : UITableViewCell
 
 @end

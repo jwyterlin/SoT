@@ -11,6 +11,8 @@
 		7B87A4591BE25F140024A45B /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4581BE25F140024A45B /* GenericModel.m */; settings = {ASSET_TAGS = (); }; };
 		7B87A45C1BE25F2D0024A45B /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45B1BE25F2D0024A45B /* TweetModel.m */; settings = {ASSET_TAGS = (); }; };
 		7B87A4601BE2601D0024A45B /* GenericTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45F1BE2601D0024A45B /* GenericTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		7B87A4631BE261270024A45B /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4621BE261270024A45B /* TweetCell.m */; settings = {ASSET_TAGS = (); }; };
+		7B87A46A1BE263850024A45B /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B87A4681BE263850024A45B /* TweetCell.xib */; settings = {ASSET_TAGS = (); }; };
 		7BC0C22A1BDD583600CE2540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2291BDD583600CE2540 /* main.m */; };
 		7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2311BDD583600CE2540 /* Main.storyboard */; };
 		7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2341BDD583600CE2540 /* Assets.xcassets */; };
@@ -69,6 +71,9 @@
 		7B87A45B1BE25F2D0024A45B /* TweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetModel.m; path = Model/TweetModel.m; sourceTree = "<group>"; };
 		7B87A45E1BE2601D0024A45B /* GenericTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericTableViewCell.h; path = "Custom UI Components/UITableViewCell/GenericTableViewCell.h"; sourceTree = "<group>"; };
 		7B87A45F1BE2601D0024A45B /* GenericTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericTableViewCell.m; path = "Custom UI Components/UITableViewCell/GenericTableViewCell.m"; sourceTree = "<group>"; };
+		7B87A4611BE261270024A45B /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetCell.h; path = "Custom UI Components/UITableViewCell/TweetCell.h"; sourceTree = "<group>"; };
+		7B87A4621BE261270024A45B /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetCell.m; path = "Custom UI Components/UITableViewCell/TweetCell.m"; sourceTree = "<group>"; };
+		7B87A4681BE263850024A45B /* TweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TweetCell.xib; path = "Custom UI Components/UITableViewCell/TweetCell.xib"; sourceTree = "<group>"; };
 		7BC0C2251BDD583600CE2540 /* SoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC0C2291BDD583600CE2540 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BC0C2321BDD583600CE2540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +166,9 @@
 			children = (
 				7B87A45E1BE2601D0024A45B /* GenericTableViewCell.h */,
 				7B87A45F1BE2601D0024A45B /* GenericTableViewCell.m */,
+				7B87A4611BE261270024A45B /* TweetCell.h */,
+				7B87A4621BE261270024A45B /* TweetCell.m */,
+				7B87A4681BE263850024A45B /* TweetCell.xib */,
 			);
 			name = UITableViewCell;
 			sourceTree = "<group>";
@@ -502,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BC0C2381BDD583600CE2540 /* LaunchScreen.storyboard in Resources */,
+				7B87A46A1BE263850024A45B /* TweetCell.xib in Resources */,
 				7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */,
 				7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */,
 			);
@@ -531,6 +540,7 @@
 				7BCB0B201BE151DD00042C40 /* SearchBackgroundView.m in Sources */,
 				7BCB0AEE1BE13B7E00042C40 /* RecentSearchButton.m in Sources */,
 				7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */,
+				7B87A4631BE261270024A45B /* TweetCell.m in Sources */,
 				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
 				7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */,
 				7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */,

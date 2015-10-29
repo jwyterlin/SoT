@@ -10,4 +10,7 @@
 
 @implementation Constants
 
+// UITableViewCell Nib Names
+NSString *const kNibNameTweetCell = @"TweetCell";
+
 @end
