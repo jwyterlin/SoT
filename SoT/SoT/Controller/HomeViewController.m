@@ -117,13 +117,19 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
         
         self.recentSearchList = recentSearches;
         
-        if ( self.recentSearchList.count > 0 )
-            [self showRecentSearches];
-        else
-            [self removeRecentSearches];
+        [self updateRecentSearchesUI];
         
     }];
 
+}
+
+-(void)updateRecentSearchesUI {
+    
+    if ( self.recentSearchList.count > 0 )
+        [self showRecentSearches];
+    else
+        [self removeRecentSearches];
+    
 }
 
 -(void)getTrendingNowList {
@@ -142,12 +148,18 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
         
         self.trendingNowList = trendingNowList;
         
-        if ( self.trendingNowList.count > 0 )
-            [self showTrendingNow];
-        else
-            [self removeTrendingNow];
+        [self updateTrendingNowUI];
         
     }];
+    
+}
+
+-(void)updateTrendingNowUI {
+    
+    if ( self.trendingNowList.count > 0 )
+        [self showTrendingNow];
+    else
+        [self removeTrendingNow];
     
 }
 
@@ -225,10 +237,12 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 -(RecentSearchButton *)createRecentSearchButtonWithText:(NSString *)text {
     
     RecentSearchButton *button = [RecentSearchButton new];
-    [button setTitle:text forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(recentSearchButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.recentSearchButtons addObject:button];
-    button.y = self.recentSearchLabel.y + self.recentSearchLabel.height + ( self.recentSearchButtons.count * ( button.height + 8 ) );
+    
+    [self setupButton:button
+                 text:text
+             selector:@selector(recentSearchButtonPressed:)
+          listButtons:self.recentSearchButtons
+       labelReference:self.recentSearchLabel];
     
     return button;
     
@@ -237,12 +251,29 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 -(TrendingNowButton *)createTrendingNowButtonWithText:(NSString *)text {
     
     TrendingNowButton *button = [TrendingNowButton new];
-    [button setTitle:text forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(trendingNowButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.trendingNowButtons addObject:button];
-    button.y = self.trendingNowLabel.y + self.trendingNowLabel.height + ( self.trendingNowButtons.count * ( button.height + 8 ) );
+    
+    [self setupButton:button
+                 text:text
+             selector:@selector(trendingNowButtonPressed:)
+          listButtons:self.trendingNowButtons
+       labelReference:self.trendingNowLabel];
     
     return button;
+    
+}
+
+-(void)setupButton:(UIButton *)button
+              text:(NSString *)text
+          selector:(SEL)selector
+       listButtons:(NSMutableArray *)listButtons
+    labelReference:(UILabel *)labelReference {
+    
+    [button setTitle:text forState:UIControlStateNormal];
+    [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    [listButtons addObject:button];
+    button.x = labelReference.x;
+    button.y = labelReference.y + labelReference.height + ( listButtons.count * ( button.height + 8 ) ) - button.height;
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     
 }
 

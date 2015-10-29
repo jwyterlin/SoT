@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+Helper.h"
 
 @interface GenericButton : UIButton
 
