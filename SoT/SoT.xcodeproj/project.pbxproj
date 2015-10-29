@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4551BE25C070024A45B /* ResultSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7B87A4591BE25F140024A45B /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4581BE25F140024A45B /* GenericModel.m */; settings = {ASSET_TAGS = (); }; };
+		7B87A45C1BE25F2D0024A45B /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45B1BE25F2D0024A45B /* TweetModel.m */; settings = {ASSET_TAGS = (); }; };
 		7BC0C22A1BDD583600CE2540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2291BDD583600CE2540 /* main.m */; };
 		7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2311BDD583600CE2540 /* Main.storyboard */; };
 		7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2341BDD583600CE2540 /* Assets.xcassets */; };
@@ -60,6 +62,10 @@
 /* Begin PBXFileReference section */
 		7B87A4541BE25C070024A45B /* ResultSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultSearchViewController.h; path = Controller/ResultSearchViewController.h; sourceTree = "<group>"; };
 		7B87A4551BE25C070024A45B /* ResultSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultSearchViewController.m; path = Controller/ResultSearchViewController.m; sourceTree = "<group>"; };
+		7B87A4571BE25F140024A45B /* GenericModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericModel.h; path = Model/GenericModel.h; sourceTree = "<group>"; };
+		7B87A4581BE25F140024A45B /* GenericModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericModel.m; path = Model/GenericModel.m; sourceTree = "<group>"; };
+		7B87A45A1BE25F2D0024A45B /* TweetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetModel.h; path = Model/TweetModel.h; sourceTree = "<group>"; };
+		7B87A45B1BE25F2D0024A45B /* TweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetModel.m; path = Model/TweetModel.m; sourceTree = "<group>"; };
 		7BC0C2251BDD583600CE2540 /* SoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC0C2291BDD583600CE2540 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BC0C2321BDD583600CE2540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -226,6 +232,10 @@
 		7BCB0AE31BE13A7000042C40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7B87A4571BE25F140024A45B /* GenericModel.h */,
+				7B87A4581BE25F140024A45B /* GenericModel.m */,
+				7B87A45A1BE25F2D0024A45B /* TweetModel.h */,
+				7B87A45B1BE25F2D0024A45B /* TweetModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -518,6 +528,7 @@
 				7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */,
 				7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */,
 				7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */,
+				7B87A45C1BE25F2D0024A45B /* TweetModel.m in Sources */,
 				7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */,
 				7BCB0AF41BE13BBB00042C40 /* TrendingNowButton.m in Sources */,
 				7BCB0B191BE1506800042C40 /* GenericTextField.m in Sources */,
@@ -527,6 +538,7 @@
 				7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */,
 				7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */,
 				7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */,
+				7B87A4591BE25F140024A45B /* GenericModel.m in Sources */,
 				7BCB0B271BE1554200042C40 /* RecentSearchLabel.m in Sources */,
 				7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */,
 				7BCB0B311BE15F0200042C40 /* SearchDAO.m in Sources */,
