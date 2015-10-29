@@ -8,7 +8,13 @@
 
 #import "SearchTextField.h"
 
+@interface SearchTextField()<UITextFieldDelegate>
+
+@end
+
 @implementation SearchTextField
+
+#pragma mark - Override super methods
 
 -(void)setup {
     
@@ -20,6 +26,25 @@
     self.height = 74;
     self.placeholder = @"Search it";
     self.returnKeyType = UIReturnKeySearch;
+    self.delegate = self;
+    
+}
+
+#pragma mark - UITextFieldDelegate methods
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    [self.delegateSearchTextField stfd_didBeginEditing];
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    [self.delegateSearchTextField stfd_didEndEditing];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [self.delegateSearchTextField stfd_search];
+    
+    return NO;
     
 }
 

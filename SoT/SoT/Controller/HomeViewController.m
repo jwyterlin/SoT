@@ -28,7 +28,7 @@
 #import "SearchDAO.h"
 #import "TrendingDAO.h"
 
-@interface HomeViewController()
+@interface HomeViewController()<SearchTextFieldDelegate>
 
 // UI
 @property(nonatomic,strong) TwitterImageView *twitterLogo;
@@ -83,6 +83,36 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 }
 
 -(IBAction)trendingNowButtonPressed:(UIButton *)sender {
+}
+
+#pragma mark - SearchTextFieldDelegate methods
+
+-(void)stfd_didBeginEditing {
+    [self animateTextField:self.searchTextField up:YES];
+}
+
+-(void)stfd_didEndEditing {
+    [self animateTextField:self.searchTextField up:NO];
+}
+
+-(void)stfd_search {
+    
+    [[SearchDAO new] searchTerm:self.searchTextField.text completion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
+        
+        if ( hasNoConnection ) {
+            /// TODO: Show has no connection
+            return;
+        }
+        
+        if ( error ) {
+            /// TODO: Show connection error
+            return;
+        }
+        
+        // Success
+        
+    }];
+    
 }
 
 #pragma mark - Private methods
@@ -381,7 +411,10 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
 -(SearchTextField *)searchTextField {
     
     if ( ! _searchTextField ) {
+        
         _searchTextField = [SearchTextField new];
+        _searchTextField.delegateSearchTextField = self;
+        
     }
     
     return _searchTextField;

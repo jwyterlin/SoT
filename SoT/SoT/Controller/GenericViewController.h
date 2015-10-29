@@ -11,6 +11,12 @@
 // Custom UI Components
 #import "CATransformLayer+Helper.h"
 
+// Service Layer
+#import "DeviceInfo.h"
+
 @interface GenericViewController : UIViewController
+
+-(void)registerObserversForKeyboard;
+-(void)animateTextField:(UITextField *)textField up:(BOOL)up;
 
 @end
