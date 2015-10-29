@@ -11,6 +11,9 @@
 // Service Layer
 #import "Constants.h"
 
+// Custom UI Components
+#import "UIView+Helper.h"
+
 @interface GenericTableViewCell : UITableViewCell
 
 @end

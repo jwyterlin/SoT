@@ -52,7 +52,8 @@
 #pragma mark - UITableViewDataSource methods
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1 + self.tweetsFound.count;
+//    return 1 + self.tweetsFound.count;
+    return self.tweetsFound.count; // Just to test tweets's list
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -63,6 +64,10 @@
 }
 
 #pragma mark - UITableViewDelegate methods
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 165.0f;
+}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -81,6 +86,7 @@
         _tableView.delegate = self;
         
         [_tableView registerNibForCellReuseIdentifier:kNibNameTweetCell];
+        [_tableView removeSeparator];
         
     }
     

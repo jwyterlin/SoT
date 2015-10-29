@@ -17,4 +17,8 @@
     
 }
 
+-(void)removeSeparator {
+    self.separatorColor = [UIColor clearColor];
+}
+
 @end

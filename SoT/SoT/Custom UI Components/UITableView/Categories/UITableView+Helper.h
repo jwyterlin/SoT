@@ -11,5 +11,6 @@
 @interface UITableView (Helper)
 
 -(void)registerNibForCellReuseIdentifier:(NSString *)identifier;
+-(void)removeSeparator;
 
 @end

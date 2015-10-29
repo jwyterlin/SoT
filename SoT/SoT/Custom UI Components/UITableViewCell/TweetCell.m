@@ -42,6 +42,9 @@
         
     }
     
+    cell.userPhoto.layer.cornerRadius = cell.userPhoto.width/2;
+    cell.userPhoto.backgroundColor = [UIColor blackColor];
+    
     cell.userName.text = tweet.userName;
     cell.tweetContent.text = tweet.detail;
     
