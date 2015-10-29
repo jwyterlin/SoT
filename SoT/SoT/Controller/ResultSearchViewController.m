@@ -16,7 +16,7 @@
 // Service Layer
 #import "CellHelper.h"
 
-@interface ResultSearchViewController()<UITableViewDataSource,UITableViewDelegate,CellHelperDelegate>
+@interface ResultSearchViewController()<UITableViewDataSource,UITableViewDelegate,CellHelperDelegate,TopSearchBarViewDelegate>
 
 // UI
 @property(nonatomic,strong) TopSearchBarView *topView;
@@ -97,12 +97,21 @@
     
 }
 
+#pragma mark - TopSearchBarViewDelegate methods
+
+-(void)tsbv_didPressCloseButton {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 #pragma mark - Creating components
 
 -(TopSearchBarView *)topView {
     
     if ( ! _topView ) {
         _topView = [TopSearchBarView new];
+        _topView.delegateTopSearchBarView = self;
     }
     
     return _topView;
