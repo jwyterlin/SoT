@@ -8,6 +8,9 @@
 
 #import "SearchDAO.h"
 
+// Model
+#import "TweetModel.h"
+
 @implementation SearchDAO
 
 // SearchTerm
@@ -27,13 +30,33 @@
 -(void)searchTerm:(NSString *)term completion:(void(^)(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error))completion
              test:(void(^)(id responseData, NSError *error))test {
     
-    NSArray *tweetsFound =  @[
-                             @"Important question",
-                             @"Amazing Gadget",
-                             @"Hyped Social Networking",
-                             @"Developer bitchin about",
-                             @"Hot new actress doig nothing"
-                            ];
+    // Fake data
+    TweetModel *t1 = [TweetModel new];
+    t1.identifier = [NSNumber numberWithInt:1];
+    t1.userName = @"Arthur Price";
+    t1.detail = @"Hey @getblogo team! It was really really great to see you again earlier. Let's definitely get that coffee sometime next week...";
+    
+    TweetModel *t2 = [TweetModel new];
+    t2.identifier = [NSNumber numberWithInt:2];
+    t2.userName = @"Shirley Ramirez";
+    t2.detail = @"Keytar McSweeney's Williamsburg, readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy. Asymmet.";
+    
+    TweetModel *t3 = [TweetModel new];
+    t3.identifier = [NSNumber numberWithInt:3];
+    t3.userName = @"Dennis Edwards";
+    t3.detail = @"Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap. Hashtag typewriter banh mi, squid keffi.";
+    
+    TweetModel *t4 = [TweetModel new];
+    t4.identifier = [NSNumber numberWithInt:4];
+    t4.userName = @"Hannah Ramirez";
+    t4.detail = @"Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled.";
+    
+    TweetModel *t5 = [TweetModel new];
+    t5.identifier = [NSNumber numberWithInt:5];
+    t5.userName = @"Dennis Edwards";
+    t5.detail = @"Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap. Hashtag typewriter banh mi, squid keffi.";
+    
+    NSArray *tweetsFound = @[t1,t2,t3,t4,t5];
     
     if (completion) {
         completion( tweetsFound, NO, NULL );

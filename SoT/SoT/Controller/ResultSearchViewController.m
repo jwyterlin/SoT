@@ -25,38 +25,20 @@
 
 #pragma mark - View Lifecycle
 
+-(id)initWithTweetsFound:(NSArray *)tweetsFound {
+    
+    self = [super init];
+    
+    if ( self ) {
+        self.tweetsFound = tweetsFound;
+    }
+    
+    return self;
+    
+}
+
 -(void)viewDidLoad {
-    
     [super viewDidLoad];
-    
-    // Fake data
-    TweetModel *t1 = [TweetModel new];
-    t1.identifier = [NSNumber numberWithInt:1];
-    t1.userName = @"Arthur Price";
-    t1.detail = @"Hey @getblogo team! It was really really great to see you again earlier. Let's definitely get that coffee sometime next week...";
-    
-    TweetModel *t2 = [TweetModel new];
-    t2.identifier = [NSNumber numberWithInt:2];
-    t2.userName = @"Shirley Ramirez";
-    t2.detail = @"Keytar McSweeney's Williamsburg, readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy. Asymmet.";
-    
-    TweetModel *t3 = [TweetModel new];
-    t3.identifier = [NSNumber numberWithInt:3];
-    t3.userName = @"Dennis Edwards";
-    t3.detail = @"Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap. Hashtag typewriter banh mi, squid keffi.";
-    
-    TweetModel *t4 = [TweetModel new];
-    t4.identifier = [NSNumber numberWithInt:4];
-    t4.userName = @"Hannah Ramirez";
-    t4.detail = @"Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled.";
-    
-    TweetModel *t5 = [TweetModel new];
-    t5.identifier = [NSNumber numberWithInt:5];
-    t5.userName = @"Dennis Edwards";
-    t5.detail = @"Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap. Hashtag typewriter banh mi, squid keffi.";
-    
-    self.tweetsFound = @[t1,t2,t3,t4,t5];
-    
 }
 
 -(void)didReceiveMemoryWarning {

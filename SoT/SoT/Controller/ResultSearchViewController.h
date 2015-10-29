@@ -10,4 +10,6 @@
 
 @interface ResultSearchViewController : GenericViewController
 
+-(id)initWithTweetsFound:(NSArray *)tweetsFound;
+
 @end
