@@ -8,6 +8,10 @@
 
 #import "ResultSearchViewController.h"
 
+// Custom UI Components
+#import "UITableView+Helper.h"
+#import "TweetCell.h"
+
 @interface ResultSearchViewController()<UITableViewDataSource,UITableViewDelegate>
 
 // UI
@@ -22,7 +26,9 @@
 #pragma mark - View Lifecycle
 
 -(void)viewDidLoad {
+    
     [super viewDidLoad];
+    
 }
 
 -(void)didReceiveMemoryWarning {
@@ -37,7 +43,8 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [UITableViewCell new];
+    TweetModel *tweetModel = self.tweetsFound[indexPath.row];
+    return [[TweetCell new] tweetCellAtIndexPath:indexPath tableView:tableView tweet:tweetModel];
     
 }
 
@@ -46,6 +53,24 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
+    
+}
+
+#pragma mark - Creating components
+
+-(UITableView *)tableView {
+    
+    if ( ! _tableView ) {
+        
+        _tableView = [UITableView new];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        
+        [_tableView registerNibForCellReuseIdentifier:kNibNameTweetCell];
+        
+    }
+    
+    return _tableView;
     
 }
 

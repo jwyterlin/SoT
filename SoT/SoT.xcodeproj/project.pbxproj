@@ -13,6 +13,7 @@
 		7B87A4601BE2601D0024A45B /* GenericTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45F1BE2601D0024A45B /* GenericTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		7B87A4631BE261270024A45B /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4621BE261270024A45B /* TweetCell.m */; settings = {ASSET_TAGS = (); }; };
 		7B87A46A1BE263850024A45B /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B87A4681BE263850024A45B /* TweetCell.xib */; settings = {ASSET_TAGS = (); }; };
+		7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A46E1BE268CE0024A45B /* UITableView+Helper.m */; settings = {ASSET_TAGS = (); }; };
 		7BC0C22A1BDD583600CE2540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2291BDD583600CE2540 /* main.m */; };
 		7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2311BDD583600CE2540 /* Main.storyboard */; };
 		7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2341BDD583600CE2540 /* Assets.xcassets */; };
@@ -74,6 +75,8 @@
 		7B87A4611BE261270024A45B /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetCell.h; path = "Custom UI Components/UITableViewCell/TweetCell.h"; sourceTree = "<group>"; };
 		7B87A4621BE261270024A45B /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetCell.m; path = "Custom UI Components/UITableViewCell/TweetCell.m"; sourceTree = "<group>"; };
 		7B87A4681BE263850024A45B /* TweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TweetCell.xib; path = "Custom UI Components/UITableViewCell/TweetCell.xib"; sourceTree = "<group>"; };
+		7B87A46D1BE268CE0024A45B /* UITableView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+Helper.h"; path = "Custom UI Components/UITableView/Categories/UITableView+Helper.h"; sourceTree = "<group>"; };
+		7B87A46E1BE268CE0024A45B /* UITableView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Helper.m"; path = "Custom UI Components/UITableView/Categories/UITableView+Helper.m"; sourceTree = "<group>"; };
 		7BC0C2251BDD583600CE2540 /* SoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC0C2291BDD583600CE2540 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BC0C2321BDD583600CE2540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -171,6 +174,23 @@
 				7B87A4681BE263850024A45B /* TweetCell.xib */,
 			);
 			name = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		7B87A46B1BE268A20024A45B /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				7B87A46C1BE268AB0024A45B /* Categories */,
+			);
+			name = UITableView;
+			sourceTree = "<group>";
+		};
+		7B87A46C1BE268AB0024A45B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7B87A46D1BE268CE0024A45B /* UITableView+Helper.h */,
+				7B87A46E1BE268CE0024A45B /* UITableView+Helper.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		7BC0C21C1BDD583600CE2540 = {
@@ -289,11 +309,12 @@
 		7BCB0AE71BE13AE900042C40 /* Custom UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				7B87A45D1BE25FEE0024A45B /* UITableViewCell */,
 				7BCB0B351BE179C700042C40 /* CATransformLayer */,
 				7BCB0AE81BE13AF300042C40 /* UIButton */,
 				7BCB0B0D1BE14CF700042C40 /* UIImageView */,
 				7BCB0B211BE153EC00042C40 /* UILabel */,
+				7B87A46B1BE268A20024A45B /* UITableView */,
+				7B87A45D1BE25FEE0024A45B /* UITableViewCell */,
 				7BCB0B1A1BE1506D00042C40 /* UITextField */,
 				7BCB0B021BE1475F00042C40 /* UIView */,
 			);
@@ -545,6 +566,7 @@
 				7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */,
 				7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */,
 				7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */,
+				7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */,
 				7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */,
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,
 				7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */,

@@ -12,6 +12,7 @@
 #import "CATransformLayer+Helper.h"
 
 // Service Layer
+#import "Constants.h"
 #import "DeviceInfo.h"
 
 @interface GenericViewController : UIViewController
