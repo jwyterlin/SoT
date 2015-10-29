@@ -46,7 +46,7 @@
 
 -(IBAction)closeButtonPressed:(id)sender {
     
-    
+    [self.delegateTopSearchBarView tsbv_didPressCloseButton];
     
 }
 

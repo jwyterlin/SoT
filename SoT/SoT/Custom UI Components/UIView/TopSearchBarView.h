@@ -8,6 +8,16 @@
 
 #import "GenericView.h"
 
+@protocol TopSearchBarViewDelegate;
+
 @interface TopSearchBarView : GenericView
+
+@property(nonatomic,weak) id<TopSearchBarViewDelegate> delegateTopSearchBarView;
+
+@end
+
+@protocol TopSearchBarViewDelegate <NSObject>
+
+-(void)tsbv_didPressCloseButton;
 
 @end
