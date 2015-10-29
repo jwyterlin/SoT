@@ -90,7 +90,7 @@
     
     if ( ! _tableView ) {
         
-        _tableView = [UITableView new];
+        _tableView = [[UITableView alloc] initWithFrame: CGRectMake( 0, 0, [DeviceInfo width], [DeviceInfo height] ) ];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         
