@@ -10,6 +10,7 @@
 		7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4551BE25C070024A45B /* ResultSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7B87A4591BE25F140024A45B /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4581BE25F140024A45B /* GenericModel.m */; settings = {ASSET_TAGS = (); }; };
 		7B87A45C1BE25F2D0024A45B /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45B1BE25F2D0024A45B /* TweetModel.m */; settings = {ASSET_TAGS = (); }; };
+		7B87A4601BE2601D0024A45B /* GenericTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45F1BE2601D0024A45B /* GenericTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		7BC0C22A1BDD583600CE2540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2291BDD583600CE2540 /* main.m */; };
 		7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2311BDD583600CE2540 /* Main.storyboard */; };
 		7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2341BDD583600CE2540 /* Assets.xcassets */; };
@@ -66,6 +67,8 @@
 		7B87A4581BE25F140024A45B /* GenericModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericModel.m; path = Model/GenericModel.m; sourceTree = "<group>"; };
 		7B87A45A1BE25F2D0024A45B /* TweetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetModel.h; path = Model/TweetModel.h; sourceTree = "<group>"; };
 		7B87A45B1BE25F2D0024A45B /* TweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetModel.m; path = Model/TweetModel.m; sourceTree = "<group>"; };
+		7B87A45E1BE2601D0024A45B /* GenericTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericTableViewCell.h; path = "Custom UI Components/UITableViewCell/GenericTableViewCell.h"; sourceTree = "<group>"; };
+		7B87A45F1BE2601D0024A45B /* GenericTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericTableViewCell.m; path = "Custom UI Components/UITableViewCell/GenericTableViewCell.m"; sourceTree = "<group>"; };
 		7BC0C2251BDD583600CE2540 /* SoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC0C2291BDD583600CE2540 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BC0C2321BDD583600CE2540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B87A45D1BE25FEE0024A45B /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B87A45E1BE2601D0024A45B /* GenericTableViewCell.h */,
+				7B87A45F1BE2601D0024A45B /* GenericTableViewCell.m */,
+			);
+			name = UITableViewCell;
+			sourceTree = "<group>";
+		};
 		7BC0C21C1BDD583600CE2540 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +281,7 @@
 		7BCB0AE71BE13AE900042C40 /* Custom UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				7B87A45D1BE25FEE0024A45B /* UITableViewCell */,
 				7BCB0B351BE179C700042C40 /* CATransformLayer */,
 				7BCB0AE81BE13AF300042C40 /* UIButton */,
 				7BCB0B0D1BE14CF700042C40 /* UIImageView */,
@@ -539,6 +552,7 @@
 				7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */,
 				7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */,
 				7B87A4591BE25F140024A45B /* GenericModel.m in Sources */,
+				7B87A4601BE2601D0024A45B /* GenericTableViewCell.m in Sources */,
 				7BCB0B271BE1554200042C40 /* RecentSearchLabel.m in Sources */,
 				7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */,
 				7BCB0B311BE15F0200042C40 /* SearchDAO.m in Sources */,
