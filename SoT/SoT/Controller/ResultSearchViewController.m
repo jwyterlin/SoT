@@ -38,7 +38,11 @@
 }
 
 -(void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    [self.view addSubview:self.tableView];
+    
 }
 
 -(void)didReceiveMemoryWarning {
