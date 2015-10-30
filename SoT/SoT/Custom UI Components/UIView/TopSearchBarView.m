@@ -42,6 +42,16 @@
     
 }
 
+#pragma mark - Public methods
+
+-(void)updateWidth:(CGFloat)width {
+    
+    self.width = width;
+    self.closeButton.x = width - self.closeButton.width - 32;
+    self.searchedTerm.width = width - self.searchedTerm.x - ( width - self.closeButton.x + 8 );
+    
+}
+
 #pragma mark - IBAction methods
 
 -(IBAction)closeButtonPressed:(id)sender {

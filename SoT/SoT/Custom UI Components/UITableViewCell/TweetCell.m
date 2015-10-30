@@ -27,7 +27,7 @@
                                tweet:(TweetModel *)tweet {
     
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:kNibNameTweetCell forIndexPath:indexPath];
-    [self configureTweetCell:cell atIndexPath:indexPath tweet:tweet];
+    [self configureTweetCell:cell atIndexPath:indexPath tableView:tableView tweet:tweet];
     
     return cell;
     
@@ -35,6 +35,7 @@
 
 -(void)configureTweetCell:(TweetCell *)cell
               atIndexPath:(NSIndexPath *)indexPath
+                tableView:(UITableView *)tableView
                     tweet:(TweetModel *)tweet {
     
     if ( tweet == nil ) {
@@ -52,7 +53,7 @@
     cell.userName.text = tweet.userName;
     cell.tweetContent.text = tweet.detail;
     
-    int rightWidth = [DeviceInfo width] - cell.tweetContent.x - 66;
+    int rightWidth = tableView.width - cell.tweetContent.x - 66;
     
     if ( cell.tweetContentWidth.constant != rightWidth ) {
         cell.tweetContentWidth.constant = rightWidth;

@@ -19,6 +19,7 @@
 
 -(void)configureTweetCell:(TweetCell *)cell
               atIndexPath:(NSIndexPath *)indexPath
+                tableView:(UITableView *)tableView
                     tweet:(TweetModel *)tweet;
 
 @end

@@ -57,7 +57,14 @@
 
 -(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
     
+    // Adjust components
+    [self.topView updateWidth:size.width];
+    self.tableView.width = size.width;
+    self.tableView.height = size.height - self.topView.height;
+    
+    [self.tableView reloadData];
     
 }
 
@@ -92,7 +99,7 @@
     
     TweetModel *tweetModel = self.tweetsFound[indexPath.row];
     
-    [customCell configureTweetCell:customCell atIndexPath:indexPath tweet:tweetModel];
+    [customCell configureTweetCell:customCell atIndexPath:indexPath tableView:self.tableView tweet:tweetModel];
     
 }
 
