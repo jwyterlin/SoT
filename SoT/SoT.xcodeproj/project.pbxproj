@@ -11,6 +11,7 @@
 		7B38933E1BE3087B00B9CE13 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933C1BE3087B00B9CE13 /* TwitterKit.framework */; };
 		7B3893401BE308C400B9CE13 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933F1BE308C400B9CE13 /* TwitterCore.framework */; };
 		7B3893421BE30C5E00B9CE13 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B3893411BE30C5E00B9CE13 /* TwitterKitResources.bundle */; };
+		7B75C6751BE3476A0030F85F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B75C6771BE3476A0030F85F /* Localizable.strings */; };
 		7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4551BE25C070024A45B /* ResultSearchViewController.m */; };
 		7B87A4591BE25F140024A45B /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4581BE25F140024A45B /* GenericModel.m */; };
 		7B87A45C1BE25F2D0024A45B /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45B1BE25F2D0024A45B /* TweetModel.m */; };
@@ -81,6 +82,10 @@
 		7B38933C1BE3087B00B9CE13 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Frameworks/TwitterKit.framework; sourceTree = "<group>"; };
 		7B38933F1BE308C400B9CE13 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = Frameworks/TwitterCore.framework; sourceTree = "<group>"; };
 		7B3893411BE30C5E00B9CE13 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = "../../../../../Downloads/cannonball-ios-master/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle"; sourceTree = "<group>"; };
+		7B75C6731BE347600030F85F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7B75C6741BE347600030F85F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		7B75C6761BE3476A0030F85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7B75C6791BE347700030F85F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7B87A4541BE25C070024A45B /* ResultSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultSearchViewController.h; path = Controller/ResultSearchViewController.h; sourceTree = "<group>"; };
 		7B87A4551BE25C070024A45B /* ResultSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultSearchViewController.m; path = Controller/ResultSearchViewController.m; sourceTree = "<group>"; };
 		7B87A4571BE25F140024A45B /* GenericModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericModel.h; path = Model/GenericModel.h; sourceTree = "<group>"; };
@@ -222,6 +227,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7B75C6701BE345EC0030F85F /* Internationalization */ = {
+			isa = PBXGroup;
+			children = (
+				7B75C6771BE3476A0030F85F /* Localizable.strings */,
+			);
+			name = Internationalization;
+			sourceTree = "<group>";
+		};
 		7B87A45D1BE25FEE0024A45B /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +289,7 @@
 		7BC0C2271BDD583600CE2540 /* SoT */ = {
 			isa = PBXGroup;
 			children = (
+				7B75C6701BE345EC0030F85F /* Internationalization */,
 				7BCB0AE51BE13A8200042C40 /* AppDelegate */,
 				7BCB0AE61BE13A9600042C40 /* Assets */,
 				7BCB0AE21BE13A6500042C40 /* Controller */,
@@ -589,6 +603,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 7BC0C21C1BDD583600CE2540;
 			productRefGroup = 7BC0C2261BDD583600CE2540 /* Products */;
@@ -608,6 +623,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BC0C2381BDD583600CE2540 /* LaunchScreen.storyboard in Resources */,
+				7B75C6751BE3476A0030F85F /* Localizable.strings in Resources */,
 				7B87A46A1BE263850024A45B /* TweetCell.xib in Resources */,
 				7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */,
 				7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */,
@@ -755,10 +771,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7B75C6771BE3476A0030F85F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B75C6761BE3476A0030F85F /* Base */,
+				7B75C6791BE347700030F85F /* pt-BR */,
+			);
+			name = Localizable.strings;
+			path = Internationalization;
+			sourceTree = "<group>";
+		};
 		7BC0C2311BDD583600CE2540 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7BC0C2321BDD583600CE2540 /* Base */,
+				7B75C6741BE347600030F85F /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -767,6 +794,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7BC0C2371BDD583600CE2540 /* Base */,
+				7B75C6731BE347600030F85F /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

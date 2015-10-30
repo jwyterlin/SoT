@@ -96,7 +96,7 @@
         CGFloat y = self.height/2 - height/2 + 10;
         
         _searchedTerm = [[UILabel alloc] initWithFrame:CGRectMake( x, y, width, height ) ];
-        _searchedTerm.text = @"\"Cool query just for testing purposes\"";
+        _searchedTerm.text = @"";
         _searchedTerm.textAlignment = NSTextAlignmentCenter;
         _searchedTerm.textColor = [UIColor whiteColor];
         _searchedTerm.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:27.0f];

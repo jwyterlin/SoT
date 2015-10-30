@@ -24,7 +24,7 @@
     self.y = 18;
     self.width = [DeviceInfo width] - self.x - 21;
     self.height = 74;
-    self.placeholder = @"Search it";
+    self.placeholder = NSLocalizedString( @"SEARCH_IT", nil );
     self.returnKeyType = UIReturnKeySearch;
     self.delegate = self;
     

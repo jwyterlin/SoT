@@ -14,7 +14,7 @@
     
     [super setup];
     
-    self.text = @"Trending Now";
+    self.text = NSLocalizedString( @"TRENDING_NOW", nil );
 
 }
 

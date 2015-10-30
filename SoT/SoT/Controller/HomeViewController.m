@@ -76,20 +76,6 @@
     
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    
-    [super viewDidAppear:animated];
-    
-//    [[Twitter sharedInstance] logInWithCompletion:^(TWTRSession *session, NSError *error) {
-//        if (session) {
-//            NSLog(@"logged in user with id %@", session.userID);
-//        } else {
-//            // log error
-//        }
-//    }];
-    
-}
-
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

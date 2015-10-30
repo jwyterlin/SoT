@@ -14,7 +14,7 @@
     
     [super setup];
     
-    self.text = @"Recent Searches";
+    self.text = NSLocalizedString( @"RECENT_SEARCHES", nil );
     
 }
 

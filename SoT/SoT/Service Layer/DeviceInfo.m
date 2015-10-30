@@ -15,10 +15,8 @@ static CGFloat width;
 
 +(CGFloat)height {
     
-//    if ( height == 0 ) {
-        CGRect screenBounds = [[UIScreen mainScreen] bounds];
-        height  = screenBounds.size.height;
-//    }
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    height  = screenBounds.size.height;
     
     return height;
     
@@ -26,10 +24,8 @@ static CGFloat width;
 
 +(CGFloat)width {
     
-//    if ( width == 0 ) {
-        CGRect screenBounds = [[UIScreen mainScreen] bounds];
-        width = screenBounds.size.width;
-//    }
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    width = screenBounds.size.width;
     
     return width;
     
