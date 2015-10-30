@@ -113,7 +113,7 @@
     
 }
 
-#pragma mark - 
+#pragma mark - TweetCellDelegate methods
 
 -(UIViewController *)tc_viewControllerToShare {
     return self;
