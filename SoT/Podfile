@@ -1,1 +1,2 @@
 pod "Reachability", "~> 3.2"
+pod 'SWTableViewCell', '~> 0.3'

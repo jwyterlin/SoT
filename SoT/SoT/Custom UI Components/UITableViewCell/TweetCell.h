@@ -11,7 +11,10 @@
 // Model
 #import "TweetModel.h"
 
-@interface TweetCell : GenericTableViewCell
+// Pods
+#import "SWTableViewCell.h"
+
+@interface TweetCell : SWTableViewCell
 
 -(TweetCell *)tweetCellAtIndexPath:(NSIndexPath *)indexPath
                          tableView:(UITableView *)tableView

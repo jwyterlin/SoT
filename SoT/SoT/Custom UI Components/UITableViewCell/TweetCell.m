@@ -12,7 +12,7 @@
 // DAO
 #import "ImageDAO.h"
 
-@interface TweetCell()
+@interface TweetCell()<SWTableViewCellDelegate>
 
 @property(nonatomic,strong) IBOutlet UIImageView *userPhoto;
 @property(nonatomic,strong) IBOutlet UILabel *userName;
@@ -67,6 +67,9 @@
     
     [cell defineUserPhotoWithTweet:tweet tableView:tableView indexPath:indexPath tweetCell:cell];
     
+    cell.leftUtilityButtons = [cell leftButtons];
+    cell.delegate = cell;
+    
 }
 
 -(void)defineUserPhotoWithTweet:(TweetModel *)tweetModel
@@ -99,6 +102,98 @@
         }
         
     }];
+    
+}
+
+-(NSArray *)leftButtons {
+    
+    NSMutableArray *leftUtilityButtons = [NSMutableArray new];
+    
+    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:90.0/256.0 green:160.0/256.0 blue:198.0/256.0 alpha:1.0f]
+                                          normalIcon:[UIImage imageNamed:@"botao_generico_off"]
+                                        selectedIcon:[UIImage imageNamed:@"botao_generico_on"]];
+    
+    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:90.0/256.0 green:160.0/256.0 blue:198.0/256.0 alpha:1.0f]
+                                          normalIcon:[UIImage imageNamed:@"botao_generico_off"]
+                                        selectedIcon:[UIImage imageNamed:@"botao_generico_on"]];
+    
+    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:90.0/256.0 green:160.0/256.0 blue:198.0/256.0 alpha:1.0f]
+                                          normalIcon:[UIImage imageNamed:@"botao_generico_off"]
+                                        selectedIcon:[UIImage imageNamed:@"botao_generico_on"]];
+    
+    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:90.0/256.0 green:160.0/256.0 blue:198.0/256.0 alpha:1.0f]
+                                          normalIcon:[UIImage imageNamed:@"botao_generico_off"]
+                                        selectedIcon:[UIImage imageNamed:@"botao_generico_on"]];
+    
+    return leftUtilityButtons;
+    
+}
+
+#pragma mark - SWTableViewDelegate methods
+
+-(void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state {
+    
+    switch (state) {
+        case kCellStateCenter:
+            NSLog( @"utility buttons closed" );
+            break;
+        case kCellStateLeft:
+            NSLog( @"left utility buttons open" );
+            break;
+        case kCellStateRight:
+            NSLog( @"right utility buttons open" );
+            break;
+        default:
+            break;
+    }
+    
+}
+
+-(void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index {
+    
+    switch (index) {
+            
+        case 0: {
+            NSLog(@"Pressed 0");
+            break;
+        } case 1: {
+            NSLog(@"Pressed 1");
+            break;
+        } case 2: {
+            NSLog(@"Pressed 2");
+            break;
+        } case 3: {
+            NSLog(@"Pressed 3");
+            break;
+        } default:
+            break;
+    }
+    
+}
+
+-(BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell {
+    
+    // allow just one cell's utility button to be open at once
+    return YES;
+    
+}
+
+-(BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state {
+    
+    switch (state) {
+        case kCellStateLeft:
+            // set to NO to disable all left utility buttons appearing
+            return YES;
+            break;
+        case kCellStateRight:
+            // set to NO to disable all right utility buttons appearing
+            return NO;
+            break;
+        default:
+            break;
+    }
+    
+    return YES;
     
 }
 
