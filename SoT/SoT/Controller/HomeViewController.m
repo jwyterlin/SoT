@@ -23,6 +23,7 @@
 
 // Service Layer
 #import "DeviceInfo.h"
+#import "RecentSearch.h"
 
 // DAO
 #import "SearchDAO.h"
@@ -62,7 +63,6 @@
     
     [super viewDidLoad];
     
-    [self getRecentSearchList];
     [self getTrendingNowList];
     
 }
@@ -71,8 +71,12 @@
     
     [super viewWillAppear:animated];
     
+    [self getRecentSearchList];
+    
     [self showTwitterLogo];
     [self showSearchTextField];
+    
+    self.searchTextField.text = @"";
     
 }
 
@@ -85,48 +89,12 @@
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
     
     // Adjust components
-    self.twitterLogo.x = size.width/2 - self.twitterLogo.width/2;
-    self.lineRecentSearches.x = [self lineRecentSearchesAxisXWithWidth:size.width];
-    self.lineTrendingNow.x = [self lineTrendingNowAxisX];
-    self.recentSearchLabel.x = self.lineRecentSearches.x;
-    self.trendingNowLabel.x = self.lineTrendingNow.x;
-    
-    self.searchBackground.width = size.width;
-    self.searchTextField.width = size.width - self.searchTextField.x - 21;
+    [self horizontalAdjustToSize:size];
     
     if ( [self.searchTextField isFirstResponder] )
         [self updateAnimateTextField];
     
-    if ( self.searchBackground.y + self.searchBackground.height > size.height ) {
-    
-        self.lineRecentSearches.y = [self lineRecentSearchesAxisY];
-        self.lineTrendingNow.y = self.lineRecentSearches.y;
-        
-        self.recentSearchLabel.y = [self recentSearchLabelAxisY];
-        self.trendingNowLabel.y = [self trendingNowLabelAxisY];
-   
-        self.searchBackground.y = size.height - self.searchBackground.height;
-        
-    }
-    
-    int i = 1, yLastVisibleButton = 0;
-    for ( UIButton *b in self.recentSearchButtons ) {
-        b.x = self.lineRecentSearches.x;
-        b.y = self.recentSearchLabel.y + self.recentSearchLabel.height + ( (8+b.height) * i++ ) - 30;
-        b.hidden = ( b.y + b.height > size.height - self.searchBackground.height );
-        yLastVisibleButton = (b.hidden?yLastVisibleButton:b.y+b.height+55);
-    }
-    
-    i = 1;
-    for ( UIButton *b in self.trendingNowButtons ) {
-        b.x = self.lineTrendingNow.x;
-        b.y = self.trendingNowLabel.y + self.trendingNowLabel.height + ( (8+b.height) * i++ ) - 30;
-        b.hidden = ( b.y + b.height > size.height - self.searchBackground.height );
-        yLastVisibleButton = (b.hidden && b.y+b.height+55>yLastVisibleButton?yLastVisibleButton:b.y+b.height+55);
-    }
-    
-    if ( yLastVisibleButton + self.searchBackground.height < size.height )
-        self.searchBackground.y = yLastVisibleButton;
+    [self verticalAdjustToSize:size];
     
 }
 
@@ -164,9 +132,15 @@
         
         // Success
         if ( tweetsFound.count > 0 ) {
+            
+            // Store this term in the recent search's history
+            [[RecentSearch sharedInstance] addRecentSearch:self.searchTextField.text];
+            
+            // Call view showing results of the search
             ResultSearchViewController *resultSearchVC = [[ResultSearchViewController alloc] initWithTweetsFound:tweetsFound
                                                                                                     termSearched:self.searchTextField.text];
             [self presentViewController:resultSearchVC animated:YES completion:nil];
+            
         }
         
     }];
@@ -185,6 +159,54 @@
 
 #pragma mark - Private methods
 
+-(void)horizontalAdjustToSize:(CGSize)size {
+    
+    self.twitterLogo.x = size.width/2 - self.twitterLogo.width/2;
+    self.lineRecentSearches.x = [self lineRecentSearchesAxisXWithWidth:size.width];
+    self.lineTrendingNow.x = [self lineTrendingNowAxisX];
+    self.recentSearchLabel.x = self.lineRecentSearches.x;
+    self.trendingNowLabel.x = self.lineTrendingNow.x;
+    
+    self.searchBackground.width = size.width;
+    self.searchTextField.width = size.width - self.searchTextField.x - 21;
+    
+}
+
+-(void)verticalAdjustToSize:(CGSize)size {
+    
+    if ( self.searchBackground.y + self.searchBackground.height > size.height ) {
+        
+        self.lineRecentSearches.y = [self lineRecentSearchesAxisY];
+        self.lineTrendingNow.y = self.lineRecentSearches.y;
+        
+        self.recentSearchLabel.y = [self recentSearchLabelAxisY];
+        self.trendingNowLabel.y = [self trendingNowLabelAxisY];
+        
+        self.searchBackground.y = size.height - self.searchBackground.height;
+        
+    }
+    
+    int i = 1, yLastVisibleButton = 0;
+    for ( UIButton *b in self.recentSearchButtons ) {
+        b.x = self.lineRecentSearches.x;
+        b.y = self.recentSearchLabel.y + self.recentSearchLabel.height + ( (8+b.height) * i++ ) - 30;
+        b.hidden = ( b.y + b.height > size.height - self.searchBackground.height );
+        yLastVisibleButton = (b.hidden?yLastVisibleButton:b.y+b.height+55);
+    }
+    
+    i = 1;
+    for ( UIButton *b in self.trendingNowButtons ) {
+        b.x = self.lineTrendingNow.x;
+        b.y = self.trendingNowLabel.y + self.trendingNowLabel.height + ( (8+b.height) * i++ ) - 30;
+        b.hidden = ( b.y + b.height > size.height - self.searchBackground.height );
+        yLastVisibleButton = (b.hidden && b.y+b.height+55>yLastVisibleButton?yLastVisibleButton:b.y+b.height+55);
+    }
+    
+    if ( yLastVisibleButton + self.searchBackground.height < size.height )
+        self.searchBackground.y = yLastVisibleButton;
+    
+}
+
 -(void)showTwitterLogo {
     
     if ( ! [self.twitterLogo isDescendantOfView:self.view] )
@@ -201,23 +223,8 @@
 
 -(void)getRecentSearchList {
     
-    [[SearchDAO new] recentSearchesWithCompletion:^(NSArray *recentSearches, BOOL hasNoConnection, NSError *error) {
-        
-        if ( hasNoConnection ) {
-            /// TODO: Show has no connection
-            return;
-        }
-        
-        if ( error ) {
-            /// TODO: Show connection error
-            return;
-        }
-        
-        self.recentSearchList = recentSearches;
-        
-        [self updateRecentSearchesUI];
-        
-    }];
+    self.recentSearchList = [[[RecentSearch sharedInstance] recentSearches] mutableCopy];
+    [self updateRecentSearchesUI];
 
 }
 
@@ -268,14 +275,24 @@
         [self.view addSubview:self.lineRecentSearches];
         [self.view addSubview:self.recentSearchLabel];
         
-        for ( NSString *text in self.recentSearchList ) {
-            RecentSearchButton *recentSearchButton = [self createRecentSearchButtonWithText:text];
-            [self.view addSubview:recentSearchButton];
-        }
+        [self cleanRecentSearchButtonsList];
+        
+        for ( NSString *text in self.recentSearchList )
+            [self createRecentSearchButtonWithText:text];
         
         self.searchBackground.y = [self positionToSearchBackground];
         
     }
+    
+}
+
+-(void)cleanRecentSearchButtonsList {
+    
+    if ( self.recentSearchButtons.count > 0 )
+        for ( UIButton *b in self.recentSearchButtons )
+            [b removeFromSuperview];
+    
+    [self.recentSearchButtons removeAllObjects];
     
 }
 
@@ -298,10 +315,8 @@
         [self.view addSubview:self.lineTrendingNow];
         [self.view addSubview:self.trendingNowLabel];
         
-        for ( TrendingModel *t in self.trendingNowList ) {
-            TrendingNowButton *trendingNowButton = [self createTrendingNowButtonWithText:t.name];
-            [self.view addSubview:trendingNowButton];
-        }
+        for ( TrendingModel *t in self.trendingNowList )
+            [self createTrendingNowButtonWithText:t.name];
         
         self.searchBackground.y = [self positionToSearchBackground];
         
@@ -371,6 +386,8 @@
     button.y = labelReference.y + labelReference.height + ( listButtons.count * ( button.height + 8 ) ) - 30;
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     
+    [self.view addSubview:button];
+    
 }
 
 -(int)positionToSearchBackground {
@@ -378,6 +395,7 @@
     NSMutableArray *listButtons = [self listWithMoreButtons];
     
     if ( listButtons ) {
+        
         UIButton *button = [listButtons lastObject];
         
         int position = button.y + button.height + 55;
@@ -428,10 +446,14 @@
 
 -(CGFloat)lineTrendingNowAxisX {
     
+    CGFloat axisX = self.lineRecentSearches.x + self.lineRecentSearches.width;
+    
     if ( [DeviceInfo isIphone] )
-        return self.lineRecentSearches.x + self.lineRecentSearches.width + DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE;
+        axisX += DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE;
     else
-        return self.lineRecentSearches.x + self.lineRecentSearches.width + DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD;
+        axisX += DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD;
+    
+    return axisX;
     
 }
 

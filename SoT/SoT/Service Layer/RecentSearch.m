@@ -50,11 +50,11 @@ static RecentSearch *sharedInstance;
     if ( ! recentSearch )
         return;
     
-    if ( ! [recentSearch isEqualToString:@""] )
+    if ( [recentSearch isEqualToString:@""] )
         return;
     
     if ( _recentSearches.count == RECENT_SEARCH_BUTTONS_LIMIT )
-        [_recentSearches removeObjectAtIndex:0];
+        [_recentSearches removeLastObject];
     
     [_recentSearches insertObject:recentSearch atIndex:0];
     
