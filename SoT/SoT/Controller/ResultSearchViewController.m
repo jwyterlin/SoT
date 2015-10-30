@@ -16,7 +16,7 @@
 // Service Layer
 #import "CellHelper.h"
 
-@interface ResultSearchViewController()<UITableViewDataSource,UITableViewDelegate,CellHelperDelegate,TopSearchBarViewDelegate>
+@interface ResultSearchViewController()<UITableViewDataSource,UITableViewDelegate,CellHelperDelegate,TopSearchBarViewDelegate,TweetCellDelegate>
 
 // UI
 @property(nonatomic,strong) TopSearchBarView *topView;
@@ -79,7 +79,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     TweetModel *tweetModel = self.tweetsFound[indexPath.row];
-    return [[TweetCell new] tweetCellAtIndexPath:indexPath tableView:tableView tweet:tweetModel];
+    return [[TweetCell new] tweetCellAtIndexPath:indexPath tableView:tableView tweet:tweetModel delegate:self];
     
 }
 
@@ -101,7 +101,7 @@
     
     TweetModel *tweetModel = self.tweetsFound[indexPath.row];
     
-    [customCell configureTweetCell:customCell atIndexPath:indexPath tableView:self.tableView tweet:tweetModel];
+    [customCell configureTweetCell:customCell atIndexPath:indexPath tableView:self.tableView tweet:tweetModel delegate:self];
     
 }
 
@@ -111,6 +111,12 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
+}
+
+#pragma mark - 
+
+-(UIViewController *)tc_viewControllerToShare {
+    return self;
 }
 
 #pragma mark - Creating components

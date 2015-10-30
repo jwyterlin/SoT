@@ -14,15 +14,27 @@
 // Pods
 #import "SWTableViewCell.h"
 
+@protocol TweetCellDelegate;
+
 @interface TweetCell : SWTableViewCell
+
+@property(nonatomic,weak) id<TweetCellDelegate> delegateTweetCell;
 
 -(TweetCell *)tweetCellAtIndexPath:(NSIndexPath *)indexPath
                          tableView:(UITableView *)tableView
-                             tweet:(TweetModel *)tweet;
+                             tweet:(TweetModel *)tweet
+                          delegate:(id<TweetCellDelegate>)delegate;
 
 -(void)configureTweetCell:(TweetCell *)cell
               atIndexPath:(NSIndexPath *)indexPath
                 tableView:(UITableView *)tableView
-                    tweet:(TweetModel *)tweet;
+                    tweet:(TweetModel *)tweet
+                 delegate:(id<TweetCellDelegate>)delegate;
+
+@end
+
+@protocol TweetCellDelegate <NSObject>
+
+-(UIViewController *)tc_viewControllerToShare;
 
 @end

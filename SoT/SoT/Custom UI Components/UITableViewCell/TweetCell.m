@@ -27,12 +27,15 @@
 
 @implementation TweetCell
 
+#pragma mark - Public methods
+
 -(TweetCell *)tweetCellAtIndexPath:(NSIndexPath *)indexPath
-                           tableView:(UITableView *)tableView
-                               tweet:(TweetModel *)tweet {
+                         tableView:(UITableView *)tableView
+                             tweet:(TweetModel *)tweet
+                          delegate:(id<TweetCellDelegate>)delegate {
     
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:kNibNameTweetCell forIndexPath:indexPath];
-    [self configureTweetCell:cell atIndexPath:indexPath tableView:tableView tweet:tweet];
+    [self configureTweetCell:cell atIndexPath:indexPath tableView:tableView tweet:tweet delegate:delegate];
     
     return cell;
     
@@ -41,7 +44,8 @@
 -(void)configureTweetCell:(TweetCell *)cell
               atIndexPath:(NSIndexPath *)indexPath
                 tableView:(UITableView *)tableView
-                    tweet:(TweetModel *)tweet {
+                    tweet:(TweetModel *)tweet
+                 delegate:(id<TweetCellDelegate>)delegate {
     
     if ( tweet == nil ) {
         
@@ -51,6 +55,8 @@
         return;
         
     }
+    
+    cell.delegateTweetCell = delegate;
     
     if ( [DeviceInfo isIphone] ) {
         cell.userName.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:16.0f];
@@ -85,6 +91,8 @@
     cell.delegate = cell;
     
 }
+
+#pragma mark - Private methods
 
 -(void)defineUserPhotoWithTweet:(TweetModel *)tweetModel
                       tableView:(UITableView *)tableView
@@ -127,57 +135,32 @@
                                           normalIcon:[UIImage imageNamed:@"botao_generico_off"]
                                         selectedIcon:[UIImage imageNamed:@"botao_generico_on"]];
     
-    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:90.0/256.0 green:160.0/256.0 blue:198.0/256.0 alpha:1.0f]
-                                          normalIcon:[UIImage imageNamed:@"botao_generico_off"]
-                                        selectedIcon:[UIImage imageNamed:@"botao_generico_on"]];
-    
-    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:90.0/256.0 green:160.0/256.0 blue:198.0/256.0 alpha:1.0f]
-                                          normalIcon:[UIImage imageNamed:@"botao_generico_off"]
-                                        selectedIcon:[UIImage imageNamed:@"botao_generico_on"]];
-    
-    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:90.0/256.0 green:160.0/256.0 blue:198.0/256.0 alpha:1.0f]
-                                          normalIcon:[UIImage imageNamed:@"botao_generico_off"]
-                                        selectedIcon:[UIImage imageNamed:@"botao_generico_on"]];
-    
     return leftUtilityButtons;
     
 }
 
-#pragma mark - SWTableViewDelegate methods
-
--(void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state {
+-(void)shareContent {
     
-    switch (state) {
-        case kCellStateCenter:
-            NSLog( @"utility buttons closed" );
-            break;
-        case kCellStateLeft:
-            NSLog( @"left utility buttons open" );
-            break;
-        case kCellStateRight:
-            NSLog( @"right utility buttons open" );
-            break;
-        default:
-            break;
-    }
+    NSString *message = self.tweetContent.text;
+    UIImage *image = [UIImage imageNamed:@"botao_generico_on"];
+    NSArray *shareItems = @[message, image];
+    
+    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
+    
+    UIViewController *vc = [self.delegateTweetCell tc_viewControllerToShare];
+    
+    [vc presentViewController:avc animated:YES completion:nil];
     
 }
+
+#pragma mark - SWTableViewDelegate methods
 
 -(void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index {
     
     switch (index) {
             
         case 0: {
-            NSLog(@"Pressed 0");
-            break;
-        } case 1: {
-            NSLog(@"Pressed 1");
-            break;
-        } case 2: {
-            NSLog(@"Pressed 2");
-            break;
-        } case 3: {
-            NSLog(@"Pressed 3");
+            [self shareContent];
             break;
         } default:
             break;
