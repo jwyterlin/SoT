@@ -52,6 +52,12 @@
     
 }
 
+-(void)updateTitle:(NSString *)title {
+    
+    self.searchedTerm.text = title;
+    
+}
+
 #pragma mark - IBAction methods
 
 -(IBAction)closeButtonPressed:(id)sender {

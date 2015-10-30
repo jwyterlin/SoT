@@ -153,7 +153,8 @@
         
         // Success
         if ( tweetsFound.count > 0 ) {
-            ResultSearchViewController *resultSearchVC = [[ResultSearchViewController alloc] initWithTweetsFound:tweetsFound];
+            ResultSearchViewController *resultSearchVC = [[ResultSearchViewController alloc] initWithTweetsFound:tweetsFound
+                                                                                                    termSearched:self.searchTextField.text];
             [self presentViewController:resultSearchVC animated:YES completion:nil];
         }
         

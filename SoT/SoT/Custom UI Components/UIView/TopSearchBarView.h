@@ -15,6 +15,7 @@
 @property(nonatomic,weak) id<TopSearchBarViewDelegate> delegateTopSearchBarView;
 
 -(void)updateWidth:(CGFloat)width;
+-(void)updateTitle:(NSString *)title;
 
 @end
 

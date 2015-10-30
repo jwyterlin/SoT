@@ -23,6 +23,7 @@
 @property(nonatomic,strong) UITableView *tableView;
 
 @property(nonatomic,strong) NSArray *tweetsFound;
+@property(nonatomic,strong) NSString *termSearched;
 
 @end
 
@@ -30,12 +31,13 @@
 
 #pragma mark - View Lifecycle
 
--(id)initWithTweetsFound:(NSArray *)tweetsFound {
+-(id)initWithTweetsFound:(NSArray *)tweetsFound termSearched:(NSString *)termSearched {
     
     self = [super init];
     
     if ( self ) {
         self.tweetsFound = tweetsFound;
+        self.termSearched = [NSString stringWithFormat:@"\"%@\"",termSearched];
     }
     
     return self;
@@ -118,6 +120,7 @@
     if ( ! _topView ) {
         _topView = [TopSearchBarView new];
         _topView.delegateTopSearchBarView = self;
+        [_topView updateTitle:self.termSearched];
     }
     
     return _topView;
