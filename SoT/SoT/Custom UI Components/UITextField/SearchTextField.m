@@ -20,10 +20,10 @@
     
     [super setup];
     
-    self.x = 165;
-    self.y = 18;
+    self.x = [DeviceInfo isIpad]?165:66;
+    self.y = [DeviceInfo isIpad]?18:2;
     self.width = [DeviceInfo width] - self.x - 21;
-    self.height = 74;
+    self.height = [DeviceInfo isIpad]?74:34;
     self.placeholder = NSLocalizedString( @"SEARCH_IT", nil );
     self.returnKeyType = UIReturnKeySearch;
     self.delegate = self;

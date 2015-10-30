@@ -24,7 +24,7 @@
 
 -(void)setup {
     
-    self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:17.0];
+    self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:[DeviceInfo isIpad]?17.0:13.0];
 
     UIColor *buttonColor = [UIColor colorWithRed:104.0/256.0 green:104.0/256.0 blue:113.0/256.0 alpha:1.0];
     

@@ -14,10 +14,10 @@
     
     [super setup];
     
-    self.x = 55;
-    self.y = 18;
-    self.width = 74;
-    self.height = 74;
+    self.x = [DeviceInfo isIpad]?55:16;
+    self.y = [DeviceInfo isIpad]?18:10;
+    self.width = [DeviceInfo isIpad]?74:21;
+    self.height = [DeviceInfo isIpad]?74:21;
     self.image = [UIImage imageNamed:@"Icon_search_big"];
     
 }

@@ -10,24 +10,19 @@
 
 @implementation DeviceInfo
 
-static CGFloat height;
-static CGFloat width;
-
 +(CGFloat)height {
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    height  = screenBounds.size.height;
-    
-    return height;
+//    NSLog( @"screenBounds.size.height: %.2f", screenBounds.size.height );
+    return screenBounds.size.height;
     
 }
 
 +(CGFloat)width {
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    width = screenBounds.size.width;
-    
-    return width;
+//    NSLog( @"screenBounds.size.width: %.2f", screenBounds.size.width );
+    return screenBounds.size.width;
     
 }
 

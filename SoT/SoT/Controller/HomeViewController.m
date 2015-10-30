@@ -104,26 +104,33 @@
         [self updateAnimateTextField];
     
     if ( self.searchBackground.y + self.searchBackground.height > size.height ) {
-        
-        self.twitterLogo.x = size.width/2 - self.twitterLogo.width/2;
-        
+    
         self.lineRecentSearches.y = [self lineRecentSearchesAxisY];
         self.lineTrendingNow.y = self.lineRecentSearches.y;
         
         self.recentSearchLabel.y = [self recentSearchLabelAxisY];
         self.trendingNowLabel.y = [self trendingNowLabelAxisY];
-        
-        int i = 1;
-        for ( UIButton *b in self.recentSearchButtons )
-            b.y = self.recentSearchLabel.y + self.recentSearchLabel.height + ( (8+b.height) * i++ ) - 30;
-        
-        i = 1;
-        for ( UIButton *b in self.trendingNowButtons )
-            b.y = self.trendingNowLabel.y + self.trendingNowLabel.height + ( (8+b.height) * i++ ) - 30;
-        
+   
         self.searchBackground.y = size.height - self.searchBackground.height;
         
     }
+    
+    int i = 1, yLastVisibleButton = 0;
+    for ( UIButton *b in self.recentSearchButtons ) {
+        b.y = self.recentSearchLabel.y + self.recentSearchLabel.height + ( (8+b.height) * i++ ) - 30;
+        b.hidden = ( b.y + b.height > size.height - self.searchBackground.height );
+        yLastVisibleButton = (b.hidden?yLastVisibleButton:b.y+b.height+55);
+    }
+    
+    i = 1;
+    for ( UIButton *b in self.trendingNowButtons ) {
+        b.y = self.trendingNowLabel.y + self.trendingNowLabel.height + ( (8+b.height) * i++ ) - 30;
+        b.hidden = ( b.y + b.height > size.height - self.searchBackground.height );
+        yLastVisibleButton = (b.hidden && b.y+b.height+55>yLastVisibleButton?yLastVisibleButton:b.y+b.height+55);
+    }
+    
+    if ( yLastVisibleButton + self.searchBackground.height < size.height )
+        self.searchBackground.y = yLastVisibleButton;
     
 }
 
@@ -365,7 +372,7 @@
     [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
     [listButtons addObject:button];
     button.x = labelReference.x;
-    button.y = labelReference.y + labelReference.height + ( listButtons.count * ( button.height + 8 ) ) - button.height;
+    button.y = labelReference.y + labelReference.height + ( listButtons.count * ( button.height + 8 ) ) - 30;
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     
 }
@@ -376,7 +383,15 @@
     
     if ( listButtons ) {
         UIButton *button = [listButtons lastObject];
-        return button.y + button.height + 55;
+        
+        int position = button.y + button.height + 55;
+        int positionCandidate = [DeviceInfo height] - self.searchBackground.height;
+        
+        if ( position > positionCandidate )
+            position = positionCandidate;
+        
+        return position;
+        
     } else {
         return self.twitterLogo.y + self.twitterLogo.height + 55;
     }
