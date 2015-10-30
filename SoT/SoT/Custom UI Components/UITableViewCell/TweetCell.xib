@@ -77,6 +77,7 @@
                 <outlet property="tweetContent" destination="INj-hF-tyo" id="qDi-tj-iye"/>
                 <outlet property="tweetContentWidth" destination="3yM-JS-cc3" id="SYe-RC-6kv"/>
                 <outlet property="userName" destination="LwI-2o-eq8" id="hDl-0s-bdg"/>
+                <outlet property="userNameTrailing" destination="FNP-vw-KrL" id="bhM-qy-mi9"/>
                 <outlet property="userPhoto" destination="UgV-9T-MAA" id="piD-o5-6MX"/>
                 <outlet property="userPhotoLeading" destination="4Rx-Ok-gWC" id="Hsz-sj-Rrw"/>
             </connections>

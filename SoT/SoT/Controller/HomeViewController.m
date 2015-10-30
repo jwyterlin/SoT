@@ -100,10 +100,11 @@
 
 #pragma mark - IBAction methods
 
--(IBAction)recentSearchButtonPressed:(UIButton *)sender {
-}
+-(IBAction)shortcutButtonPressed:(UIButton *)sender {
 
--(IBAction)trendingNowButtonPressed:(UIButton *)sender {
+    self.searchTextField.text = sender.titleLabel.text;
+    [self searchTerm:NO];
+    
 }
 
 #pragma mark - SearchTextFieldDelegate methods
@@ -117,6 +118,24 @@
 }
 
 -(void)stfd_search {
+    
+    [self searchTerm:YES];
+    
+}
+
+#pragma mark - Overriding super methods
+
+-(void)updateAnimateTextField {
+    
+    [super updateAnimateTextField];
+    
+    [self animateTextField:self.searchTextField up:YES];
+    
+}
+
+#pragma mark - Private methods
+
+-(void)searchTerm:(BOOL)wasTyped {
     
     [[SearchDAO new] searchTerm:self.searchTextField.text completion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
         
@@ -133,9 +152,11 @@
         // Success
         if ( tweetsFound.count > 0 ) {
             
-            // Store this term in the recent search's history
-            [[RecentSearch sharedInstance] addRecentSearch:self.searchTextField.text];
-            
+            if ( wasTyped ) {
+                // Store this term in the recent search's history
+                [[RecentSearch sharedInstance] addRecentSearch:self.searchTextField.text];
+            }
+
             // Call view showing results of the search
             ResultSearchViewController *resultSearchVC = [[ResultSearchViewController alloc] initWithTweetsFound:tweetsFound
                                                                                                     termSearched:self.searchTextField.text];
@@ -146,18 +167,6 @@
     }];
     
 }
-
-#pragma mark - Overriding super methods
-
--(void)updateAnimateTextField {
-    
-    [super updateAnimateTextField];
-    
-    [self animateTextField:self.searchTextField up:YES];
-    
-}
-
-#pragma mark - Private methods
 
 -(void)horizontalAdjustToSize:(CGSize)size {
     
@@ -351,7 +360,7 @@
     
     [self setupButton:button
                  text:text
-             selector:@selector(recentSearchButtonPressed:)
+             selector:@selector(shortcutButtonPressed:)
           listButtons:self.recentSearchButtons
        labelReference:self.recentSearchLabel];
     
@@ -365,7 +374,7 @@
     
     [self setupButton:button
                  text:text
-             selector:@selector(trendingNowButtonPressed:)
+             selector:@selector(shortcutButtonPressed:)
           listButtons:self.trendingNowButtons
        labelReference:self.trendingNowLabel];
     

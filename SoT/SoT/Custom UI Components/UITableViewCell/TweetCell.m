@@ -21,6 +21,7 @@
 // Constraints
 @property(nonatomic,strong) IBOutlet NSLayoutConstraint *tweetContentWidth;
 @property(nonatomic,strong) IBOutlet NSLayoutConstraint *userPhotoLeading;
+@property(nonatomic,strong) IBOutlet NSLayoutConstraint *userNameTrailing;
 
 @end
 
@@ -72,9 +73,11 @@
     
     if ( cell.tweetContentWidth.constant != rightWidth ) {
         cell.tweetContentWidth.constant = rightWidth;
+        cell.userNameTrailing.constant = rightWidth;
     }
     
     [cell.tweetContent setNeedsUpdateConstraints];
+    [cell.userName     setNeedsUpdateConstraints];
     
     [cell defineUserPhotoWithTweet:tweet tableView:tableView indexPath:indexPath tweetCell:cell];
     
