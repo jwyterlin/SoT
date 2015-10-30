@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "UIView+Helper.h"
 
+// Service Layer
+#import "Constants.h"
+#import "DeviceInfo.h"
+
 @interface GenericButton : UIButton
 
 -(void)setup;

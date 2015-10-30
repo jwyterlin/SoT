@@ -10,6 +10,10 @@
 
 #import "UIView+Helper.h"
 
+// Service Layer
+#import "Constants.h"
+#import "DeviceInfo.h"
+
 @interface GenericLabel : UILabel
 
 -(void)setup;

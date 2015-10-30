@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Constants : NSObject
 
@@ -16,6 +17,9 @@ extern NSString *const kNibNameTweetCell;
 extern const int RECENT_SEARCH_BUTTONS_LIMIT;
 extern const int TRENDING_NOW_BUTTONS_LIMIT;
 extern const int SEARC_TERMS_LIMIT;
+
+extern const CGFloat WIDTH_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD;
+extern const CGFloat WIDTH_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE;
 
 // Trending
 extern NSString *const kTrendingName;

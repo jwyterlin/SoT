@@ -398,7 +398,13 @@
     if ( ! _lineRecentSearches ) {
         
         _lineRecentSearches = [LineView new];
-        _lineRecentSearches.x = [DeviceInfo width]/2 - _lineRecentSearches.width - 38.5;
+        
+        if ( [DeviceInfo isIphone] ) {
+            _lineRecentSearches.x = 16;
+        } else {
+            _lineRecentSearches.x = [DeviceInfo width]/2 - _lineRecentSearches.width - 38.5;
+        }
+        
         _lineRecentSearches.y = self.twitterLogo.y + self.twitterLogo.height + 89;
         
     }
@@ -426,7 +432,13 @@
     if ( ! _lineTrendingNow ) {
         
         _lineTrendingNow = [LineView new];
-        _lineTrendingNow.x = self.lineRecentSearches.x + self.lineRecentSearches.width + 77;
+        
+        if ( [DeviceInfo isIphone] ) {
+            _lineTrendingNow.x = self.lineRecentSearches.x + self.lineRecentSearches.width + 21;
+        } else {
+            _lineTrendingNow.x = self.lineRecentSearches.x + self.lineRecentSearches.width + 77;
+        }
+        
         _lineTrendingNow.y = self.twitterLogo.y + self.twitterLogo.height + 89;
         
     }

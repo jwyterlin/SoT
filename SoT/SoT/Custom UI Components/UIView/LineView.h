@@ -8,6 +8,9 @@
 
 #import "GenericView.h"
 
+// Service Layer
+#import "Constants.h"
+
 @interface LineView : GenericView
 
 @end

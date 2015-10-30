@@ -14,7 +14,7 @@
     
     [super setup];
     
-    self.width = 231;
+    self.width = [DeviceInfo isIpad]?WIDTH_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD:WIDTH_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE;
     self.height = 4;
     self.backgroundColor = [UIColor colorWithRed:90.0/256.0 green:160.0/256.0 blue:198.0/256.0 alpha:1.0];
     

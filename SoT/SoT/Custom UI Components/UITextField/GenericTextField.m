@@ -24,7 +24,7 @@
 
 -(void)setup {
     
-    self.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:64.0f];
+    self.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:[DeviceInfo isIpad]?64.0f:48.0f];
     
 }
 

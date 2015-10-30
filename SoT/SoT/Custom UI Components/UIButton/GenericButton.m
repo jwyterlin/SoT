@@ -30,7 +30,7 @@
     
     [self setTitleColor:buttonColor forState:UIControlStateNormal];
     
-    self.width = 231;
+    self.width = [DeviceInfo isIpad]?WIDTH_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD:WIDTH_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE;
     self.height = 21;
     
 }
