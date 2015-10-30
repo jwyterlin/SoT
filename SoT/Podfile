@@ -1,2 +1,1 @@
-pod 'AFNetworking', '2.5.4'
 pod "Reachability", "~> 3.2"

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B3893361BE2F8E100B9CE13 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3893351BE2F8E100B9CE13 /* Connection.m */; };
 		7B38933D1BE3087B00B9CE13 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933B1BE3087B00B9CE13 /* Fabric.framework */; };
 		7B38933E1BE3087B00B9CE13 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933C1BE3087B00B9CE13 /* TwitterKit.framework */; };
 		7B3893401BE308C400B9CE13 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933F1BE308C400B9CE13 /* TwitterCore.framework */; };
@@ -55,7 +54,6 @@
 		7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B371BE17A0200042C40 /* CATransformLayer+Helper.m */; };
 		7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */; };
 		7BCF40911BE29D3D002A3D28 /* TopSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCF40901BE29D3D002A3D28 /* TopSearchBarView.m */; };
-		7BD3E91B1BE2F69E00473577 /* NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3E91A1BE2F69E00473577 /* NetAPIClient.m */; };
 		7BD3E91E1BE2F74100473577 /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3E91D1BE2F74100473577 /* Routes.m */; };
 		D810101C75294A4BB982D318 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF94AA5AC83264BC15F7FC2 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -79,8 +77,6 @@
 
 /* Begin PBXFileReference section */
 		72E38342024A0303B5408930 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		7B3893341BE2F8E100B9CE13 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = "Service Layer/Connection.h"; sourceTree = "<group>"; };
-		7B3893351BE2F8E100B9CE13 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = "Service Layer/Connection.m"; sourceTree = "<group>"; };
 		7B38933B1BE3087B00B9CE13 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
 		7B38933C1BE3087B00B9CE13 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Frameworks/TwitterKit.framework; sourceTree = "<group>"; };
 		7B38933F1BE308C400B9CE13 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = Frameworks/TwitterCore.framework; sourceTree = "<group>"; };
@@ -170,8 +166,6 @@
 		7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericViewController.m; path = Controller/GenericViewController.m; sourceTree = "<group>"; };
 		7BCF408F1BE29D3D002A3D28 /* TopSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopSearchBarView.h; path = "Custom UI Components/UIView/TopSearchBarView.h"; sourceTree = "<group>"; };
 		7BCF40901BE29D3D002A3D28 /* TopSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopSearchBarView.m; path = "Custom UI Components/UIView/TopSearchBarView.m"; sourceTree = "<group>"; };
-		7BD3E9191BE2F69E00473577 /* NetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetAPIClient.h; path = "Service Layer/NetAPIClient.h"; sourceTree = "<group>"; };
-		7BD3E91A1BE2F69E00473577 /* NetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetAPIClient.m; path = "Service Layer/NetAPIClient.m"; sourceTree = "<group>"; };
 		7BD3E91C1BE2F74100473577 /* Routes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routes.h; path = "Service Layer/Routes.h"; sourceTree = "<group>"; };
 		7BD3E91D1BE2F74100473577 /* Routes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routes.m; path = "Service Layer/Routes.m"; sourceTree = "<group>"; };
 		84D3552E76C1074C58559FE6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -407,14 +401,10 @@
 			children = (
 				7B87A4701BE27E280024A45B /* CellHelper.h */,
 				7B87A4711BE27E280024A45B /* CellHelper.m */,
-				7B3893341BE2F8E100B9CE13 /* Connection.h */,
-				7B3893351BE2F8E100B9CE13 /* Connection.m */,
 				7BCB0AFC1BE13FCB00042C40 /* Constants.h */,
 				7BCB0AFD1BE13FCB00042C40 /* Constants.m */,
 				7BCB0AFF1BE13FE100042C40 /* DeviceInfo.h */,
 				7BCB0B001BE13FE100042C40 /* DeviceInfo.m */,
-				7BD3E9191BE2F69E00473577 /* NetAPIClient.h */,
-				7BD3E91A1BE2F69E00473577 /* NetAPIClient.m */,
 				7BD3E91C1BE2F74100473577 /* Routes.h */,
 				7BD3E91D1BE2F74100473577 /* Routes.m */,
 				7B9CD3AA1BE31C010024434D /* Validator.h */,
@@ -698,13 +688,11 @@
 				7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */,
 				7B87A4631BE261270024A45B /* TweetCell.m in Sources */,
 				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
-				7BD3E91B1BE2F69E00473577 /* NetAPIClient.m in Sources */,
 				7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */,
 				7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */,
 				7B87A4721BE27E280024A45B /* CellHelper.m in Sources */,
 				7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */,
 				7BCF40911BE29D3D002A3D28 /* TopSearchBarView.m in Sources */,
-				7B3893361BE2F8E100B9CE13 /* Connection.m in Sources */,
 				7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */,
 				7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */,
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,
