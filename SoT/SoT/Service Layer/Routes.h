@@ -13,4 +13,6 @@
 +(NSString *)BASE_URL;
 +(NSString *)BASE_URL_API;
 
++(NSString *)WS_TRENDS;
+
 @end

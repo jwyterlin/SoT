@@ -31,6 +31,9 @@
 // Controller
 #import "ResultSearchViewController.h"
 
+// Model
+#import "TrendingModel.h"
+
 @interface HomeViewController()<SearchTextFieldDelegate>
 
 // UI
@@ -51,9 +54,6 @@
 
 @end
 
-const int RECENT_SEARCH_BUTTONS_LIMIT = 5;
-const int TRENDING_NOW_BUTTONS_LIMIT = 5;
-
 @implementation HomeViewController
 
 #pragma mark - View Lifecycle
@@ -73,6 +73,20 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
     
     [self showTwitterLogo];
     [self showSearchTextField];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+//    [[Twitter sharedInstance] logInWithCompletion:^(TWTRSession *session, NSError *error) {
+//        if (session) {
+//            NSLog(@"logged in user with id %@", session.userID);
+//        } else {
+//            // log error
+//        }
+//    }];
     
 }
 
@@ -272,8 +286,8 @@ const int TRENDING_NOW_BUTTONS_LIMIT = 5;
         [self.view addSubview:self.lineTrendingNow];
         [self.view addSubview:self.trendingNowLabel];
         
-        for ( NSString *text in self.trendingNowList ) {
-            TrendingNowButton *trendingNowButton = [self createTrendingNowButtonWithText:text];
+        for ( TrendingModel *t in self.trendingNowList ) {
+            TrendingNowButton *trendingNowButton = [self createTrendingNowButtonWithText:t.name];
             [self.view addSubview:trendingNowButton];
         }
         

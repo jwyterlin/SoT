@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+// Service Layer
+#import "Constants.h"
+#import "Validator.h"
+
 @interface GenericModel : NSObject
+
+-(NSArray *)setupListWithJson:(NSArray *)list;
+-(id)setupWithJson:(NSDictionary *)json;
 
 @end

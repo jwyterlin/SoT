@@ -13,4 +13,13 @@
 // UITableViewCell Nib Names
 extern NSString *const kNibNameTweetCell;
 
+extern const int RECENT_SEARCH_BUTTONS_LIMIT;
+extern const int TRENDING_NOW_BUTTONS_LIMIT;
+
+// Trending
+extern NSString *const kTrendingName;
+extern NSString *const kTrendingPromotedContent;
+extern NSString *const kTrendingQuery;
+extern NSString *const kTrendingUrl;
+
 @end
