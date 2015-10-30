@@ -91,12 +91,6 @@
     self.recentSearchLabel.x = self.lineRecentSearches.x;
     self.trendingNowLabel.x = self.lineTrendingNow.x;
     
-    for ( UIButton *b in self.recentSearchButtons )
-        b.x = self.lineRecentSearches.x;
-    
-    for ( UIButton *b in self.trendingNowButtons )
-        b.x = self.lineTrendingNow.x;
-    
     self.searchBackground.width = size.width;
     self.searchTextField.width = size.width - self.searchTextField.x - 21;
     
@@ -117,6 +111,7 @@
     
     int i = 1, yLastVisibleButton = 0;
     for ( UIButton *b in self.recentSearchButtons ) {
+        b.x = self.lineRecentSearches.x;
         b.y = self.recentSearchLabel.y + self.recentSearchLabel.height + ( (8+b.height) * i++ ) - 30;
         b.hidden = ( b.y + b.height > size.height - self.searchBackground.height );
         yLastVisibleButton = (b.hidden?yLastVisibleButton:b.y+b.height+55);
@@ -124,6 +119,7 @@
     
     i = 1;
     for ( UIButton *b in self.trendingNowButtons ) {
+        b.x = self.lineTrendingNow.x;
         b.y = self.trendingNowLabel.y + self.trendingNowLabel.height + ( (8+b.height) * i++ ) - 30;
         b.hidden = ( b.y + b.height > size.height - self.searchBackground.height );
         yLastVisibleButton = (b.hidden && b.y+b.height+55>yLastVisibleButton?yLastVisibleButton:b.y+b.height+55);
