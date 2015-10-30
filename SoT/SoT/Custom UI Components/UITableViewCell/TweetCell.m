@@ -132,8 +132,7 @@
     NSMutableArray *leftUtilityButtons = [NSMutableArray new];
     
     [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:90.0/256.0 green:160.0/256.0 blue:198.0/256.0 alpha:1.0f]
-                                          normalIcon:[UIImage imageNamed:@"botao_generico_off"]
-                                        selectedIcon:[UIImage imageNamed:@"botao_generico_on"]];
+                                                icon:[UIImage imageNamed:@"share.png"]];
     
     return leftUtilityButtons;
     
