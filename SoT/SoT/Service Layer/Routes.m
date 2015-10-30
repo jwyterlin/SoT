@@ -11,7 +11,7 @@
 @implementation Routes
 
 +(NSString *)BASE_URL {
-    return @"https://api.twitter.com.br";
+    return @"https://api.twitter.com";
 }
 
 +(NSString *)BASE_URL_API {
@@ -20,6 +20,10 @@
 
 +(NSString *)WS_TRENDS {
     return @"trends/place.json";
+}
+
++(NSString *)WS_SEARCH_TWEETS {
+    return @"search/tweets.json";
 }
 
 @end

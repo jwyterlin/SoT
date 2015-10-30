@@ -14,5 +14,6 @@
 +(NSString *)BASE_URL_API;
 
 +(NSString *)WS_TRENDS;
++(NSString *)WS_SEARCH_TWEETS;
 
 @end

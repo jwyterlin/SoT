@@ -13,6 +13,8 @@
 #import "Constants.h"
 #import "Routes.h"
 
+#import <TwitterKit/TwitterKit.h>
+
 @interface GenericDAO : NSObject
 
 @end

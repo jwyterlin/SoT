@@ -15,11 +15,19 @@ extern NSString *const kNibNameTweetCell;
 
 extern const int RECENT_SEARCH_BUTTONS_LIMIT;
 extern const int TRENDING_NOW_BUTTONS_LIMIT;
+extern const int SEARC_TERMS_LIMIT;
 
 // Trending
 extern NSString *const kTrendingName;
 extern NSString *const kTrendingPromotedContent;
 extern NSString *const kTrendingQuery;
 extern NSString *const kTrendingUrl;
+
+// Tweet
+extern NSString *const kTweetIdentifier;
+extern NSString *const kTweetUser;
+extern NSString *const kTweetUserName;
+extern NSString *const kTweetUserProfileImageUrl;
+extern NSString *const kTweetText;
 
 @end

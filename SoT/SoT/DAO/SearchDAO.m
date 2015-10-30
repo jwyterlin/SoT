@@ -33,37 +33,65 @@
 -(void)searchTerm:(NSString *)term completion:(void(^)(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error))completion
              test:(void(^)(id responseData, NSError *error))test {
     
-    // Fake data
-    TweetModel *t1 = [TweetModel new];
-    t1.identifier = [NSNumber numberWithInt:1];
-    t1.userName = @"Arthur Price";
-    t1.detail = @"Hey @getblogo team! It was really really great to see you again earlier. Let's definitely get that coffee sometime next week...";
+    TWTRAPIClient *client = [[TWTRAPIClient alloc] init];
+    NSString *statusesShowEndpoint = [NSString stringWithFormat:@"%@%@",[Routes BASE_URL_API], [Routes WS_SEARCH_TWEETS]];
+
+    term = [term stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSString *query = [term stringByRemovingPercentEncoding];
     
-    TweetModel *t2 = [TweetModel new];
-    t2.identifier = [NSNumber numberWithInt:2];
-    t2.userName = @"Shirley Ramirez";
-    t2.detail = @"Keytar McSweeney's Williamsburg, readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy. Asymmet.";
+    NSDictionary *params = @{
+                             @"q":query,
+                             @"count":[NSString stringWithFormat:@"%i",SEARC_TERMS_LIMIT]
+                            };
+    NSError *clientError;
     
-    TweetModel *t3 = [TweetModel new];
-    t3.identifier = [NSNumber numberWithInt:3];
-    t3.userName = @"Dennis Edwards";
-    t3.detail = @"Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap. Hashtag typewriter banh mi, squid keffi.";
+    NSURLRequest *request = [client URLRequestWithMethod:@"GET" URL:statusesShowEndpoint parameters:params error:&clientError];
     
-    TweetModel *t4 = [TweetModel new];
-    t4.identifier = [NSNumber numberWithInt:4];
-    t4.userName = @"Hannah Ramirez";
-    t4.detail = @"Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled.";
-    
-    TweetModel *t5 = [TweetModel new];
-    t5.identifier = [NSNumber numberWithInt:5];
-    t5.userName = @"Dennis Edwards";
-    t5.detail = @"Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap. Hashtag typewriter banh mi, squid keffi.";
-    
-    NSArray *tweetsFound = @[t1,t2,t3,t4,t5];
-    
-    if (completion) {
-        completion( tweetsFound, NO, NULL );
-        return;
+    if ( request ) {
+        
+        [client sendTwitterRequest:request completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            
+            if ( data ) {
+                
+                NSError *jsonError;
+                NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                
+                NSArray *statuses = json[@"statuses"];
+                
+                NSMutableArray *list = [NSMutableArray new];
+                
+                if ( statuses.count > 0 ) {
+                    
+                    for ( NSDictionary *obj in statuses ) {
+                        
+                        TweetModel *t = [[TweetModel new] setupWithJson:obj];
+                        
+                        [list addObject:t];
+                        
+                    }
+                    
+                }
+
+                if ( completion ) {
+                    completion( list, NO, nil );
+                }
+                
+            } else {
+                
+                if (completion) {
+                    completion( nil, NO, connectionError );
+                }
+                
+            }
+            
+        }];
+        
+    } else {
+        
+        if (completion) {
+            completion( nil, NO, clientError );
+        }
+        
     }
     
 }

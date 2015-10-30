@@ -10,4 +10,22 @@
 
 @implementation TweetModel
 
+-(TweetModel *)setupWithJson:(NSDictionary *)j {
+    
+    if ( ! [Validator validateObject:j] )
+        return nil;
+    
+    TweetModel *t = [TweetModel new];
+    
+    NSDictionary *user = j[kTweetUser];
+    
+    t.identifier = [NSNumber numberWithLongLong:[j[kTweetIdentifier] longLongValue]];
+    t.userName = user[kTweetUserName];
+    t.imageUrl = user[kTweetUserProfileImageUrl];
+    t.detail = j[kTweetText];
+    
+    return t;
+    
+}
+
 @end

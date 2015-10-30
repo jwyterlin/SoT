@@ -8,8 +8,7 @@
 
 #import "TrendingDAO.h"
 
-#import <TwitterKit/TwitterKit.h>
-
+// Model
 #import "TrendingModel.h"
 
 @implementation TrendingDAO
