@@ -17,7 +17,7 @@
     static NetAPIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[NetAPIClient alloc] initWithBaseURL:[NSURL URLWithString:[Routes BASEAPI_URL]]];
+        _sharedClient = [[NetAPIClient alloc] initWithBaseURL:[NSURL URLWithString:[Routes BASE_URL_API]]];
         _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
         _sharedClient.securityPolicy.allowInvalidCertificates = YES;
     });

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3893361BE2F8E100B9CE13 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3893351BE2F8E100B9CE13 /* Connection.m */; };
 		7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4551BE25C070024A45B /* ResultSearchViewController.m */; };
 		7B87A4591BE25F140024A45B /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4581BE25F140024A45B /* GenericModel.m */; };
 		7B87A45C1BE25F2D0024A45B /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A45B1BE25F2D0024A45B /* TweetModel.m */; };
@@ -71,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		72E38342024A0303B5408930 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7B3893341BE2F8E100B9CE13 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = "Service Layer/Connection.h"; sourceTree = "<group>"; };
+		7B3893351BE2F8E100B9CE13 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = "Service Layer/Connection.m"; sourceTree = "<group>"; };
 		7B87A4541BE25C070024A45B /* ResultSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultSearchViewController.h; path = Controller/ResultSearchViewController.h; sourceTree = "<group>"; };
 		7B87A4551BE25C070024A45B /* ResultSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultSearchViewController.m; path = Controller/ResultSearchViewController.m; sourceTree = "<group>"; };
 		7B87A4571BE25F140024A45B /* GenericModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericModel.h; path = Model/GenericModel.h; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 				7BD3E91A1BE2F69E00473577 /* NetAPIClient.m */,
 				7BD3E91C1BE2F74100473577 /* Routes.h */,
 				7BD3E91D1BE2F74100473577 /* Routes.m */,
+				7B3893341BE2F8E100B9CE13 /* Connection.h */,
+				7B3893351BE2F8E100B9CE13 /* Connection.m */,
 			);
 			name = "Service Layer";
 			sourceTree = "<group>";
@@ -654,6 +659,7 @@
 				7B87A4721BE27E280024A45B /* CellHelper.m in Sources */,
 				7BCB0B341BE1615D00042C40 /* TrendingDAO.m in Sources */,
 				7BCF40911BE29D3D002A3D28 /* TopSearchBarView.m in Sources */,
+				7B3893361BE2F8E100B9CE13 /* Connection.m in Sources */,
 				7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */,
 				7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */,
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,

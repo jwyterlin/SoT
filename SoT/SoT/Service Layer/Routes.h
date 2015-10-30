@@ -11,6 +11,6 @@
 @interface Routes : NSObject
 
 +(NSString *)BASE_URL;
-+(NSString *)BASEAPI_URL;
++(NSString *)BASE_URL_API;
 
 @end

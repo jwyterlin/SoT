@@ -14,12 +14,8 @@
     return @"https://api.twitter.com.br/";
 }
 
-+(NSString *)BASEAPI_URL {
++(NSString *)BASE_URL_API {
     return [NSString stringWithFormat:@"%@",[Routes BASE_URL]];
-}
-
-+(NSString *)WS_TEST {
-    return @"test";
 }
 
 @end
