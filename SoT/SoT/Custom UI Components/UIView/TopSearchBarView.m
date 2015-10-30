@@ -100,6 +100,8 @@
         _searchedTerm.textAlignment = NSTextAlignmentCenter;
         _searchedTerm.textColor = [UIColor whiteColor];
         _searchedTerm.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:[DeviceInfo isIpad]?27.0f:21.0];
+        _searchedTerm.adjustsFontSizeToFitWidth = YES;
+        _searchedTerm.minimumScaleFactor = 0.3;
         
     }
     

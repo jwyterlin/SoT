@@ -26,5 +26,19 @@
     
 }
 
++(BOOL)isEmptyString:(NSString *)string {
+    
+    if ( string == nil )
+        return YES;
+    
+    if ( [string isEqual:[NSNull null]] )
+        return YES;
+    
+    if ( [string isKindOfClass:[NSNumber class]] )
+        return [[NSString stringWithFormat:@"%lld", [string longLongValue]] isEqualToString:@""];
+    
+    return [string isEqualToString:@""];
+    
+}
 
 @end

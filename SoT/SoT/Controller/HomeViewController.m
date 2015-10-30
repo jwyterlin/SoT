@@ -23,6 +23,7 @@
 
 // Service Layer
 #import "DeviceInfo.h"
+#import "Indicator.h"
 #import "RecentSearch.h"
 
 // DAO
@@ -137,7 +138,11 @@
 
 -(void)searchTerm:(BOOL)wasTyped {
     
+    [[Indicator shared] showIndicatorWithLabel:NSLocalizedString(@"LOADING", nil) viewController:self];
+
     [[SearchDAO new] searchTerm:self.searchTextField.text completion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
+        
+        [[Indicator shared] stopIndicatorInViewController:self];
         
         if ( hasNoConnection ) {
             /// TODO: Show has no connection

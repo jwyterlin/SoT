@@ -11,5 +11,6 @@
 @interface Validator : NSObject
 
 +(BOOL)validateObject:(id)object;
++(BOOL)isEmptyString:(NSString *)string;
 
 @end

@@ -12,6 +12,8 @@
 		7B3893401BE308C400B9CE13 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933F1BE308C400B9CE13 /* TwitterCore.framework */; };
 		7B3893421BE30C5E00B9CE13 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B3893411BE30C5E00B9CE13 /* TwitterKitResources.bundle */; };
 		7B60F6321BE40464001E3279 /* RecentSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B60F6311BE40464001E3279 /* RecentSearch.m */; };
+		7B60F6351BE41CBD001E3279 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B60F6341BE41CBD001E3279 /* MBProgressHUD.m */; };
+		7B60F6381BE41D5D001E3279 /* Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B60F6371BE41D5D001E3279 /* Indicator.m */; };
 		7B75C6751BE3476A0030F85F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B75C6771BE3476A0030F85F /* Localizable.strings */; };
 		7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4551BE25C070024A45B /* ResultSearchViewController.m */; };
 		7B87A4591BE25F140024A45B /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4581BE25F140024A45B /* GenericModel.m */; };
@@ -85,6 +87,10 @@
 		7B3893411BE30C5E00B9CE13 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = "../../../../../Downloads/cannonball-ios-master/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle"; sourceTree = "<group>"; };
 		7B60F6301BE40464001E3279 /* RecentSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentSearch.h; path = "Service Layer/RecentSearch.h"; sourceTree = "<group>"; };
 		7B60F6311BE40464001E3279 /* RecentSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecentSearch.m; path = "Service Layer/RecentSearch.m"; sourceTree = "<group>"; };
+		7B60F6331BE41CBD001E3279 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = "Service Layer/MBProgressHUD.h"; sourceTree = "<group>"; };
+		7B60F6341BE41CBD001E3279 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = "Service Layer/MBProgressHUD.m"; sourceTree = "<group>"; };
+		7B60F6361BE41D5D001E3279 /* Indicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Indicator.h; path = "Service Layer/Indicator.h"; sourceTree = "<group>"; };
+		7B60F6371BE41D5D001E3279 /* Indicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Indicator.m; path = "Service Layer/Indicator.m"; sourceTree = "<group>"; };
 		7B75C6731BE347600030F85F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		7B75C6741BE347600030F85F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		7B75C6761BE3476A0030F85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -422,6 +428,10 @@
 				7BCB0AFD1BE13FCB00042C40 /* Constants.m */,
 				7BCB0AFF1BE13FE100042C40 /* DeviceInfo.h */,
 				7BCB0B001BE13FE100042C40 /* DeviceInfo.m */,
+				7B60F6361BE41D5D001E3279 /* Indicator.h */,
+				7B60F6371BE41D5D001E3279 /* Indicator.m */,
+				7B60F6331BE41CBD001E3279 /* MBProgressHUD.h */,
+				7B60F6341BE41CBD001E3279 /* MBProgressHUD.m */,
 				7B60F6301BE40464001E3279 /* RecentSearch.h */,
 				7B60F6311BE40464001E3279 /* RecentSearch.m */,
 				7BD3E91C1BE2F74100473577 /* Routes.h */,
@@ -710,6 +720,7 @@
 				7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */,
 				7B87A4631BE261270024A45B /* TweetCell.m in Sources */,
 				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
+				7B60F6351BE41CBD001E3279 /* MBProgressHUD.m in Sources */,
 				7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */,
 				7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */,
 				7B87A4721BE27E280024A45B /* CellHelper.m in Sources */,
@@ -720,6 +731,7 @@
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,
 				7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */,
 				7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */,
+				7B60F6381BE41D5D001E3279 /* Indicator.m in Sources */,
 				7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */,
 				7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */,
 				7B9CD3AF1BE332B40024434D /* ImageDAO.m in Sources */,
