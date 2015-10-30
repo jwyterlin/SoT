@@ -21,6 +21,9 @@ extern const int SEARC_TERMS_LIMIT;
 extern const CGFloat WIDTH_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD;
 extern const CGFloat WIDTH_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE;
 
+extern const CGFloat DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD;
+extern const CGFloat DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE;
+
 // Trending
 extern NSString *const kTrendingName;
 extern NSString *const kTrendingPromotedContent;

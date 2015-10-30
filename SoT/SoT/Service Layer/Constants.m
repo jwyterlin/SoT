@@ -22,6 +22,9 @@ const int SEARC_TERMS_LIMIT = 15;
 const CGFloat WIDTH_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD = 231;
 const CGFloat WIDTH_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE = 180;
 
+const CGFloat DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD = 77;
+const CGFloat DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE = 21;
+
 // Trending
 NSString *const kTrendingName = @"name";
 NSString *const kTrendingPromotedContent = @"promoted_content";

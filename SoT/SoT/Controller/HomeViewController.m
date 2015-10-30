@@ -86,7 +86,7 @@
     
     // Adjust components
     self.twitterLogo.x = size.width/2 - self.twitterLogo.width/2;
-    self.lineRecentSearches.x = [DeviceInfo isIpad]?(size.width/2 - self.lineRecentSearches.width - 38.5):16;
+    self.lineRecentSearches.x = [self lineRecentSearchesAxisXWithWidth:size.width];
     self.lineTrendingNow.x = [self lineTrendingNowAxisX];
     self.recentSearchLabel.x = self.lineRecentSearches.x;
     self.trendingNowLabel.x = self.lineTrendingNow.x;
@@ -103,10 +103,8 @@
     if ( [self.searchTextField isFirstResponder] )
         [self updateAnimateTextField];
     
-    if ( self.searchBackground.y > size.height ) {
+    if ( self.searchBackground.y + self.searchBackground.height > size.height ) {
         
-        self.twitterLogo.width *= 0.3;
-        self.twitterLogo.height *= 0.3;
         self.twitterLogo.x = size.width/2 - self.twitterLogo.width/2;
         
         self.lineRecentSearches.y = [self lineRecentSearchesAxisY];
@@ -405,12 +403,11 @@
     
 }
 
--(CGFloat)lineRecentSearchesAxisX {
+-(CGFloat)lineRecentSearchesAxisXWithWidth:(CGFloat)width {
     
-    if ( [DeviceInfo isIphone] )
-        return 16.0f;
-    else
-        return [DeviceInfo width]/2 - self.lineRecentSearches.width - 38.5;
+    CGFloat distance = [DeviceInfo isIpad]?DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD:DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE;
+    
+    return width/2 - self.lineRecentSearches.width - distance/2;
 
 }
 
@@ -421,9 +418,9 @@
 -(CGFloat)lineTrendingNowAxisX {
     
     if ( [DeviceInfo isIphone] )
-        return self.lineRecentSearches.x + self.lineRecentSearches.width + 21;
+        return self.lineRecentSearches.x + self.lineRecentSearches.width + DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPHONE;
     else
-        return self.lineRecentSearches.x + self.lineRecentSearches.width + 77;
+        return self.lineRecentSearches.x + self.lineRecentSearches.width + DISTANCE_BETWEEN_SUBCOLUMNS_MAIN_VIEW_FOR_IPAD;
     
 }
 
@@ -456,7 +453,7 @@
     if ( ! _lineRecentSearches ) {
         
         _lineRecentSearches = [LineView new];
-        _lineRecentSearches.x = [self lineRecentSearchesAxisX];
+        _lineRecentSearches.x = [self lineRecentSearchesAxisXWithWidth:[DeviceInfo width]];
         _lineRecentSearches.y = [self lineRecentSearchesAxisY];
         
     }
