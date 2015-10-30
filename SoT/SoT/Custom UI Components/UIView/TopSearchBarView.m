@@ -72,13 +72,13 @@
 
     if ( ! _searchLogo ) {
         
-        CGFloat width = 38;
-        CGFloat height = 38;
-        CGFloat x = 31;
+        CGFloat width = [DeviceInfo isIpad]?38:25;
+        CGFloat height = [DeviceInfo isIpad]?38:25;
+        CGFloat x = [DeviceInfo isIpad]?31:21;
         CGFloat y = self.height/2 - height/2 + 10;
         
         _searchLogo = [[UIImageView alloc] initWithFrame:CGRectMake( x, y, width, height )];
-        _searchLogo.backgroundColor = [UIColor blackColor];
+        _searchLogo.image = [UIImage imageNamed:@"search-icon"];
         
     }
     
@@ -123,7 +123,7 @@
         [_closeButton setTitle:@"X" forState:UIControlStateNormal];
         [_closeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _closeButton.backgroundColor = [UIColor clearColor];
-        _closeButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:27.0f];
+        _closeButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:[DeviceInfo isIpad]?27.0f:21.0f];
         
     }
     
