@@ -9,6 +9,9 @@
 #import "TweetCell.h"
 #import "CellLabel.h"
 
+// DAO
+#import "ImageDAO.h"
+
 @interface TweetCell()
 
 @property(nonatomic,strong) IBOutlet UIImageView *userPhoto;
@@ -48,6 +51,7 @@
     }
     
     cell.userPhoto.layer.cornerRadius = cell.userPhoto.width/2;
+    cell.userPhoto.layer.masksToBounds = YES;
     cell.userPhoto.backgroundColor = [UIColor blackColor];
     
     cell.userName.text = tweet.userName;
@@ -60,6 +64,41 @@
     }
     
     [cell.tweetContent setNeedsUpdateConstraints];
+    
+    [cell defineUserPhotoWithTweet:tweet tableView:tableView indexPath:indexPath tweetCell:cell];
+    
+}
+
+-(void)defineUserPhotoWithTweet:(TweetModel *)tweetModel
+                      tableView:(UITableView *)tableView
+                      indexPath:(NSIndexPath *)indexPath
+                      tweetCell:(TweetCell *)tweetCell {
+    
+    if ( tweetModel.image ) {
+        
+        tweetCell.userPhoto.image = [UIImage imageWithData:tweetModel.image];
+        return ;
+        
+    }
+    
+    tweetCell.userPhoto.image = nil;
+    
+    [[ImageDAO new] imageByUrl:tweetModel.imageUrl completion:^(UIImage *image) {
+        
+        TweetCell *helperCell = (TweetCell *)[tableView cellForRowAtIndexPath:indexPath];
+        
+        if ( helperCell ) {
+            
+            if ( image ) {
+                
+                tweetModel.image = UIImageJPEGRepresentation(image, 1.0);
+                helperCell.userPhoto.image = image;
+                
+            }
+            
+        }
+        
+    }];
     
 }
 

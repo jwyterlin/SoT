@@ -11,7 +11,7 @@
 @interface TweetModel : GenericModel
 
 @property(nonatomic,strong) NSNumber *identifier;
-@property(nonatomic,strong) NSData *imageData;
+@property(nonatomic,strong) NSData *image;
 @property(nonatomic,strong) NSString *imageUrl;
 @property(nonatomic,strong) NSString *userName;
 @property(nonatomic,strong) NSString *detail;

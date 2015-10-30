@@ -27,7 +27,7 @@ NSString *const kTrendingUrl = @"url";
 NSString *const kTweetIdentifier = @"id";
 NSString *const kTweetUser = @"user";
 NSString *const kTweetUserName = @"name";
-NSString *const kTweetUserProfileImageUrl = @"profile_image_url";
+NSString *const kTweetUserProfileImageUrl = @"profile_image_url_https";
 NSString *const kTweetText = @"text";
 
 @end

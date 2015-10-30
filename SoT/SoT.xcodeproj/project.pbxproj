@@ -23,6 +23,7 @@
 		7B87A47A1BE286F70024A45B /* CellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4791BE286F70024A45B /* CellLabel.m */; };
 		7B9CD3A91BE313730024434D /* TrendingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9CD3A81BE313730024434D /* TrendingModel.m */; };
 		7B9CD3AC1BE31C010024434D /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9CD3AB1BE31C010024434D /* Validator.m */; };
+		7B9CD3AF1BE332B40024434D /* ImageDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9CD3AE1BE332B40024434D /* ImageDAO.m */; };
 		7BC0C22A1BDD583600CE2540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2291BDD583600CE2540 /* main.m */; };
 		7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2311BDD583600CE2540 /* Main.storyboard */; };
 		7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2341BDD583600CE2540 /* Assets.xcassets */; };
@@ -105,6 +106,8 @@
 		7B9CD3A81BE313730024434D /* TrendingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingModel.m; path = Model/TrendingModel.m; sourceTree = "<group>"; };
 		7B9CD3AA1BE31C010024434D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Validator.h; path = "Service Layer/Validator.h"; sourceTree = "<group>"; };
 		7B9CD3AB1BE31C010024434D /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Validator.m; path = "Service Layer/Validator.m"; sourceTree = "<group>"; };
+		7B9CD3AD1BE332B40024434D /* ImageDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageDAO.h; path = DAO/ImageDAO.h; sourceTree = "<group>"; };
+		7B9CD3AE1BE332B40024434D /* ImageDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageDAO.m; path = DAO/ImageDAO.m; sourceTree = "<group>"; };
 		7BC0C2251BDD583600CE2540 /* SoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC0C2291BDD583600CE2540 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BC0C2321BDD583600CE2540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -493,6 +496,8 @@
 				7BCB0B301BE15F0200042C40 /* SearchDAO.m */,
 				7BCB0B321BE1615D00042C40 /* TrendingDAO.h */,
 				7BCB0B331BE1615D00042C40 /* TrendingDAO.m */,
+				7B9CD3AD1BE332B40024434D /* ImageDAO.h */,
+				7B9CD3AE1BE332B40024434D /* ImageDAO.m */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -707,6 +712,7 @@
 				7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */,
 				7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */,
 				7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */,
+				7B9CD3AF1BE332B40024434D /* ImageDAO.m in Sources */,
 				7B87A45C1BE25F2D0024A45B /* TweetModel.m in Sources */,
 				7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */,
 				7B9CD3AC1BE31C010024434D /* Validator.m in Sources */,
