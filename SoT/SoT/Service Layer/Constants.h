@@ -37,4 +37,6 @@ extern NSString *const kTweetUserName;
 extern NSString *const kTweetUserProfileImageUrl;
 extern NSString *const kTweetText;
 
+extern NSString *const kStoredRecentSearches;
+
 @end

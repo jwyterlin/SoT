@@ -38,4 +38,6 @@ NSString *const kTweetUserName = @"name";
 NSString *const kTweetUserProfileImageUrl = @"profile_image_url_https";
 NSString *const kTweetText = @"text";
 
+NSString *const kStoredRecentSearches = @"StoredRecentSearches";
+
 @end
