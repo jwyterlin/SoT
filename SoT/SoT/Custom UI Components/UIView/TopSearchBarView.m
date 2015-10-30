@@ -99,7 +99,7 @@
         _searchedTerm.text = @"";
         _searchedTerm.textAlignment = NSTextAlignmentCenter;
         _searchedTerm.textColor = [UIColor whiteColor];
-        _searchedTerm.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:27.0f];
+        _searchedTerm.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:[DeviceInfo isIpad]?27.0f:21.0];
         
     }
     

@@ -51,6 +51,11 @@
         
     }
     
+    if ( [DeviceInfo isIphone] ) {
+        cell.userName.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:16.0f];
+        cell.tweetContent.font = [UIFont fontWithName:@"HelveticaNeue" size:16.0f];
+    }
+    
     cell.userPhoto.layer.cornerRadius = cell.userPhoto.width/2;
     cell.userPhoto.layer.masksToBounds = YES;
     cell.userPhoto.backgroundColor = [UIColor blackColor];
