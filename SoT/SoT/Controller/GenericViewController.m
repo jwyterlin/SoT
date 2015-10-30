@@ -15,6 +15,7 @@
 @property(nonatomic,strong) NSNumber *screenHasMoved;
 @property(nonatomic,strong) NSNumber *screenMoveValue;
 @property(nonatomic) BOOL isFirstUpdateAnimateTextField;
+@property(nonatomic,strong) UITextField *activeTextField;
 
 @end
 
@@ -40,9 +41,9 @@
     self.isFirstUpdateAnimateTextField = YES;
     
     if ( [self.screenHasMoved boolValue] == YES ) {
-    
+        
         self.view.frame = CGRectOffset( self.view.frame, 0, [self.screenMoveValue floatValue] );
-        self.screenHasMoved = [NSNumber numberWithBool:NO];
+        [self animateTextField:self.activeTextField up:YES];
         
     }
     
@@ -64,8 +65,6 @@
 
 -(void)animateTextField:(UITextField *)textField up:(BOOL)up {
     
-    NSLog( @"animateTextField:(UITextField *)textField up:%@", up?@"YES":@"NO" );
-    
     if ( ! self.keyHeight )
         return;
     if ( ! self.screenHasMoved )
@@ -73,14 +72,15 @@
     if ( ! self.screenMoveValue )
         self.screenMoveValue = [NSNumber numberWithInt:0];
     
-    CGFloat textSize = [textField.superview convertPoint:textField.frame.origin toView:nil].y + textField.frame.size.height;
+    CGFloat textSize = textField.superview.y + textField.superview.frame.size.height;
     
     if ( up ) {
         
         if ( self.view.height - textSize < [self.keyHeight floatValue] ) {
             
             // tweak as needed
-            self.screenMoveValue = [NSNumber numberWithInt:[self.keyHeight floatValue] - ( self.view.height - textSize ) + 16];
+            self.screenMoveValue = [NSNumber numberWithInt:[self.keyHeight floatValue] - ( self.view.height - textSize )];
+            
             const float movementDuration = 0.3f; // tweak as needed
             
             [UIView beginAnimations: @"anim" context: nil];
@@ -89,6 +89,7 @@
             self.view.frame = CGRectOffset( self.view.frame, 0, -[self.screenMoveValue intValue] );
             [UIView commitAnimations];
             self.screenHasMoved = [NSNumber numberWithBool:YES];
+            self.activeTextField = textField;
             
         }
         
@@ -100,6 +101,7 @@
         self.view.frame = CGRectOffset( self.view.frame, 0, [self.screenMoveValue intValue] );
         [UIView commitAnimations];
         self.screenHasMoved = [NSNumber numberWithBool:NO];
+        self.activeTextField = nil;
         
     }
     
