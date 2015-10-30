@@ -113,7 +113,7 @@
         
         CGFloat width = 34;
         CGFloat height = 34;
-        CGFloat x = [DeviceInfo width] - width - 32;
+        CGFloat x = [DeviceInfo width] - width - ( [DeviceInfo isIpad]?32:16 );
         CGFloat y = self.height/2 - height/2 + 10;
         
         _closeButton = [[UIButton alloc] initWithFrame: CGRectMake( x, y, width, height ) ];

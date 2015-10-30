@@ -20,6 +20,7 @@
 
 // Constraints
 @property(nonatomic,strong) IBOutlet NSLayoutConstraint *tweetContentWidth;
+@property(nonatomic,strong) IBOutlet NSLayoutConstraint *userPhotoLeading;
 
 @end
 
@@ -57,7 +58,12 @@
     cell.userName.text = tweet.userName;
     cell.tweetContent.text = tweet.detail;
     
-    int rightWidth = tableView.width - cell.tweetContent.x - 66;
+    if ( [DeviceInfo isIphone] ) {
+        cell.userPhotoLeading.constant = 16;
+        [cell.userPhoto setNeedsUpdateConstraints];
+    }
+    
+    int rightWidth = tableView.width - cell.tweetContent.x - ( [DeviceInfo isIpad]?66:16 );
     
     if ( cell.tweetContentWidth.constant != rightWidth ) {
         cell.tweetContentWidth.constant = rightWidth;
