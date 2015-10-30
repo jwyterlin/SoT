@@ -47,6 +47,8 @@
 		7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B371BE17A0200042C40 /* CATransformLayer+Helper.m */; };
 		7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */; };
 		7BCF40911BE29D3D002A3D28 /* TopSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCF40901BE29D3D002A3D28 /* TopSearchBarView.m */; };
+		7BD3E91B1BE2F69E00473577 /* NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3E91A1BE2F69E00473577 /* NetAPIClient.m */; };
+		7BD3E91E1BE2F74100473577 /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3E91D1BE2F74100473577 /* Routes.m */; };
 		D810101C75294A4BB982D318 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF94AA5AC83264BC15F7FC2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +150,10 @@
 		7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericViewController.m; path = Controller/GenericViewController.m; sourceTree = "<group>"; };
 		7BCF408F1BE29D3D002A3D28 /* TopSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopSearchBarView.h; path = "Custom UI Components/UIView/TopSearchBarView.h"; sourceTree = "<group>"; };
 		7BCF40901BE29D3D002A3D28 /* TopSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopSearchBarView.m; path = "Custom UI Components/UIView/TopSearchBarView.m"; sourceTree = "<group>"; };
+		7BD3E9191BE2F69E00473577 /* NetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetAPIClient.h; path = "Service Layer/NetAPIClient.h"; sourceTree = "<group>"; };
+		7BD3E91A1BE2F69E00473577 /* NetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetAPIClient.m; path = "Service Layer/NetAPIClient.m"; sourceTree = "<group>"; };
+		7BD3E91C1BE2F74100473577 /* Routes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routes.h; path = "Service Layer/Routes.h"; sourceTree = "<group>"; };
+		7BD3E91D1BE2F74100473577 /* Routes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routes.m; path = "Service Layer/Routes.m"; sourceTree = "<group>"; };
 		84D3552E76C1074C58559FE6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF94AA5AC83264BC15F7FC2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -376,6 +382,10 @@
 				7BCB0AFD1BE13FCB00042C40 /* Constants.m */,
 				7BCB0AFF1BE13FE100042C40 /* DeviceInfo.h */,
 				7BCB0B001BE13FE100042C40 /* DeviceInfo.m */,
+				7BD3E9191BE2F69E00473577 /* NetAPIClient.h */,
+				7BD3E91A1BE2F69E00473577 /* NetAPIClient.m */,
+				7BD3E91C1BE2F74100473577 /* Routes.h */,
+				7BD3E91D1BE2F74100473577 /* Routes.m */,
 			);
 			name = "Service Layer";
 			sourceTree = "<group>";
@@ -638,6 +648,7 @@
 				7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */,
 				7B87A4631BE261270024A45B /* TweetCell.m in Sources */,
 				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
+				7BD3E91B1BE2F69E00473577 /* NetAPIClient.m in Sources */,
 				7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */,
 				7BCB0B2E1BE15E9600042C40 /* GenericDAO.m in Sources */,
 				7B87A4721BE27E280024A45B /* CellHelper.m in Sources */,
@@ -664,6 +675,7 @@
 				7B87A4601BE2601D0024A45B /* GenericTableViewCell.m in Sources */,
 				7BCB0B271BE1554200042C40 /* RecentSearchLabel.m in Sources */,
 				7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */,
+				7BD3E91E1BE2F74100473577 /* Routes.m in Sources */,
 				7BCB0B311BE15F0200042C40 /* SearchDAO.m in Sources */,
 				7BCB0B0C1BE14B1C00042C40 /* LineView.m in Sources */,
 			);
