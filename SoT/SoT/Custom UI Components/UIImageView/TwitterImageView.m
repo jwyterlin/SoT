@@ -17,7 +17,7 @@
     self.width = 165;
     self.height = 135;
     self.x = [DeviceInfo width]/2 - self.width/2;
-    self.y = [DeviceInfo isIpad]?165:80;
+    self.y = [DeviceInfo isIpad]?165:30;
     self.image = [UIImage imageNamed:@"Twitter_logo_blue"];
     
 }

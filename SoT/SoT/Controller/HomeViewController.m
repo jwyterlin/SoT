@@ -86,8 +86,8 @@
     
     // Adjust components
     self.twitterLogo.x = size.width/2 - self.twitterLogo.width/2;
-    self.lineRecentSearches.x = size.width/2 - self.lineRecentSearches.width - 38.5;
-    self.lineTrendingNow.x = self.lineRecentSearches.x + self.lineRecentSearches.width + 77;
+    self.lineRecentSearches.x = [DeviceInfo isIpad]?(size.width/2 - self.lineRecentSearches.width - 38.5):16;
+    self.lineTrendingNow.x = [self lineTrendingNowAxisX];
     self.recentSearchLabel.x = self.lineRecentSearches.x;
     self.trendingNowLabel.x = self.lineTrendingNow.x;
     
@@ -102,6 +102,30 @@
     
     if ( [self.searchTextField isFirstResponder] )
         [self updateAnimateTextField];
+    
+    if ( self.searchBackground.y > size.height ) {
+        
+        self.twitterLogo.width *= 0.3;
+        self.twitterLogo.height *= 0.3;
+        self.twitterLogo.x = size.width/2 - self.twitterLogo.width/2;
+        
+        self.lineRecentSearches.y = [self lineRecentSearchesAxisY];
+        self.lineTrendingNow.y = self.lineRecentSearches.y;
+        
+        self.recentSearchLabel.y = [self recentSearchLabelAxisY];
+        self.trendingNowLabel.y = [self trendingNowLabelAxisY];
+        
+        int i = 1;
+        for ( UIButton *b in self.recentSearchButtons )
+            b.y = self.recentSearchLabel.y + self.recentSearchLabel.height + ( (8+b.height) * i++ ) - 30;
+        
+        i = 1;
+        for ( UIButton *b in self.trendingNowButtons )
+            b.y = self.trendingNowLabel.y + self.trendingNowLabel.height + ( (8+b.height) * i++ ) - 30;
+        
+        self.searchBackground.y = size.height - self.searchBackground.height;
+        
+    }
     
 }
 
@@ -381,6 +405,40 @@
     
 }
 
+-(CGFloat)lineRecentSearchesAxisX {
+    
+    if ( [DeviceInfo isIphone] )
+        return 16.0f;
+    else
+        return [DeviceInfo width]/2 - self.lineRecentSearches.width - 38.5;
+
+}
+
+-(CGFloat)lineRecentSearchesAxisY {
+    return self.twitterLogo.y + self.twitterLogo.height + ( [DeviceInfo isIpad]?89:34 );
+}
+
+-(CGFloat)lineTrendingNowAxisX {
+    
+    if ( [DeviceInfo isIphone] )
+        return self.lineRecentSearches.x + self.lineRecentSearches.width + 21;
+    else
+        return self.lineRecentSearches.x + self.lineRecentSearches.width + 77;
+    
+}
+
+-(CGFloat)lineTrendingNowAxisY {
+    return self.twitterLogo.y + self.twitterLogo.height + ( [DeviceInfo isIpad]?89:34 );
+}
+
+-(CGFloat)recentSearchLabelAxisY {
+    return self.lineRecentSearches.y + self.lineRecentSearches.height + 8;
+}
+
+-(CGFloat)trendingNowLabelAxisY {
+    return self.lineTrendingNow.y + self.lineTrendingNow.height + 8;
+}
+
 #pragma mark - Creating components
 
 -(TwitterImageView *)twitterLogo {
@@ -398,14 +456,8 @@
     if ( ! _lineRecentSearches ) {
         
         _lineRecentSearches = [LineView new];
-        
-        if ( [DeviceInfo isIphone] ) {
-            _lineRecentSearches.x = 16;
-        } else {
-            _lineRecentSearches.x = [DeviceInfo width]/2 - _lineRecentSearches.width - 38.5;
-        }
-        
-        _lineRecentSearches.y = self.twitterLogo.y + self.twitterLogo.height + 89;
+        _lineRecentSearches.x = [self lineRecentSearchesAxisX];
+        _lineRecentSearches.y = [self lineRecentSearchesAxisY];
         
     }
     
@@ -419,7 +471,7 @@
         
         _recentSearchLabel = [RecentSearchLabel new];
         _recentSearchLabel.x = self.lineRecentSearches.x;
-        _recentSearchLabel.y = self.lineRecentSearches.y + self.lineRecentSearches.height + 8;
+        _recentSearchLabel.y = [self recentSearchLabelAxisY];
         
     }
     
@@ -432,14 +484,8 @@
     if ( ! _lineTrendingNow ) {
         
         _lineTrendingNow = [LineView new];
-        
-        if ( [DeviceInfo isIphone] ) {
-            _lineTrendingNow.x = self.lineRecentSearches.x + self.lineRecentSearches.width + 21;
-        } else {
-            _lineTrendingNow.x = self.lineRecentSearches.x + self.lineRecentSearches.width + 77;
-        }
-        
-        _lineTrendingNow.y = self.twitterLogo.y + self.twitterLogo.height + 89;
+        _lineTrendingNow.x = [self lineTrendingNowAxisX];
+        _lineTrendingNow.y = [self lineTrendingNowAxisY];
         
     }
     
@@ -453,7 +499,7 @@
         
         _trendingNowLabel = [TrendingNowLabel new];
         _trendingNowLabel.x = self.lineTrendingNow.x;
-        _trendingNowLabel.y = self.lineTrendingNow.y + self.lineTrendingNow.height + 8;
+        _trendingNowLabel.y = [self trendingNowLabelAxisY];
         
     }
     
@@ -502,9 +548,8 @@
 
 -(NSMutableArray *)recentSearchButtons {
     
-    if ( ! _recentSearchButtons ) {
+    if ( ! _recentSearchButtons )
         _recentSearchButtons = [NSMutableArray new];
-    }
     
     return _recentSearchButtons;
     
@@ -512,9 +557,8 @@
 
 -(NSMutableArray *)trendingNowButtons {
     
-    if ( ! _trendingNowButtons ) {
+    if ( ! _trendingNowButtons )
         _trendingNowButtons = [NSMutableArray new];
-    }
     
     return _trendingNowButtons;
     
