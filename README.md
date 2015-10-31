@@ -30,6 +30,6 @@ $ git clone https://github.com/jwyterlin/SoT
 - Open the file `SoT.xcworkspace` either by double-clicking the file or running the following in the the project folder:
 
 ```
-$ open SoT.xcworkspace`
+$ open SoT.xcworkspace
 ```
 - Choose a simulator or connect an iOS device to your computer and run the application with  `⌘ + R` command
