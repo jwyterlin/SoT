@@ -102,8 +102,9 @@
     
     if ( cell.tweetContentWidth.constant != rightWidth ) {
         cell.tweetContentWidth.constant = rightWidth;
-        cell.userNameTrailing.constant = rightWidth;
     }
+    
+    cell.userNameTrailing.constant = [DeviceInfo isIpad]?66:16;
     
     [cell.tweetContent setNeedsUpdateConstraints];
     [cell.userName     setNeedsUpdateConstraints];
