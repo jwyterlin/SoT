@@ -6,6 +6,7 @@ Another features:
 
 - Display last searches;
 - Display current trending topics;
+- Internationalized for English and Brazilian Portuguese languages;
 
 Build in Xcode 7.1 with Objective-C.
 
