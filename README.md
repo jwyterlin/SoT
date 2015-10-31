@@ -26,7 +26,7 @@ Tested in simulators only. Platforms >= 8.0
 
 - Clone to project to your local directory
 ```
-$ git clone https://github.com/jwyterlin/SoT
+$ git clone https://github.com/jwyterlin/SoT.git
 ```
 - Open the file `SoT.xcworkspace` either by double-clicking the file or running the following in the the project folder:
 
