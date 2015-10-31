@@ -10,11 +10,34 @@
 
 @interface GenericViewController()
 
+/*!
+ * @brief Object used to dismiss keyboard when user taps out of it.
+ */
 @property(nonatomic,strong) UITapGestureRecognizer *tapToDismissKeyboard;
+
+/*!
+ * @brief Object used to get height of the keyboard and help to calculate axis Y of the active textField.
+ */
 @property(nonatomic,strong) NSNumber *keyHeight;
+
+/*!
+ * @brief Object used to give the state if the screen was moved or not.
+ */
 @property(nonatomic,strong) NSNumber *screenHasMoved;
+
+/*!
+ * @brief Object used to determine how much the screen moved.
+ */
 @property(nonatomic,strong) NSNumber *screenMoveValue;
+
+/*!
+ * @brief Helper object to inform that the view must be animated twice to get the height of keyboard correctly on the first time that the keyboard is showed.
+ */
 @property(nonatomic) BOOL isFirstUpdateAnimateTextField;
+
+/*!
+ * @brief Object used to get the active textfield
+ */
 @property(nonatomic,strong) UITextField *activeTextField;
 
 @end

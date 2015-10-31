@@ -14,13 +14,36 @@
 
 @interface TweetCell()<SWTableViewCellDelegate>
 
+/*!
+ * @brief UIImageView to show the photo of the user
+ */
 @property(nonatomic,strong) IBOutlet UIImageView *userPhoto;
+
+/*!
+ * @brief Label to show the username
+ */
 @property(nonatomic,strong) IBOutlet UILabel *userName;
+
+/*!
+ * @brief Label to show the content of the tweet
+ */
 @property(nonatomic,strong) IBOutlet CellLabel *tweetContent;
 
 // Constraints
+
+/*!
+ * @brief Constraint that determines the width of tweetContent
+ */
 @property(nonatomic,strong) IBOutlet NSLayoutConstraint *tweetContentWidth;
+
+/*!
+ * @brief Constraint that determines the space between the userPhoto and the left bound
+ */
 @property(nonatomic,strong) IBOutlet NSLayoutConstraint *userPhotoLeading;
+
+/*!
+ * @brief Constraint that determines the space between the username and the right bound
+ */
 @property(nonatomic,strong) IBOutlet NSLayoutConstraint *userNameTrailing;
 
 @end

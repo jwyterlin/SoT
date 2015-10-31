@@ -12,6 +12,9 @@
 
 +(instancetype)sharedInstance;
 
+/*!
+ * @brief Mutable array to hold the last recent searches were made
+ */
 @property(nonatomic,getter=recentSearches,readonly) NSMutableArray *recentSearches;
 
 -(void)addRecentSearch:(NSString *)recentSearch;

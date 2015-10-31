@@ -10,9 +10,24 @@
 
 @interface TrendingModel : GenericModel
 
+/*!
+ * @brief Main description about the trending topic
+ */
 @property(nonatomic,strong) NSString *name;
+
+/*!
+ * @brief Promoted content
+ */
 @property(nonatomic,strong) NSString *promotedContent;
+
+/*!
+ * @brief The description as query
+ */
 @property(nonatomic,strong) NSString *query;
+
+/*!
+ * @brief URL to the trending topic
+ */
 @property(nonatomic,strong) NSString *url;
 
 @end

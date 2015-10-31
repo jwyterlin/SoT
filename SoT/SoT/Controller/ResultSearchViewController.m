@@ -18,11 +18,24 @@
 
 @interface ResultSearchViewController()<UITableViewDataSource,UITableViewDelegate,CellHelperDelegate,TopSearchBarViewDelegate,TweetCellDelegate>
 
-// UI
+/*!
+ * @brief Top bar that shows the term searched
+ */
 @property(nonatomic,strong) TopSearchBarView *topView;
+
+/*!
+ * @brief Tableview that lists the tweet with the term searched
+ */
 @property(nonatomic,strong) UITableView *tableView;
 
+/*!
+ * @brief List of tweets with the term searched
+ */
 @property(nonatomic,strong) NSArray *tweetsFound;
+
+/*!
+ * @brief An instance variable to get the term searched
+ */
 @property(nonatomic,strong) NSString *termSearched;
 
 @end

@@ -12,6 +12,9 @@
 
 @interface TopSearchBarView : GenericView
 
+/*!
+ * @brief Object to be the delegate of the class TopSearchBarView
+ */
 @property(nonatomic,weak) id<TopSearchBarViewDelegate> delegateTopSearchBarView;
 
 -(void)updateWidth:(CGFloat)width;

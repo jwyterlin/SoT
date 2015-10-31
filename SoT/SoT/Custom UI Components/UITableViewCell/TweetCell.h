@@ -18,6 +18,9 @@
 
 @interface TweetCell : SWTableViewCell
 
+/*!
+ * @brief Object to be the delegate of the class TweetCell
+ */
 @property(nonatomic,weak) id<TweetCellDelegate> delegateTweetCell;
 
 -(TweetCell *)tweetCellAtIndexPath:(NSIndexPath *)indexPath

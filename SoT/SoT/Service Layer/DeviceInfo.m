@@ -13,7 +13,6 @@
 +(CGFloat)height {
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
-//    NSLog( @"screenBounds.size.height: %.2f", screenBounds.size.height );
     return screenBounds.size.height;
     
 }
@@ -21,7 +20,6 @@
 +(CGFloat)width {
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
-//    NSLog( @"screenBounds.size.width: %.2f", screenBounds.size.width );
     return screenBounds.size.width;
     
 }

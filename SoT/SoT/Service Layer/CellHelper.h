@@ -15,6 +15,9 @@
     id <CellHelperDelegate> delegate;
 }
 
+/*!
+ * @brief Object to be the delegate of the class CellHelper
+ */
 @property (nonatomic,strong) id <CellHelperDelegate> delegate;
 
 -(CGFloat)calculateHeightForConfiguredSizingCell:(UITableViewCell *)sizingCell;

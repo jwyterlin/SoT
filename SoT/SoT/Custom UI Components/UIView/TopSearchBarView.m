@@ -10,8 +10,19 @@
 
 @interface TopSearchBarView()
 
+/*!
+ * @brief Search logo that appears in the left of the bar
+ */
 @property(nonatomic,strong) UIImageView *searchLogo;
+
+/*!
+ * @brief Label that shows the searched term
+ */
 @property(nonatomic,strong) UILabel *searchedTerm;
+
+/*!
+ * @brief A close button that appears in the right of the bar and dismiss the view when pressed
+ */
 @property(nonatomic,strong) UIButton *closeButton;
 
 @end

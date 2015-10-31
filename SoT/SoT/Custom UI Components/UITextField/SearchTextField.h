@@ -12,6 +12,9 @@
 
 @interface SearchTextField : GenericTextField
 
+/*!
+ * @brief Object to be the delegate of the class SearchTextFieldDelegate
+ */
 @property(nonatomic,weak) id<SearchTextFieldDelegate> delegateSearchTextField;
 
 @end

@@ -38,20 +38,64 @@
 
 @interface HomeViewController()<SearchTextFieldDelegate>
 
-// UI
+/*!
+ * @brief Twitter logo that appears at the top of the view
+ */
 @property(nonatomic,strong) TwitterImageView *twitterLogo;
+
+/*!
+ * @brief Line that appears at the left of the view, to indicate the list of Recent Searches
+ */
 @property(nonatomic,strong) LineView *lineRecentSearches;
+
+/*!
+ * @brief Line that appears at the right of the view, to indicate the list of Trending Now
+ */
 @property(nonatomic,strong) LineView *lineTrendingNow;
+
+/*!
+ * @brief Textfield to the user type the term he wants to get tweet with it
+ */
 @property(nonatomic,strong) SearchTextField *searchTextField;
+
+/*!
+ * @brief A search logo to show beside the searchTextField
+ */
 @property(nonatomic,strong) SearchImageView *searchLogo;
+
+/*!
+ * @brief White background to searchTextField
+ */
 @property(nonatomic,strong) SearchBackgroundView *searchBackground;
+
+/*!
+ * @brief A label to indicate the Recent Search column
+ */
 @property(nonatomic,strong) RecentSearchLabel *recentSearchLabel;
+
+/*!
+ * @brief A label to indicate the Trending Now column
+ */
 @property(nonatomic,strong) TrendingNowLabel *trendingNowLabel;
 
+/*!
+ * @brief List with the last terms searched
+ */
 @property(nonatomic,strong) NSArray *recentSearchList;
+
+/*!
+ * @brief List with the trending now terms
+ */
 @property(nonatomic,strong) NSArray *trendingNowList;
 
+/*!
+ * @brief List with the buttons that represent the terms of the list of Recent Searches
+ */
 @property(nonatomic,strong) NSMutableArray *recentSearchButtons;
+
+/*!
+ * @brief List with the buttons that represent the terms of the list of Trending Now
+ */
 @property(nonatomic,strong) NSMutableArray *trendingNowButtons;
 
 @end
