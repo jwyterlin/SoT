@@ -1,5 +1,5 @@
 //
-//  GenericDAO.h
+//  GenericService.h
 //  SoT
 //
 //  Created by Jhonathan Wyterlin on 28/10/15.
@@ -14,6 +14,6 @@
 
 #import <TwitterKit/TwitterKit.h>
 
-@interface GenericDAO : NSObject
+@interface GenericService : NSObject
 
 @end

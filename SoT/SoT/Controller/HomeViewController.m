@@ -27,8 +27,8 @@
 #import "RecentSearch.h"
 
 // DAO
-#import "SearchDAO.h"
-#import "TrendingDAO.h"
+#import "SearchService.h"
+#import "TrendingService.h"
 
 // Controller
 #import "ResultSearchViewController.h"
@@ -184,7 +184,7 @@
     
     [[Indicator shared] showIndicatorWithLabel:NSLocalizedString(@"LOADING", nil) viewController:self];
 
-    [[SearchDAO new] searchTerm:self.searchTextField.text completion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
+    [[SearchService new] searchTerm:self.searchTextField.text completion:^(NSArray *tweetsFound, BOOL hasNoConnection, NSError *error) {
         
         [[Indicator shared] stopIndicatorInViewController:self];
         
@@ -297,7 +297,7 @@
 
 -(void)getTrendingNowList {
     
-    [[TrendingDAO new] trendingNowWithCompletion:^(NSArray *trendingNowList, BOOL hasNoConnection, NSError *error) {
+    [[TrendingService new] trendingNowWithCompletion:^(NSArray *trendingNowList, BOOL hasNoConnection, NSError *error) {
        
         if ( hasNoConnection ) {
             /// TODO: Show has no connection

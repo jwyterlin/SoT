@@ -6,9 +6,9 @@
 //  Copyright © 2015 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import "ImageDAO.h"
+#import "ImageService.h"
 
-@implementation ImageDAO
+@implementation ImageService
 
 -(void)imageByUrl:(NSString *)url completion:(void(^)(UIImage *image))completion {
     

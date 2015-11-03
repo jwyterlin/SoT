@@ -10,7 +10,7 @@
 #import "CellLabel.h"
 
 // DAO
-#import "ImageDAO.h"
+#import "ImageService.h"
 
 @interface TweetCell()<SWTableViewCellDelegate>
 
@@ -132,7 +132,7 @@
     
     tweetCell.userPhoto.image = nil;
     
-    [[ImageDAO new] imageByUrl:tweetModel.imageUrl completion:^(UIImage *image) {
+    [[ImageService new] imageByUrl:tweetModel.imageUrl completion:^(UIImage *image) {
         
         TweetCell *helperCell = (TweetCell *)[tableView cellForRowAtIndexPath:indexPath];
         

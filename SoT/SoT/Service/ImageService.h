@@ -1,14 +1,14 @@
 //
-//  ImageDAO.h
+//  ImageService.h
 //  SoT
 //
 //  Created by Jhonathan Wyterlin on 30/10/15.
 //  Copyright © 2015 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import "GenericDAO.h"
+#import "GenericService.h"
 
-@interface ImageDAO : GenericDAO
+@interface ImageService : GenericService
 
 -(void)imageByUrl:(NSString *)url completion:(void(^)(UIImage *image))completion;
 

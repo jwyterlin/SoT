@@ -1,17 +1,17 @@
 //
-//  SearchDAO.m
+//  SearchService.m
 //  SoT
 //
 //  Created by Jhonathan Wyterlin on 28/10/15.
 //  Copyright © 2015 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import "SearchDAO.h"
+#import "SearchService.h"
 
 // Model
 #import "TweetModel.h"
 
-@implementation SearchDAO
+@implementation SearchService
 
 // SearchTerm
 
