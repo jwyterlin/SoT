@@ -11,9 +11,6 @@
 		7B38933E1BE3087B00B9CE13 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933C1BE3087B00B9CE13 /* TwitterKit.framework */; };
 		7B3893401BE308C400B9CE13 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933F1BE308C400B9CE13 /* TwitterCore.framework */; };
 		7B3893421BE30C5E00B9CE13 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B3893411BE30C5E00B9CE13 /* TwitterKitResources.bundle */; };
-		7B60F6321BE40464001E3279 /* RecentSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B60F6311BE40464001E3279 /* RecentSearch.m */; };
-		7B60F6351BE41CBD001E3279 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B60F6341BE41CBD001E3279 /* MBProgressHUD.m */; };
-		7B60F6381BE41D5D001E3279 /* Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B60F6371BE41D5D001E3279 /* Indicator.m */; };
 		7B60F6401BE4323F001E3279 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B60F6421BE4323F001E3279 /* share.png */; };
 		7B60F6441BE43245001E3279 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B60F6461BE43245001E3279 /* share@2x.png */; };
 		7B60F6481BE4324B001E3279 /* share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B60F64A1BE4324B001E3279 /* share@3x.png */; };
@@ -25,10 +22,8 @@
 		7B87A4631BE261270024A45B /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4621BE261270024A45B /* TweetCell.m */; };
 		7B87A46A1BE263850024A45B /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B87A4681BE263850024A45B /* TweetCell.xib */; };
 		7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A46E1BE268CE0024A45B /* UITableView+Helper.m */; };
-		7B87A4721BE27E280024A45B /* CellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4711BE27E280024A45B /* CellHelper.m */; };
 		7B87A47A1BE286F70024A45B /* CellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4791BE286F70024A45B /* CellLabel.m */; };
 		7B9CD3A91BE313730024434D /* TrendingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9CD3A81BE313730024434D /* TrendingModel.m */; };
-		7B9CD3AC1BE31C010024434D /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9CD3AB1BE31C010024434D /* Validator.m */; };
 		7BC0C22A1BDD583600CE2540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C2291BDD583600CE2540 /* main.m */; };
 		7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2311BDD583600CE2540 /* Main.storyboard */; };
 		7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0C2341BDD583600CE2540 /* Assets.xcassets */; };
@@ -40,8 +35,6 @@
 		7BCB0AF41BE13BBB00042C40 /* TrendingNowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF31BE13BBB00042C40 /* TrendingNowButton.m */; };
 		7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF61BE13D6000042C40 /* HomeViewController.m */; };
 		7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AF91BE13D8B00042C40 /* AppDelegate.m */; };
-		7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0AFD1BE13FCB00042C40 /* Constants.m */; };
-		7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B001BE13FE100042C40 /* DeviceInfo.m */; };
 		7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B051BE1479400042C40 /* UIView+Helper.m */; };
 		7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B081BE14ACC00042C40 /* GenericView.m */; };
 		7BCB0B0C1BE14B1C00042C40 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B0B1BE14B1C00042C40 /* LineView.m */; };
@@ -57,11 +50,18 @@
 		7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B371BE17A0200042C40 /* CATransformLayer+Helper.m */; };
 		7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */; };
 		7BCF40911BE29D3D002A3D28 /* TopSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCF40901BE29D3D002A3D28 /* TopSearchBarView.m */; };
-		7BD3E91E1BE2F74100473577 /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3E91D1BE2F74100473577 /* Routes.m */; };
 		7BE8B9BD1BE8956D000CA40B /* GenericService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9B61BE8956D000CA40B /* GenericService.m */; };
 		7BE8B9BE1BE8956D000CA40B /* ImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9B81BE8956D000CA40B /* ImageService.m */; };
 		7BE8B9BF1BE8956D000CA40B /* SearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9BA1BE8956D000CA40B /* SearchService.m */; };
 		7BE8B9C01BE8956D000CA40B /* TrendingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9BC1BE8956D000CA40B /* TrendingService.m */; };
+		7BE8B9D81BE8974C000CA40B /* CellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9C91BE8974C000CA40B /* CellHelper.m */; };
+		7BE8B9D91BE8974C000CA40B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9CB1BE8974C000CA40B /* Constants.m */; };
+		7BE8B9DA1BE8974C000CA40B /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9CD1BE8974C000CA40B /* DeviceInfo.m */; };
+		7BE8B9DB1BE8974C000CA40B /* Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9CF1BE8974C000CA40B /* Indicator.m */; };
+		7BE8B9DC1BE8974C000CA40B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9D11BE8974C000CA40B /* MBProgressHUD.m */; };
+		7BE8B9DD1BE8974C000CA40B /* RecentSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9D31BE8974C000CA40B /* RecentSearch.m */; };
+		7BE8B9DE1BE8974C000CA40B /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9D51BE8974C000CA40B /* Routes.m */; };
+		7BE8B9DF1BE8974C000CA40B /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B9D71BE8974C000CA40B /* Validator.m */; };
 		D810101C75294A4BB982D318 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF94AA5AC83264BC15F7FC2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -88,12 +88,6 @@
 		7B38933C1BE3087B00B9CE13 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Frameworks/TwitterKit.framework; sourceTree = "<group>"; };
 		7B38933F1BE308C400B9CE13 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = Frameworks/TwitterCore.framework; sourceTree = "<group>"; };
 		7B3893411BE30C5E00B9CE13 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = "../../../../../Downloads/cannonball-ios-master/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle"; sourceTree = "<group>"; };
-		7B60F6301BE40464001E3279 /* RecentSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentSearch.h; path = "Service Layer/RecentSearch.h"; sourceTree = "<group>"; };
-		7B60F6311BE40464001E3279 /* RecentSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecentSearch.m; path = "Service Layer/RecentSearch.m"; sourceTree = "<group>"; };
-		7B60F6331BE41CBD001E3279 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = "Service Layer/MBProgressHUD.h"; sourceTree = "<group>"; };
-		7B60F6341BE41CBD001E3279 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = "Service Layer/MBProgressHUD.m"; sourceTree = "<group>"; };
-		7B60F6361BE41D5D001E3279 /* Indicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Indicator.h; path = "Service Layer/Indicator.h"; sourceTree = "<group>"; };
-		7B60F6371BE41D5D001E3279 /* Indicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Indicator.m; path = "Service Layer/Indicator.m"; sourceTree = "<group>"; };
 		7B60F6411BE4323F001E3279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/share.png; sourceTree = "<group>"; };
 		7B60F6431BE43240001E3279 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pt-BR"; path = "pt-BR.lproj/share.png"; sourceTree = "<group>"; };
 		7B60F6451BE43245001E3279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Base.lproj/share@2x.png"; sourceTree = "<group>"; };
@@ -117,14 +111,10 @@
 		7B87A4681BE263850024A45B /* TweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TweetCell.xib; path = "Custom UI Components/UITableViewCell/TweetCell.xib"; sourceTree = "<group>"; };
 		7B87A46D1BE268CE0024A45B /* UITableView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+Helper.h"; path = "Custom UI Components/UITableView/Categories/UITableView+Helper.h"; sourceTree = "<group>"; };
 		7B87A46E1BE268CE0024A45B /* UITableView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Helper.m"; path = "Custom UI Components/UITableView/Categories/UITableView+Helper.m"; sourceTree = "<group>"; };
-		7B87A4701BE27E280024A45B /* CellHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellHelper.h; path = "Service Layer/CellHelper.h"; sourceTree = "<group>"; };
-		7B87A4711BE27E280024A45B /* CellHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellHelper.m; path = "Service Layer/CellHelper.m"; sourceTree = "<group>"; };
 		7B87A4781BE286F70024A45B /* CellLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellLabel.h; path = "Custom UI Components/UILabel/CellLabel.h"; sourceTree = "<group>"; };
 		7B87A4791BE286F70024A45B /* CellLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellLabel.m; path = "Custom UI Components/UILabel/CellLabel.m"; sourceTree = "<group>"; };
 		7B9CD3A71BE313730024434D /* TrendingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingModel.h; path = Model/TrendingModel.h; sourceTree = "<group>"; };
 		7B9CD3A81BE313730024434D /* TrendingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingModel.m; path = Model/TrendingModel.m; sourceTree = "<group>"; };
-		7B9CD3AA1BE31C010024434D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Validator.h; path = "Service Layer/Validator.h"; sourceTree = "<group>"; };
-		7B9CD3AB1BE31C010024434D /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Validator.m; path = "Service Layer/Validator.m"; sourceTree = "<group>"; };
 		7BC0C2251BDD583600CE2540 /* SoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC0C2291BDD583600CE2540 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BC0C2321BDD583600CE2540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,10 +137,6 @@
 		7BCB0AF61BE13D6000042C40 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Controller/HomeViewController.m; sourceTree = "<group>"; };
 		7BCB0AF81BE13D8B00042C40 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AppDelegate/AppDelegate.h; sourceTree = "<group>"; };
 		7BCB0AF91BE13D8B00042C40 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AppDelegate/AppDelegate.m; sourceTree = "<group>"; };
-		7BCB0AFC1BE13FCB00042C40 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Service Layer/Constants.h"; sourceTree = "<group>"; };
-		7BCB0AFD1BE13FCB00042C40 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "Service Layer/Constants.m"; sourceTree = "<group>"; };
-		7BCB0AFF1BE13FE100042C40 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceInfo.h; path = "Service Layer/DeviceInfo.h"; sourceTree = "<group>"; };
-		7BCB0B001BE13FE100042C40 /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceInfo.m; path = "Service Layer/DeviceInfo.m"; sourceTree = "<group>"; };
 		7BCB0B041BE1479400042C40 /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Helper.h"; path = "Custom UI Components/UIView/Categories/UIView+Helper.h"; sourceTree = "<group>"; };
 		7BCB0B051BE1479400042C40 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Helper.m"; path = "Custom UI Components/UIView/Categories/UIView+Helper.m"; sourceTree = "<group>"; };
 		7BCB0B071BE14ACC00042C40 /* GenericView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericView.h; path = "Custom UI Components/UIView/GenericView.h"; sourceTree = "<group>"; };
@@ -181,8 +167,6 @@
 		7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericViewController.m; path = Controller/GenericViewController.m; sourceTree = "<group>"; };
 		7BCF408F1BE29D3D002A3D28 /* TopSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopSearchBarView.h; path = "Custom UI Components/UIView/TopSearchBarView.h"; sourceTree = "<group>"; };
 		7BCF40901BE29D3D002A3D28 /* TopSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopSearchBarView.m; path = "Custom UI Components/UIView/TopSearchBarView.m"; sourceTree = "<group>"; };
-		7BD3E91C1BE2F74100473577 /* Routes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routes.h; path = "Service Layer/Routes.h"; sourceTree = "<group>"; };
-		7BD3E91D1BE2F74100473577 /* Routes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routes.m; path = "Service Layer/Routes.m"; sourceTree = "<group>"; };
 		7BE8B9B51BE8956D000CA40B /* GenericService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericService.h; path = Service/GenericService.h; sourceTree = "<group>"; };
 		7BE8B9B61BE8956D000CA40B /* GenericService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericService.m; path = Service/GenericService.m; sourceTree = "<group>"; };
 		7BE8B9B71BE8956D000CA40B /* ImageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageService.h; path = Service/ImageService.h; sourceTree = "<group>"; };
@@ -191,6 +175,22 @@
 		7BE8B9BA1BE8956D000CA40B /* SearchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchService.m; path = Service/SearchService.m; sourceTree = "<group>"; };
 		7BE8B9BB1BE8956D000CA40B /* TrendingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingService.h; path = Service/TrendingService.h; sourceTree = "<group>"; };
 		7BE8B9BC1BE8956D000CA40B /* TrendingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingService.m; path = Service/TrendingService.m; sourceTree = "<group>"; };
+		7BE8B9C81BE8974C000CA40B /* CellHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellHelper.h; path = Util/CellHelper.h; sourceTree = "<group>"; };
+		7BE8B9C91BE8974C000CA40B /* CellHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellHelper.m; path = Util/CellHelper.m; sourceTree = "<group>"; };
+		7BE8B9CA1BE8974C000CA40B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Util/Constants.h; sourceTree = "<group>"; };
+		7BE8B9CB1BE8974C000CA40B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Util/Constants.m; sourceTree = "<group>"; };
+		7BE8B9CC1BE8974C000CA40B /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceInfo.h; path = Util/DeviceInfo.h; sourceTree = "<group>"; };
+		7BE8B9CD1BE8974C000CA40B /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceInfo.m; path = Util/DeviceInfo.m; sourceTree = "<group>"; };
+		7BE8B9CE1BE8974C000CA40B /* Indicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Indicator.h; path = Util/Indicator.h; sourceTree = "<group>"; };
+		7BE8B9CF1BE8974C000CA40B /* Indicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Indicator.m; path = Util/Indicator.m; sourceTree = "<group>"; };
+		7BE8B9D01BE8974C000CA40B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Util/MBProgressHUD.h; sourceTree = "<group>"; };
+		7BE8B9D11BE8974C000CA40B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Util/MBProgressHUD.m; sourceTree = "<group>"; };
+		7BE8B9D21BE8974C000CA40B /* RecentSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentSearch.h; path = Util/RecentSearch.h; sourceTree = "<group>"; };
+		7BE8B9D31BE8974C000CA40B /* RecentSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecentSearch.m; path = Util/RecentSearch.m; sourceTree = "<group>"; };
+		7BE8B9D41BE8974C000CA40B /* Routes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routes.h; path = Util/Routes.h; sourceTree = "<group>"; };
+		7BE8B9D51BE8974C000CA40B /* Routes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routes.m; path = Util/Routes.m; sourceTree = "<group>"; };
+		7BE8B9D61BE8974C000CA40B /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Validator.h; path = Util/Validator.h; sourceTree = "<group>"; };
+		7BE8B9D71BE8974C000CA40B /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Validator.m; path = Util/Validator.m; sourceTree = "<group>"; };
 		84D3552E76C1074C58559FE6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF94AA5AC83264BC15F7FC2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -362,12 +362,9 @@
 		7BCB0AE21BE13A6500042C40 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7BCB0B391BE17A4700042C40 /* GenericViewController.h */,
-				7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */,
-				7BCB0AF51BE13D6000042C40 /* HomeViewController.h */,
-				7BCB0AF61BE13D6000042C40 /* HomeViewController.m */,
-				7B87A4541BE25C070024A45B /* ResultSearchViewController.h */,
-				7B87A4551BE25C070024A45B /* ResultSearchViewController.m */,
+				7BE8B9C51BE896AE000CA40B /* GenericViewController */,
+				7BE8B9C61BE896BC000CA40B /* HomeViewController */,
+				7BE8B9C71BE896CF000CA40B /* ResultSearchViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -442,22 +439,14 @@
 		7BCB0AFB1BE13FAB00042C40 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				7B87A4701BE27E280024A45B /* CellHelper.h */,
-				7B87A4711BE27E280024A45B /* CellHelper.m */,
-				7BCB0AFC1BE13FCB00042C40 /* Constants.h */,
-				7BCB0AFD1BE13FCB00042C40 /* Constants.m */,
-				7BCB0AFF1BE13FE100042C40 /* DeviceInfo.h */,
-				7BCB0B001BE13FE100042C40 /* DeviceInfo.m */,
-				7B60F6361BE41D5D001E3279 /* Indicator.h */,
-				7B60F6371BE41D5D001E3279 /* Indicator.m */,
-				7B60F6331BE41CBD001E3279 /* MBProgressHUD.h */,
-				7B60F6341BE41CBD001E3279 /* MBProgressHUD.m */,
-				7B60F6301BE40464001E3279 /* RecentSearch.h */,
-				7B60F6311BE40464001E3279 /* RecentSearch.m */,
-				7BD3E91C1BE2F74100473577 /* Routes.h */,
-				7BD3E91D1BE2F74100473577 /* Routes.m */,
-				7B9CD3AA1BE31C010024434D /* Validator.h */,
-				7B9CD3AB1BE31C010024434D /* Validator.m */,
+				7BE8B9E01BE89758000CA40B /* CellHelper */,
+				7BE8B9E11BE89763000CA40B /* Constants */,
+				7BE8B9E21BE8976F000CA40B /* DeviceInfo */,
+				7BE8B9E31BE8977E000CA40B /* Indicator */,
+				7BE8B9E41BE8978C000CA40B /* MBProgressHUD */,
+				7BE8B9E51BE8979E000CA40B /* RecentSearch */,
+				7BE8B9E61BE897AC000CA40B /* Routes */,
+				7BE8B9E71BE897B9000CA40B /* Validator */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -580,6 +569,105 @@
 				7BE8B9BC1BE8956D000CA40B /* TrendingService.m */,
 			);
 			name = TrendingService;
+			sourceTree = "<group>";
+		};
+		7BE8B9C51BE896AE000CA40B /* GenericViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0B391BE17A4700042C40 /* GenericViewController.h */,
+				7BCB0B3A1BE17A4700042C40 /* GenericViewController.m */,
+			);
+			name = GenericViewController;
+			sourceTree = "<group>";
+		};
+		7BE8B9C61BE896BC000CA40B /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB0AF51BE13D6000042C40 /* HomeViewController.h */,
+				7BCB0AF61BE13D6000042C40 /* HomeViewController.m */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		7BE8B9C71BE896CF000CA40B /* ResultSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7B87A4541BE25C070024A45B /* ResultSearchViewController.h */,
+				7B87A4551BE25C070024A45B /* ResultSearchViewController.m */,
+			);
+			name = ResultSearchViewController;
+			sourceTree = "<group>";
+		};
+		7BE8B9E01BE89758000CA40B /* CellHelper */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8B9C81BE8974C000CA40B /* CellHelper.h */,
+				7BE8B9C91BE8974C000CA40B /* CellHelper.m */,
+			);
+			name = CellHelper;
+			sourceTree = "<group>";
+		};
+		7BE8B9E11BE89763000CA40B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8B9CA1BE8974C000CA40B /* Constants.h */,
+				7BE8B9CB1BE8974C000CA40B /* Constants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		7BE8B9E21BE8976F000CA40B /* DeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8B9CC1BE8974C000CA40B /* DeviceInfo.h */,
+				7BE8B9CD1BE8974C000CA40B /* DeviceInfo.m */,
+			);
+			name = DeviceInfo;
+			sourceTree = "<group>";
+		};
+		7BE8B9E31BE8977E000CA40B /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8B9CE1BE8974C000CA40B /* Indicator.h */,
+				7BE8B9CF1BE8974C000CA40B /* Indicator.m */,
+			);
+			name = Indicator;
+			sourceTree = "<group>";
+		};
+		7BE8B9E41BE8978C000CA40B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8B9D01BE8974C000CA40B /* MBProgressHUD.h */,
+				7BE8B9D11BE8974C000CA40B /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		7BE8B9E51BE8979E000CA40B /* RecentSearch */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8B9D21BE8974C000CA40B /* RecentSearch.h */,
+				7BE8B9D31BE8974C000CA40B /* RecentSearch.m */,
+			);
+			name = RecentSearch;
+			sourceTree = "<group>";
+		};
+		7BE8B9E61BE897AC000CA40B /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8B9D41BE8974C000CA40B /* Routes.h */,
+				7BE8B9D51BE8974C000CA40B /* Routes.m */,
+			);
+			name = Routes;
+			sourceTree = "<group>";
+		};
+		7BE8B9E71BE897B9000CA40B /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8B9D61BE8974C000CA40B /* Validator.h */,
+				7BE8B9D71BE8974C000CA40B /* Validator.m */,
+			);
+			name = Validator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -770,43 +858,43 @@
 			files = (
 				7BCB0B201BE151DD00042C40 /* SearchBackgroundView.m in Sources */,
 				7BCB0AEE1BE13B7E00042C40 /* RecentSearchButton.m in Sources */,
+				7BE8B9DB1BE8974C000CA40B /* Indicator.m in Sources */,
 				7B87A47A1BE286F70024A45B /* CellLabel.m in Sources */,
-				7B60F6321BE40464001E3279 /* RecentSearch.m in Sources */,
+				7BE8B9DA1BE8974C000CA40B /* DeviceInfo.m in Sources */,
 				7BCB0AF11BE13B9100042C40 /* GenericButton.m in Sources */,
 				7B87A4631BE261270024A45B /* TweetCell.m in Sources */,
 				7BCB0B061BE1479400042C40 /* UIView+Helper.m in Sources */,
-				7B60F6351BE41CBD001E3279 /* MBProgressHUD.m in Sources */,
 				7BCB0B2A1BE1558100042C40 /* TrendingNowLabel.m in Sources */,
-				7B87A4721BE27E280024A45B /* CellHelper.m in Sources */,
 				7BE8B9BE1BE8956D000CA40B /* ImageService.m in Sources */,
 				7BCF40911BE29D3D002A3D28 /* TopSearchBarView.m in Sources */,
 				7B87A46F1BE268CE0024A45B /* UITableView+Helper.m in Sources */,
+				7BE8B9DF1BE8974C000CA40B /* Validator.m in Sources */,
 				7BCB0B241BE1540800042C40 /* GenericLabel.m in Sources */,
 				7BC0C22A1BDD583600CE2540 /* main.m in Sources */,
 				7BCB0B091BE14ACC00042C40 /* GenericView.m in Sources */,
-				7BCB0B011BE13FE100042C40 /* DeviceInfo.m in Sources */,
-				7B60F6381BE41D5D001E3279 /* Indicator.m in Sources */,
 				7BCB0B161BE14E8B00042C40 /* TwitterImageView.m in Sources */,
+				7BE8B9DE1BE8974C000CA40B /* Routes.m in Sources */,
+				7BE8B9D91BE8974C000CA40B /* Constants.m in Sources */,
 				7BE8B9BF1BE8956D000CA40B /* SearchService.m in Sources */,
 				7BCB0AF71BE13D6000042C40 /* HomeViewController.m in Sources */,
 				7B87A45C1BE25F2D0024A45B /* TweetModel.m in Sources */,
+				7BE8B9DC1BE8974C000CA40B /* MBProgressHUD.m in Sources */,
 				7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */,
-				7B9CD3AC1BE31C010024434D /* Validator.m in Sources */,
 				7BCB0AF41BE13BBB00042C40 /* TrendingNowButton.m in Sources */,
 				7BCB0B191BE1506800042C40 /* GenericTextField.m in Sources */,
 				7BCB0B131BE14D4C00042C40 /* SearchImageView.m in Sources */,
 				7BCB0B1D1BE1509B00042C40 /* SearchTextField.m in Sources */,
 				7BE8B9C01BE8956D000CA40B /* TrendingService.m in Sources */,
 				7BCB0B101BE14D1800042C40 /* GenericImageView.m in Sources */,
-				7BCB0AFE1BE13FCB00042C40 /* Constants.m in Sources */,
 				7B9CD3A91BE313730024434D /* TrendingModel.m in Sources */,
 				7BCB0AFA1BE13D8B00042C40 /* AppDelegate.m in Sources */,
 				7BCB0B381BE17A0200042C40 /* CATransformLayer+Helper.m in Sources */,
 				7B87A4591BE25F140024A45B /* GenericModel.m in Sources */,
+				7BE8B9D81BE8974C000CA40B /* CellHelper.m in Sources */,
+				7BE8B9DD1BE8974C000CA40B /* RecentSearch.m in Sources */,
 				7B87A4601BE2601D0024A45B /* GenericTableViewCell.m in Sources */,
 				7BCB0B271BE1554200042C40 /* RecentSearchLabel.m in Sources */,
 				7BCB0B3B1BE17A4700042C40 /* GenericViewController.m in Sources */,
-				7BD3E91E1BE2F74100473577 /* Routes.m in Sources */,
 				7BE8B9BD1BE8956D000CA40B /* GenericService.m in Sources */,
 				7BCB0B0C1BE14B1C00042C40 /* LineView.m in Sources */,
 			);
