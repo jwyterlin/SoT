@@ -6,6 +6,7 @@ Another features:
 
 - Display last searches;
 - Display current trending topics;
+- Internationalized for English and Brazilian Portuguese languages;
 
 Build in Xcode 7.1 with Objective-C.
 
@@ -25,7 +26,7 @@ Tested in simulators only. Platforms >= 8.0
 
 - Clone to project to your local directory
 ```
-$ git clone https://github.com/jwyterlin/SoT
+$ git clone https://github.com/jwyterlin/SoT.git
 ```
 - Open the file `SoT.xcworkspace` either by double-clicking the file or running the following in the the project folder:
 
@@ -33,3 +34,25 @@ $ git clone https://github.com/jwyterlin/SoT
 $ open SoT.xcworkspace
 ```
 - Choose a simulator or connect an iOS device to your computer and run the application with  `⌘ + R` command
+
+### Preview:
+
+#### iPad Air 2 Portrait:
+
+![Portrait](https://github.com/jwyterlin/SoT/blob/master/Screenshot/iPad-Air-2-Portrait-Main.png)
+![Portrait](https://github.com/jwyterlin/SoT/blob/master/Screenshot/iPad-Air-2-Portrait-Detail.png)
+
+#### iPad Air 2 Landscape:
+
+![Landscape](https://github.com/jwyterlin/SoT/blob/master/Screenshot/iPad-Air-2-Landscape-Main.png)
+![Landscape](https://github.com/jwyterlin/SoT/blob/master/Screenshot/iPad-Air-2-Landscape-Detail.png)
+
+#### iPhone 6S Plus Portrait:
+
+![Portrait](https://github.com/jwyterlin/SoT/blob/master/Screenshot/iPhone-6S-Plus-Portrait-Main.png)
+![Portrait](https://github.com/jwyterlin/SoT/blob/master/Screenshot/iPhone-6S-Plus-Portrait-Detail.png)
+
+#### iPhone 6S Plus Landscape:
+
+![Landscape](https://github.com/jwyterlin/SoT/blob/master/Screenshot/iPhone-6S-Plus-Landscape-Main.png)
+![Landscape](https://github.com/jwyterlin/SoT/blob/master/Screenshot/iPhone-6S-Plus-Landscape-Detail.png)
