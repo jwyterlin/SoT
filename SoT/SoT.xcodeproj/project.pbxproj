@@ -10,10 +10,10 @@
 		7B38933D1BE3087B00B9CE13 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933B1BE3087B00B9CE13 /* Fabric.framework */; };
 		7B38933E1BE3087B00B9CE13 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933C1BE3087B00B9CE13 /* TwitterKit.framework */; };
 		7B3893401BE308C400B9CE13 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38933F1BE308C400B9CE13 /* TwitterCore.framework */; };
-		7B3893421BE30C5E00B9CE13 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B3893411BE30C5E00B9CE13 /* TwitterKitResources.bundle */; };
 		7B60F6401BE4323F001E3279 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B60F6421BE4323F001E3279 /* share.png */; };
 		7B60F6441BE43245001E3279 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B60F6461BE43245001E3279 /* share@2x.png */; };
 		7B60F6481BE4324B001E3279 /* share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B60F64A1BE4324B001E3279 /* share@3x.png */; };
+		7B669B931BEA7ADD0092B3A0 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B669B921BEA7ADD0092B3A0 /* TwitterKitResources.bundle */; };
 		7B75C6751BE3476A0030F85F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B75C6771BE3476A0030F85F /* Localizable.strings */; };
 		7B87A4561BE25C070024A45B /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4551BE25C070024A45B /* ResultSearchViewController.m */; };
 		7B87A4591BE25F140024A45B /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87A4581BE25F140024A45B /* GenericModel.m */; };
@@ -87,13 +87,13 @@
 		7B38933B1BE3087B00B9CE13 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
 		7B38933C1BE3087B00B9CE13 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Frameworks/TwitterKit.framework; sourceTree = "<group>"; };
 		7B38933F1BE308C400B9CE13 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = Frameworks/TwitterCore.framework; sourceTree = "<group>"; };
-		7B3893411BE30C5E00B9CE13 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = "../../../../../Downloads/cannonball-ios-master/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle"; sourceTree = "<group>"; };
 		7B60F6411BE4323F001E3279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/share.png; sourceTree = "<group>"; };
 		7B60F6431BE43240001E3279 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pt-BR"; path = "pt-BR.lproj/share.png"; sourceTree = "<group>"; };
 		7B60F6451BE43245001E3279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Base.lproj/share@2x.png"; sourceTree = "<group>"; };
 		7B60F6471BE43247001E3279 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pt-BR"; path = "pt-BR.lproj/share@2x.png"; sourceTree = "<group>"; };
 		7B60F6491BE4324B001E3279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Base.lproj/share@3x.png"; sourceTree = "<group>"; };
 		7B60F64B1BE4324D001E3279 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pt-BR"; path = "pt-BR.lproj/share@3x.png"; sourceTree = "<group>"; };
+		7B669B921BEA7ADD0092B3A0 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = Frameworks/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		7B75C6731BE347600030F85F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		7B75C6741BE347600030F85F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		7B75C6761BE3476A0030F85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		1A7D7EC88C9F2C4DDDB7C48D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7B3893411BE30C5E00B9CE13 /* TwitterKitResources.bundle */,
+				7B669B921BEA7ADD0092B3A0 /* TwitterKitResources.bundle */,
 				7B38933B1BE3087B00B9CE13 /* Fabric.framework */,
 				ACF94AA5AC83264BC15F7FC2 /* libPods.a */,
 				7B38933F1BE308C400B9CE13 /* TwitterCore.framework */,
@@ -784,8 +784,8 @@
 				7B60F6401BE4323F001E3279 /* share.png in Resources */,
 				7B60F6441BE43245001E3279 /* share@2x.png in Resources */,
 				7BC0C2351BDD583600CE2540 /* Assets.xcassets in Resources */,
+				7B669B931BEA7ADD0092B3A0 /* TwitterKitResources.bundle in Resources */,
 				7BC0C2331BDD583600CE2540 /* Main.storyboard in Resources */,
-				7B3893421BE30C5E00B9CE13 /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
