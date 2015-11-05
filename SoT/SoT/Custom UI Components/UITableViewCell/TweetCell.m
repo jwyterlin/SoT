@@ -172,8 +172,15 @@
     
     UIViewController *vc = [self.delegateTweetCell tc_viewControllerToShare];
     
-    [vc presentViewController:avc animated:YES completion:nil];
-    
+    if ( [avc respondsToSelector:@selector(popoverPresentationController)] ) {
+        
+        UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:avc];
+        [popup presentPopoverFromRect:CGRectMake(vc.view.width/2, vc.view.height/4, 0, 0) inView:vc.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        
+    } else {
+        [vc presentViewController:avc animated:YES completion:nil];
+    }
+
 }
 
 #pragma mark - SWTableViewDelegate methods
